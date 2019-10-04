@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible =false;
+        Cursor.lockState = CursorLockMode.Locked;
         
     }
     // Update is called once per frame
@@ -25,19 +27,20 @@ public class PlayerController : MonoBehaviour
     }
     private void ControlMovement()
     {
+
         var horizontal = Input.GetAxisRaw("Horizontal");
         var vertical = Input.GetAxisRaw("Vertical");
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            moveBehavior.SetMovementMode(Movement.MovementMode.Run);
+            moveBehavior.SetMovementMode(IMovement.MovementMode.Run);
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            moveBehavior.SetMovementMode(Movement.MovementMode.Walk);
+            moveBehavior.SetMovementMode(IMovement.MovementMode.Walk);
         }
         if (Input.GetKeyUp(KeyCode.LeftControl))
         {
-            moveBehavior.SetMovementMode(Movement.MovementMode.Walk);
+            moveBehavior.SetMovementMode(IMovement.MovementMode.Walk);
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {

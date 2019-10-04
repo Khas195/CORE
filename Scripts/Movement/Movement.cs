@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class Movement : IMovement
+public class Movement: IMovement
 {
     [SerializeField]
     [Tooltip("The RigidBody of the moving object")]
@@ -10,11 +10,21 @@ public class Movement : IMovement
     int moveForward = 0;
     int moveSide = 0;
     bool jumpSignal = false;
+    [SerializeField]
+    [Range(0.0f, 1.0f)]
+    float speedReductionWhileAirborne;
     // cache 
     Transform targetTransform = null;
     private float distToGround;
+    [SerializeField]
+    bool shouldMoveTowardCameraDirection;
+    [SerializeField]
+    float rotateSpeed;
+    [SerializeField]
+    GameObject charCameraEntity;
+    [SerializeField]
+    List<Transform> checkGroundsList;
 
-    
 
     // Start is called before the first frame update
     void Start()
@@ -35,9 +45,39 @@ public class Movement : IMovement
     {
         Debug.Assert(-1 <= forward && forward <= 1);
         Debug.Assert(-1 <= side && side <= 1);
-        moveForward = (int)forward;
-        moveSide = (int)side;
+
+        if (shouldMoveTowardCameraDirection)
+        {
+            if (forward != 0 || side != 0)
+            {
+                moveForward = (int)(Mathf.Abs(forward) > Mathf.Abs(side) ? forward : side);
+                moveForward = Mathf.Abs(moveForward);
+                RotateTowardCameraDirection(forward, side);
+            }
+            else
+            {
+                moveForward = 0;
+                moveSide = 0;
+            }
+        }
+        else
+        {
+            moveForward = (int)forward;
+            moveSide = (int)side;
+        }
+        Definition.MovementDebug("Movement(forward, side): " + moveForward + ", " + moveSide);
     }
+
+    private void RotateTowardCameraDirection(float forward, float side)
+    {
+        var forwardDir = charCameraEntity.transform.forward * forward;
+        var sideDir = charCameraEntity.transform.right * side;
+        var moveDir = forwardDir + sideDir;
+        Definition.MovementDebug("Camera Move Direction" + moveDir);
+        var rotation = Quaternion.LookRotation(moveDir);
+        targetRigidBody.rotation = Quaternion.Slerp(targetRigidBody.rotation, rotation, rotateSpeed * Time.deltaTime);
+    }
+
     /// <summary>
     /// This function will signal the target object to jump in the next FixedUpdate
     /// </summary>
@@ -47,22 +87,21 @@ public class Movement : IMovement
     }
     void Step(float speed, int forward, int side, bool isAirborne)
     {
-        
+
         var forwardDirection = targetTransform.forward * forward;
         var sideDirection = targetTransform.right * side;
 
         var moveDirection = forwardDirection + sideDirection;
-        if (!isAirborne)
+        Definition.MovementDebug("Movement Direction: " + moveDirection);
+        var moveSpeed = speed;
+        if (isAirborne)
         {
-            var velocity = moveDirection * speed + Vector3.up * targetRigidBody.velocity.y;
-            targetRigidBody.velocity = velocity;
+            moveSpeed *= 1 - speedReductionWhileAirborne;
         }
-        else
-        {
-            var velocity = moveDirection * speed;
-            targetRigidBody.AddForce(velocity * 1.5f, ForceMode.Acceleration);
-            targetRigidBody.velocity = Vector3.ClampMagnitude(targetRigidBody.velocity, speed);
-        }
+        var velocity = moveDirection * moveSpeed + Vector3.up * targetRigidBody.velocity.y;
+        targetRigidBody.velocity = velocity;
+
+        Definition.MovementDebug("Movement Velocity after each step: " + targetRigidBody.velocity);
     }
 
     private void FixedUpdate()
@@ -89,16 +128,21 @@ public class Movement : IMovement
         }
     }
 
-    
+
 
     private void Jump()
     {
-        targetRigidBody.AddForce(Vector3.up * data.jumpForce, ForceMode.Impulse);
+        targetRigidBody.AddForce(targetRigidBody.transform.up * data.jumpForce, ForceMode.Impulse);
     }
     public bool IsTouchingGround()
     {
-        return Physics.Raycast(targetTransform.position, -Vector3.up, distToGround + 0.3f);
+        foreach(var trans in checkGroundsList) {
+            if (Physics.Raycast(trans.position, -Vector3.up, distToGround + 0.3f)){
+                return true;
+            }
+        }
+        return false;
     }
 
-    
+
 }

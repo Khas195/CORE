@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,5 +30,10 @@ public class IInteractable : MonoBehaviour {
     {
         Definition.InteractableDebug(interacter.name + " try to interact with " + this.name);
         return isFocus;
+    }
+
+    public virtual GameObject GetGameObject()
+    {
+        return this.gameObject;
     }
 }
