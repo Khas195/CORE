@@ -1,0 +1,4 @@
+<map id="Movement2D.UpdateCurrentSpeed" name="Movement2D.UpdateCurrentSpeed">
+<area shape="rect" id="node1" title="Update the current movespeed and move it toward the intended runSpeed in the data container." alt="" coords="196,5,380,47"/>
+<area shape="rect" id="node2" href="$class_movement2_d.html#a2ca9d7325e390e6f82f6744196852634" title=" " alt="" coords="5,13,148,39"/>
+</map>

@@ -6,6 +6,8 @@
     <title>Classes    </title>
         <itemizedlist>
             <listitem><para>class <link linkend="_class_front_back_two_point_sort">FrontBackTwoPointSort</link></para>
+
+<para>This class offers a 2 points for the process of determination of whether the character&apos;s sprite is above or blow the host&apos;s sprite. </para>
 </listitem>
         </itemizedlist>
 </simplesect>

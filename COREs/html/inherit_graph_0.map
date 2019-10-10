@@ -5,17 +5,17 @@
 <area shape="rect" id="node4" href="$class_camera_rotate_mouse.html" title="This class roate the camera entity based on the motion of the mouse." alt="" coords="179,107,323,133"/>
 <area shape="rect" id="node5" href="$class_camera_zoom.html" title=" " alt="" coords="201,157,300,184"/>
 <area shape="rect" id="node6" href="$class_constraint_camera.html" title=" " alt="" coords="187,208,314,235"/>
-<area shape="rect" id="node7" href="$class_front_back_sorting_manager.html" title=" " alt="" coords="164,259,337,285"/>
-<area shape="rect" id="node8" href="$class_i_front_back_sorting.html" title=" " alt="" coords="187,309,314,336"/>
+<area shape="rect" id="node7" href="$class_front_back_sorting_manager.html" title="This class manages all the game object that runs the different sorting methods." alt="" coords="164,259,337,285"/>
+<area shape="rect" id="node8" href="$class_i_front_back_sorting.html" title="This class aims to generalize the possible sorting method for 2d sprites in a top down view." alt="" coords="187,309,314,336"/>
 <area shape="rect" id="node11" href="$class_i_interactable.html" title=" " alt="" coords="205,360,297,387"/>
 <area shape="rect" id="node12" href="$class_i_movement.html" title="The IMovement interface acts as a generalization of all type of movements in the game." alt="" coords="209,411,293,437"/>
 <area shape="rect" id="node16" href="$class_monologue_manager.html" title=" " alt="" coords="183,461,318,488"/>
 <area shape="rect" id="node17" href="$class_on_create_trigger.html" title=" " alt="" coords="193,512,309,539"/>
 <area shape="rect" id="node18" href="$class_player_controller.html" title="This class processes the player&#39;s input and call the coresspondence behavior to perform the intended ..." alt="" coords="193,563,308,589"/>
 <area shape="rect" id="node19" href="$class_state.html" title=" " alt="" coords="224,613,277,640"/>
-<area shape="rect" id="node9" href="$class_front_back_sorting.html" title=" " alt="" coords="403,259,526,285"/>
-<area shape="rect" id="node10" href="$class_front_back_two_point_sort.html" title=" " alt="" coords="385,309,544,336"/>
-<area shape="rect" id="node13" href="$class_movement.html" title="This class handle all movement related behaviors in 3D The host object (mentioned in blow) is the obj..." alt="" coords="424,360,505,387"/>
-<area shape="rect" id="node14" href="$class_movement2_d.html" title=" " alt="" coords="416,411,513,437"/>
+<area shape="rect" id="node9" href="$class_front_back_sorting.html" title="This class offers the most simple sorting." alt="" coords="403,259,526,285"/>
+<area shape="rect" id="node10" href="$class_front_back_two_point_sort.html" title="This class offers a 2 points for the process of determination of whether the character&#39;s sprite is ab..." alt="" coords="385,309,544,336"/>
+<area shape="rect" id="node13" href="$class_movement.html" title="This class handles all movement related behaviors in 3D The host object (mentioned in blow) is the ob..." alt="" coords="424,360,505,387"/>
+<area shape="rect" id="node14" href="$class_movement2_d.html" title="This class handles all movement related behavior in 2D." alt="" coords="416,411,513,437"/>
 <area shape="rect" id="node15" href="$class_movement_root_motion.html" title="This class move the host object by ultilize root motion in the animations of the host object." alt="" coords="391,461,538,488"/>
 </map>

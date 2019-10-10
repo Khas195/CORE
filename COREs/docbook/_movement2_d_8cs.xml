@@ -6,6 +6,8 @@
     <title>Classes    </title>
         <itemizedlist>
             <listitem><para>class <link linkend="_class_movement2_d">Movement2D</link></para>
+
+<para>This class handles all movement related behavior in 2D. </para>
 </listitem>
         </itemizedlist>
 </simplesect>

@@ -70,12 +70,15 @@ $(function() {
 <div class="title">Movement2D Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class handles all movement related behavior in 2D.  
+ <a href="class_movement2_d.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for Movement2D:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_movement2_d__inherit__graph.png" border="0" usemap="#_movement2_d_inherit__map" alt="Inheritance graph"/></div>
 <map name="_movement2_d_inherit__map" id="_movement2_d_inherit__map">
-<area shape="rect" title=" " alt="" coords="25,315,171,539"/>
+<area shape="rect" title="This class handles all movement related behavior in 2D." alt="" coords="19,315,177,480"/>
 <area shape="rect" href="class_i_movement.html" title="The IMovement interface acts as a generalization of all type of movements in the game." alt="" coords="5,131,191,267"/>
 <area shape="rect" title=" " alt="" coords="43,5,153,83"/>
 </map>
@@ -85,7 +88,7 @@ Collaboration diagram for Movement2D:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_movement2_d__coll__graph.png" border="0" usemap="#_movement2_d_coll__map" alt="Collaboration graph"/></div>
 <map name="_movement2_d_coll__map" id="_movement2_d_coll__map">
-<area shape="rect" title=" " alt="" coords="32,472,177,696"/>
+<area shape="rect" title="This class handles all movement related behavior in 2D." alt="" coords="25,472,184,637"/>
 <area shape="rect" href="class_i_movement.html" title="The IMovement interface acts as a generalization of all type of movements in the game." alt="" coords="12,301,197,423"/>
 <area shape="rect" title=" " alt="" coords="5,147,116,224"/>
 <area shape="rect" href="class_movement_data.html" title="The container for all movement related datas in the game Can be created in the Unity Editor." alt="" coords="140,132,248,239"/>
@@ -96,16 +99,11 @@ Collaboration diagram for Movement2D:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aea00f7aee904a57de7b8679208265ce8"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement2_d.html#aea00f7aee904a57de7b8679208265ce8">Move</a> (float forward, float side)</td></tr>
-<tr class="memdesc:aea00f7aee904a57de7b8679208265ce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">All movements actions should be handle in this function.  <a href="class_movement2_d.html#aea00f7aee904a57de7b8679208265ce8">More...</a><br /></td></tr>
+<tr class="memdesc:aea00f7aee904a57de7b8679208265ce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the host object towards the forward and side inputs of the player.  <a href="class_movement2_d.html#aea00f7aee904a57de7b8679208265ce8">More...</a><br /></td></tr>
 <tr class="separator:aea00f7aee904a57de7b8679208265ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15853c33b4ff1610a7ce17a6319beb79"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement2_d.html#a15853c33b4ff1610a7ce17a6319beb79">IsInMotion</a> ()</td></tr>
-<tr class="separator:a15853c33b4ff1610a7ce17a6319beb79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c480b7568b99c721a687090f1958b2e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement2_d.html#a2c480b7568b99c721a687090f1958b2e">GetSideInput</a> ()</td></tr>
-<tr class="separator:a2c480b7568b99c721a687090f1958b2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4cb0b40d66c88b540b31eee12dc50a5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement2_d.html#aa4cb0b40d66c88b540b31eee12dc50a5">GetCurrentSpeed</a> ()</td></tr>
-<tr class="separator:aa4cb0b40d66c88b540b31eee12dc50a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad644849dbe54e82815ee2a4bca79756e"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement2_d.html#ad644849dbe54e82815ee2a4bca79756e">SignalJump</a> ()</td></tr>
-<tr class="memdesc:ad644849dbe54e82815ee2a4bca79756e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signaled that the jump command had been called.  <a href="class_movement2_d.html#ad644849dbe54e82815ee2a4bca79756e">More...</a><br /></td></tr>
+<tr class="memdesc:ad644849dbe54e82815ee2a4bca79756e"><td class="mdescLeft">&#160;</td><td class="mdescRight">this function signal the jump input of the player and the jump action should be handle in the next fixed update function <br  />
+  <a href="class_movement2_d.html#ad644849dbe54e82815ee2a4bca79756e">More...</a><br /></td></tr>
 <tr class="separator:ad644849dbe54e82815ee2a4bca79756e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_i_movement"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_movement')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_movement.html">IMovement</a></td></tr>
 <tr class="memitem:a6c04585e3e788c0b308cb00f61cdb295 inherit pub_methods_class_i_movement"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_movement.html#a6c04585e3e788c0b308cb00f61cdb295">SetMovementMode</a> (<a class="el" href="class_i_movement.html#a27174271007699a25c49af4a4ee50c40">MovementMode</a> newMode)</td></tr>
@@ -114,23 +112,26 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a520bb22bbdff2e35559ed9289aff6db3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement2_d.html#a520bb22bbdff2e35559ed9289aff6db3">Start</a> ()</td></tr>
-<tr class="separator:a520bb22bbdff2e35559ed9289aff6db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ca9d7325e390e6f82f6744196852634"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement2_d.html#a2ca9d7325e390e6f82f6744196852634">Update</a> ()</td></tr>
 <tr class="separator:a2ca9d7325e390e6f82f6744196852634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49868fdd944970646f91b3242642bcde"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement2_d.html#a49868fdd944970646f91b3242642bcde">UpdateCurrentSpeed</a> ()</td></tr>
+<tr class="memdesc:a49868fdd944970646f91b3242642bcde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the current movespeed and move it toward the intended runSpeed in the data container.  <a href="class_movement2_d.html#a49868fdd944970646f91b3242642bcde">More...</a><br /></td></tr>
+<tr class="separator:a49868fdd944970646f91b3242642bcde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ad270fb4f4a5c9a1d6ba6eb06330e0707"><td class="memItemLeft" align="right" valign="top">Rigidbody2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement2_d.html#ad270fb4f4a5c9a1d6ba6eb06330e0707">body2D</a> = null</td></tr>
+<tr class="memdesc:ad270fb4f4a5c9a1d6ba6eb06330e0707"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Rigid body of the host object body2D is needed to be assigned for this class to work.  <a href="class_movement2_d.html#ad270fb4f4a5c9a1d6ba6eb06330e0707">More...</a><br /></td></tr>
 <tr class="separator:ad270fb4f4a5c9a1d6ba6eb06330e0707"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5b8a2bb9af6386305cb6ddf9ff4ab83"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement2_d.html#af5b8a2bb9af6386305cb6ddf9ff4ab83">smoothAcceleration</a> = 0</td></tr>
+<tr class="memdesc:af5b8a2bb9af6386305cb6ddf9ff4ab83"><td class="mdescLeft">&#160;</td><td class="mdescRight">this value smoothen the acceleration of the host object while speeding up to his intended speed A value of 1 means the host object will snap to his intended speed  <a href="class_movement2_d.html#af5b8a2bb9af6386305cb6ddf9ff4ab83">More...</a><br /></td></tr>
+<tr class="separator:af5b8a2bb9af6386305cb6ddf9ff4ab83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e987e3b1677e0c3d9ef506336971fa1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement2_d.html#a2e987e3b1677e0c3d9ef506336971fa1">currentSpeed</a></td></tr>
+<tr class="memdesc:a2e987e3b1677e0c3d9ef506336971fa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current speed of the host object.  <a href="class_movement2_d.html#a2e987e3b1677e0c3d9ef506336971fa1">More...</a><br /></td></tr>
 <tr class="separator:a2e987e3b1677e0c3d9ef506336971fa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a853551f79b76925cb0ac497575024098"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement2_d.html#a853551f79b76925cb0ac497575024098">inMotion</a> = false</td></tr>
+<tr class="memdesc:a853551f79b76925cb0ac497575024098"><td class="mdescLeft">&#160;</td><td class="mdescRight">represents whether the host object is moving or not  <a href="class_movement2_d.html#a853551f79b76925cb0ac497575024098">More...</a><br /></td></tr>
 <tr class="separator:a853551f79b76925cb0ac497575024098"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5b8a2bb9af6386305cb6ddf9ff4ab83"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement2_d.html#af5b8a2bb9af6386305cb6ddf9ff4ab83">smoothAcceleration</a> = 0</td></tr>
-<tr class="separator:af5b8a2bb9af6386305cb6ddf9ff4ab83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92295c1a06be51715165762735bf515c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement2_d.html#a92295c1a06be51715165762735bf515c">cachedSide</a></td></tr>
-<tr class="separator:a92295c1a06be51715165762735bf515c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -153,66 +154,11 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:afff2a26f0dcb004ae43cb293decdab18 inherit pro_attribs_class_i_movement"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_movement2_d_8cs_source.html#l00005">5</a> of file <a class="el" href="_movement2_d_8cs_source.html">Movement2D.cs</a>.</p>
+<div class="textblock"><p>This class handles all movement related behavior in 2D. </p>
+<p>The host object (mentioned in blow) is the object which this script will perform its functions on . The host object is not necessary be the parent gameobject of the script. </p>
+
+<p class="definition">Definition at line <a class="el" href="_movement2_d_8cs_source.html#l00010">10</a> of file <a class="el" href="_movement2_d_8cs_source.html">Movement2D.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa4cb0b40d66c88b540b31eee12dc50a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4cb0b40d66c88b540b31eee12dc50a5">&#9670;&nbsp;</a></span>GetCurrentSpeed()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Movement2D.GetCurrentSpeed </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_movement2_d_8cs_source.html#l00055">55</a> of file <a class="el" href="_movement2_d_8cs_source.html">Movement2D.cs</a>.</p>
-
-</div>
-</div>
-<a id="a2c480b7568b99c721a687090f1958b2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c480b7568b99c721a687090f1958b2e">&#9670;&nbsp;</a></span>GetSideInput()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Movement2D.GetSideInput </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_movement2_d_8cs_source.html#l00052">52</a> of file <a class="el" href="_movement2_d_8cs_source.html">Movement2D.cs</a>.</p>
-
-</div>
-</div>
-<a id="a15853c33b4ff1610a7ce17a6319beb79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15853c33b4ff1610a7ce17a6319beb79">&#9670;&nbsp;</a></span>IsInMotion()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Movement2D.IsInMotion </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_movement2_d_8cs_source.html#l00049">49</a> of file <a class="el" href="_movement2_d_8cs_source.html">Movement2D.cs</a>.</p>
-
-</div>
-</div>
 <a id="aea00f7aee904a57de7b8679208265ce8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aea00f7aee904a57de7b8679208265ce8">&#9670;&nbsp;</a></span>Move()</h2>
 
@@ -247,11 +193,18 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>All movements actions should be handle in this function. </p>
+<p>Move the host object towards the forward and side inputs of the player. </p>
+<p>'</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">forward</td><td>is how much the host object should move forward or backward, in the case of 2D -&gt; vertical movement. </td></tr>
+    <tr><td class="paramname">side</td><td>is how much the host object should move sideway. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="class_i_movement.html#abeb4f7bb7a84ba21041dd4ac88081f23">IMovement</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_movement2_d_8cs_source.html#l00032">32</a> of file <a class="el" href="_movement2_d_8cs_source.html">Movement2D.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_movement2_d_8cs_source.html#l00048">48</a> of file <a class="el" href="_movement2_d_8cs_source.html">Movement2D.cs</a>.</p>
 
 </div>
 </div>
@@ -278,47 +231,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Signaled that the jump command had been called. </p>
+<p>this function signal the jump input of the player and the jump action should be handle in the next fixed update function <br  />
+ </p>
 
 <p>Implements <a class="el" href="class_i_movement.html#a2d47acb7fe566d1301ac90efd48772b9">IMovement</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_movement2_d_8cs_source.html#l00059">59</a> of file <a class="el" href="_movement2_d_8cs_source.html">Movement2D.cs</a>.</p>
-
-</div>
-</div>
-<a id="a520bb22bbdff2e35559ed9289aff6db3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a520bb22bbdff2e35559ed9289aff6db3">&#9670;&nbsp;</a></span>Start()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Movement2D.Start </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_movement2_d_8cs_source.html#l00017">17</a> of file <a class="el" href="_movement2_d_8cs_source.html">Movement2D.cs</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_movement2_d_a520bb22bbdff2e35559ed9289aff6db3_cgraph.png" border="0" usemap="#class_movement2_d_a520bb22bbdff2e35559ed9289aff6db3_cgraph" alt=""/></div>
-<map name="class_movement2_d_a520bb22bbdff2e35559ed9289aff6db3_cgraph" id="class_movement2_d_a520bb22bbdff2e35559ed9289aff6db3_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,135,32"/>
-<area shape="rect" href="class_definition.html#ac8f4beb12f4cdc7a69e3a0c5096a698a" title=" " alt="" coords="183,5,341,32"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="_movement2_d_8cs_source.html#l00065">65</a> of file <a class="el" href="_movement2_d_8cs_source.html">Movement2D.cs</a>.</p>
 
 </div>
 </div>
@@ -345,7 +263,55 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_movement2_d_8cs_source.html#l00025">25</a> of file <a class="el" href="_movement2_d_8cs_source.html">Movement2D.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_movement2_d_8cs_source.html#l00027">27</a> of file <a class="el" href="_movement2_d_8cs_source.html">Movement2D.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_movement2_d_a2ca9d7325e390e6f82f6744196852634_cgraph.png" border="0" usemap="#class_movement2_d_a2ca9d7325e390e6f82f6744196852634_cgraph" alt=""/></div>
+<map name="class_movement2_d_a2ca9d7325e390e6f82f6744196852634_cgraph" id="class_movement2_d_a2ca9d7325e390e6f82f6744196852634_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,148,39"/>
+<area shape="rect" href="class_movement2_d.html#a49868fdd944970646f91b3242642bcde" title="Update the current movespeed and move it toward the intended runSpeed in the data container." alt="" coords="196,5,380,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a49868fdd944970646f91b3242642bcde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49868fdd944970646f91b3242642bcde">&#9670;&nbsp;</a></span>UpdateCurrentSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Movement2D.UpdateCurrentSpeed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update the current movespeed and move it toward the intended runSpeed in the data container. </p>
+<p>It uses the smoothAcceleration to smoothen the transition to the intended runSpeed </p>
+
+<p class="definition">Definition at line <a class="el" href="_movement2_d_8cs_source.html#l00036">36</a> of file <a class="el" href="_movement2_d_8cs_source.html">Movement2D.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_movement2_d_a49868fdd944970646f91b3242642bcde_icgraph.png" border="0" usemap="#class_movement2_d_a49868fdd944970646f91b3242642bcde_icgraph" alt=""/></div>
+<map name="class_movement2_d_a49868fdd944970646f91b3242642bcde_icgraph" id="class_movement2_d_a49868fdd944970646f91b3242642bcde_icgraph">
+<area shape="rect" title="Update the current movespeed and move it toward the intended runSpeed in the data container." alt="" coords="196,5,380,47"/>
+<area shape="rect" href="class_movement2_d.html#a2ca9d7325e390e6f82f6744196852634" title=" " alt="" coords="5,13,148,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -370,31 +336,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_movement2_d_8cs_source.html#l00008">8</a> of file <a class="el" href="_movement2_d_8cs_source.html">Movement2D.cs</a>.</p>
+<p>The Rigid body of the host object body2D is needed to be assigned for this class to work. </p>
 
-</div>
-</div>
-<a id="a92295c1a06be51715165762735bf515c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92295c1a06be51715165762735bf515c">&#9670;&nbsp;</a></span>cachedSide</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Movement2D.cachedSide</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_movement2_d_8cs_source.html#l00014">14</a> of file <a class="el" href="_movement2_d_8cs_source.html">Movement2D.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_movement2_d_8cs_source.html#l00016">16</a> of file <a class="el" href="_movement2_d_8cs_source.html">Movement2D.cs</a>.</p>
 
 </div>
 </div>
@@ -418,7 +362,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_movement2_d_8cs_source.html#l00009">9</a> of file <a class="el" href="_movement2_d_8cs_source.html">Movement2D.cs</a>.</p>
+<p>The current speed of the host object. </p>
+
+<p class="definition">Definition at line <a class="el" href="_movement2_d_8cs_source.html#l00024">24</a> of file <a class="el" href="_movement2_d_8cs_source.html">Movement2D.cs</a>.</p>
 
 </div>
 </div>
@@ -442,7 +388,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_movement2_d_8cs_source.html#l00010">10</a> of file <a class="el" href="_movement2_d_8cs_source.html">Movement2D.cs</a>.</p>
+<p>represents whether the host object is moving or not </p>
+
+<p class="definition">Definition at line <a class="el" href="_movement2_d_8cs_source.html#l00026">26</a> of file <a class="el" href="_movement2_d_8cs_source.html">Movement2D.cs</a>.</p>
 
 </div>
 </div>
@@ -466,7 +414,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_movement2_d_8cs_source.html#l00012">12</a> of file <a class="el" href="_movement2_d_8cs_source.html">Movement2D.cs</a>.</p>
+<p>this value smoothen the acceleration of the host object while speeding up to his intended speed A value of 1 means the host object will snap to his intended speed </p>
+
+<p class="definition">Definition at line <a class="el" href="_movement2_d_8cs_source.html#l00022">22</a> of file <a class="el" href="_movement2_d_8cs_source.html">Movement2D.cs</a>.</p>
 
 </div>
 </div>

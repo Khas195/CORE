@@ -1,5 +1,5 @@
 <map id="FrontBackSorting" name="FrontBackSorting">
-<area shape="rect" id="node1" title=" " alt="" coords="5,315,148,421"/>
-<area shape="rect" id="node2" href="$class_i_front_back_sorting.html" title=" " alt="" coords="5,131,148,267"/>
+<area shape="rect" id="node1" title="This class offers the most simple sorting." alt="" coords="5,315,148,421"/>
+<area shape="rect" id="node2" href="$class_i_front_back_sorting.html" title="This class aims to generalize the possible sorting method for 2d sprites in a top down view." alt="" coords="5,131,148,267"/>
 <area shape="rect" id="node3" title=" " alt="" coords="21,5,132,83"/>
 </map>

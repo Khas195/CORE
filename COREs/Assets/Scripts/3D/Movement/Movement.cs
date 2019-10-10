@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /**
- * This class handle all movement related behaviors in 3D
+ * This class handles all movement related behaviors in 3D
  * The host object (mentioned in blow) is the object which this script will perform its functions on .!--
  * The host object is not necessary be the parent gameobject of the script.!-- 
  */

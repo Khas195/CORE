@@ -1,4 +1,4 @@
 <map id="FrontBackSortingManager" name="FrontBackSortingManager">
-<area shape="rect" id="node1" title=" " alt="" coords="5,131,179,237"/>
+<area shape="rect" id="node1" title="This class manages all the game object that runs the different sorting methods." alt="" coords="5,131,179,237"/>
 <area shape="rect" id="node2" title=" " alt="" coords="37,5,147,83"/>
 </map>

@@ -3,11 +3,21 @@
 <title>Class List</title>
 Here are the classes, structs, unions and interfaces with brief descriptions:<link linkend="_class_area_view">AreaView</link><link linkend="_class_camera_follow">CameraFollow</link><link linkend="_class_camera_rotate_mouse">CameraRotateMouse</link>
 <para>This class roate the camera entity based on the motion of the mouse </para>
-<link linkend="_class_camera_zoom">CameraZoom</link><link linkend="_class_constraint_camera">ConstraintCamera</link><link linkend="_class_definition">Definition</link><link linkend="_class_front_back_sorting">FrontBackSorting</link><link linkend="_class_front_back_sorting_manager">FrontBackSortingManager</link><link linkend="_class_front_back_two_point_sort">FrontBackTwoPointSort</link><link linkend="_class_i_front_back_sorting">IFrontBackSorting</link><link linkend="_class_i_interactable">IInteractable</link><link linkend="_class_i_movement">IMovement</link>
+<link linkend="_class_camera_zoom">CameraZoom</link><link linkend="_class_constraint_camera">ConstraintCamera</link><link linkend="_class_definition">Definition</link><link linkend="_class_front_back_sorting">FrontBackSorting</link>
+<para>This class offers the most simple sorting </para>
+<link linkend="_class_front_back_sorting_manager">FrontBackSortingManager</link>
+<para>This class manages all the game object that runs the different sorting methods </para>
+<link linkend="_class_front_back_two_point_sort">FrontBackTwoPointSort</link>
+<para>This class offers a 2 points for the process of determination of whether the character&apos;s sprite is above or blow the host&apos;s sprite </para>
+<link linkend="_class_i_front_back_sorting">IFrontBackSorting</link>
+<para>This class aims to generalize the possible sorting method for 2d sprites in a top down view </para>
+<link linkend="_class_i_interactable">IInteractable</link><link linkend="_class_i_movement">IMovement</link>
 <para>The <link linkend="_class_i_movement">IMovement</link> interface acts as a generalization of all type of movements in the game </para>
 <link linkend="_class_monologue_data">MonologueData</link><link linkend="_class_monologue_manager">MonologueManager</link><link linkend="_class_movement">Movement</link>
-<para>This class handle all movement related behaviors in 3D The host object (mentioned in blow) is the object which this script will perform its functions on </para>
-<link linkend="_class_movement2_d">Movement2D</link><link linkend="_class_movement_data">MovementData</link>
+<para>This class handles all movement related behaviors in 3D The host object (mentioned in blow) is the object which this script will perform its functions on </para>
+<link linkend="_class_movement2_d">Movement2D</link>
+<para>This class handles all movement related behavior in 2D </para>
+<link linkend="_class_movement_data">MovementData</link>
 <para>The container for all movement related datas in the game Can be created in the Unity Editor </para>
 <link linkend="_class_movement_root_motion">MovementRootMotion</link>
 <para>This class move the host object by ultilize root motion in the animations of the host object </para>

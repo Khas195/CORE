@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/**
+ * This class manages all the game object that runs the different sorting methods.
+ * This class also sorts the host object of these scripts appropriately.
+ */
 public class FrontBackSortingManager : MonoBehaviour
 {
     [SerializeField]
@@ -25,11 +28,11 @@ public class FrontBackSortingManager : MonoBehaviour
         {
             var pos = target.HostPosition();
 
-            if (target.IsAboveCharacter(character.position, pos))
+            if (target.IsAboveCharacter(character.position))
             {
                 pos.z = character.position.z - 1;
             }
-            else if (target.IsBelowCharacter(character.position, pos))
+            else if (target.IsBelowCharacter(character.position))
             {
                 pos.z = character.position.z + 1;
             }

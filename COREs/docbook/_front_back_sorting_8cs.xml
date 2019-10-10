@@ -6,6 +6,8 @@
     <title>Classes    </title>
         <itemizedlist>
             <listitem><para>class <link linkend="_class_front_back_sorting">FrontBackSorting</link></para>
+
+<para>This class offers the most simple sorting. </para>
 </listitem>
         </itemizedlist>
 </simplesect>

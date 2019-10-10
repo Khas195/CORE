@@ -32,6 +32,7 @@ public class CameraRotateMouse : MonoBehaviour
 
     /** 
      * This function rotate the yaw and pitch pivot accoring to the mouse input
+     * The pitch angle is limited by the pitchLowerLimit and the pitchUpperLimit
      */
     private void RotateYawAndPitch()
     {

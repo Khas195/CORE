@@ -54,15 +54,6 @@ Here is the caller graph for this function:<para>
 <indexterm><primary>Definition</primary><secondary>InitalizeErrors</secondary></indexterm>
 <para><computeroutput>static void Definition.InitalizeErrors (string message)<computeroutput>[static]</computeroutput></computeroutput></para><para>
 Definition at line 17 of file Definition.cs.</para>
-Here is the caller graph for this function:<para>
-    <informalfigure>
-        <mediaobject>
-            <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_definition_ac8f4beb12f4cdc7a69e3a0c5096a698a_icgraph.png"></imagedata>
-            </imageobject>
-        </mediaobject>
-    </informalfigure>
-</para>
     </section><anchor xml:id="_class_definition_1a1b2b4702132d28cd59cb9d831a9c2eea"/>    <section>
     <title>InteractableDebug()</title>
 <indexterm><primary>InteractableDebug</primary><secondary>Definition</secondary></indexterm>

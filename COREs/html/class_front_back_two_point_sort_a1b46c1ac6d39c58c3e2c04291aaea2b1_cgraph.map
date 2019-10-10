@@ -1,0 +1,4 @@
+<map id="FrontBackTwoPointSort.IsAboveCharacter" name="FrontBackTwoPointSort.IsAboveCharacter">
+<area shape="rect" id="node1" title="Check whether the host&#39;s sprite should be above the character&#39;s sprite." alt="" coords="5,5,179,47"/>
+<area shape="rect" id="node2" href="$class_front_back_two_point_sort.html#a831167cdee06f037d13615877c0b80f2" title="Return whether the character&#39;s position is left of the host&#39;s pivot." alt="" coords="227,5,400,47"/>
+</map>

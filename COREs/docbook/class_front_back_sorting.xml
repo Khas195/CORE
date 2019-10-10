@@ -2,6 +2,11 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_front_back_sorting">
 <title>FrontBackSorting Class Reference</title>
 <indexterm><primary>FrontBackSorting</primary></indexterm>
+<para>
+
+<para>This class offers the most simple sorting. </para>
+ 
+</para>
 Inheritance diagram for FrontBackSorting:<para>
     <informalfigure>
         <mediaobject>
@@ -23,9 +28,13 @@ Collaboration diagram for FrontBackSorting:<para>
 <simplesect>
     <title>Public Member Functions    </title>
         <itemizedlist>
-            <listitem><para>override bool <link linkend="_class_front_back_sorting_1abc2e254b2fbff454376536629e885314">IsAboveCharacter</link> (Vector3 characterPos, Vector3 hostPos)</para>
+            <listitem><para>override bool <link linkend="_class_front_back_sorting_1a09d180dbb268cf43b9ea38b28dc034c1">IsAboveCharacter</link> (Vector3 characterPos)</para>
+
+<para>This function return whether the host&apos;s sprite should be above the character&apos;s sprite. </para>
 </listitem>
-            <listitem><para>override bool <link linkend="_class_front_back_sorting_1afbbb62d35be9a2622caf7ad3dd528cd0">IsBelowCharacter</link> (Vector3 characterPos, Vector3 hostPos)</para>
+            <listitem><para>override bool <link linkend="_class_front_back_sorting_1ad5e2985b0c68f9d560108205143aa3d0">IsBelowCharacter</link> (Vector3 characterPos)</para>
+
+<para>This function return whether the host&apos;s sprite should be below the character&apos;s sprite. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -41,33 +50,47 @@ Collaboration diagram for FrontBackSorting:<para>
 </simplesect>
 <section>
 <title>Detailed Description</title>
+
+<para>This class offers the most simple sorting. </para>
+
+
+
+<para>Whether the character&apos;s sprite is aoove or below the sprite is determined by the character&apos;s y position in comparison to the host&apos;s sprite </para>
 <para>
-Definition at line 5 of file FrontBackSorting.cs.</para>
+Definition at line 9 of file FrontBackSorting.cs.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
-<anchor xml:id="_class_front_back_sorting_1abc2e254b2fbff454376536629e885314"/>    <section>
+<anchor xml:id="_class_front_back_sorting_1a09d180dbb268cf43b9ea38b28dc034c1"/>    <section>
     <title>IsAboveCharacter()</title>
 <indexterm><primary>IsAboveCharacter</primary><secondary>FrontBackSorting</secondary></indexterm>
 <indexterm><primary>FrontBackSorting</primary><secondary>IsAboveCharacter</secondary></indexterm>
-<para><computeroutput>override bool FrontBackSorting.IsAboveCharacter (Vector3 characterPos, Vector3 hostPos)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
-Implements <link linkend="_class_i_front_back_sorting_1a6c65584e6e36b38b9637d0caef2e9584">IFrontBackSorting</link>.</para>
+<para><computeroutput>override bool FrontBackSorting.IsAboveCharacter (Vector3 characterPos)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>This function return whether the host&apos;s sprite should be above the character&apos;s sprite. </para>
+</para>
 <para>
-Definition at line 15 of file FrontBackSorting.cs.</para>
-    </section><anchor xml:id="_class_front_back_sorting_1afbbb62d35be9a2622caf7ad3dd528cd0"/>    <section>
+Implements <link linkend="_class_i_front_back_sorting_1aec5597998def5d8c32e401bc040aea7b">IFrontBackSorting</link>.</para>
+<para>
+Definition at line 22 of file FrontBackSorting.cs.</para>
+    </section><anchor xml:id="_class_front_back_sorting_1ad5e2985b0c68f9d560108205143aa3d0"/>    <section>
     <title>IsBelowCharacter()</title>
 <indexterm><primary>IsBelowCharacter</primary><secondary>FrontBackSorting</secondary></indexterm>
 <indexterm><primary>FrontBackSorting</primary><secondary>IsBelowCharacter</secondary></indexterm>
-<para><computeroutput>override bool FrontBackSorting.IsBelowCharacter (Vector3 characterPos, Vector3 hostPos)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
-Implements <link linkend="_class_i_front_back_sorting_1a536050d8c6f539ef2355f7d060405a7d">IFrontBackSorting</link>.</para>
+<para><computeroutput>override bool FrontBackSorting.IsBelowCharacter (Vector3 characterPos)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>This function return whether the host&apos;s sprite should be below the character&apos;s sprite. </para>
+</para>
 <para>
-Definition at line 20 of file FrontBackSorting.cs.</para>
+Implements <link linkend="_class_i_front_back_sorting_1ac26a5a0c05ee35848a7a0d75620cb052">IFrontBackSorting</link>.</para>
+<para>
+Definition at line 29 of file FrontBackSorting.cs.</para>
     </section><anchor xml:id="_class_front_back_sorting_1a17d55c23c23be73fe916086a78fa67c0"/>    <section>
     <title>Start()</title>
 <indexterm><primary>Start</primary><secondary>FrontBackSorting</secondary></indexterm>
 <indexterm><primary>FrontBackSorting</primary><secondary>Start</secondary></indexterm>
 <para><computeroutput>void FrontBackSorting.Start ( )<computeroutput>[private]</computeroutput></computeroutput></para><para>
-Definition at line 8 of file FrontBackSorting.cs.</para>
+Definition at line 12 of file FrontBackSorting.cs.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

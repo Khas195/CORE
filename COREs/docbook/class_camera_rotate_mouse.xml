@@ -32,7 +32,7 @@ Collaboration diagram for CameraRotateMouse:<para>
 </listitem>
             <listitem><para>void <link linkend="_class_camera_rotate_mouse_1a3997817baeecd83148f3eb3d17df47d8">RotateYawAndPitch</link> ()</para>
 
-<para>This function rotate the yaw and pitch pivot accoring to the mouse input. </para>
+<para>This function rotate the yaw and pitch pivot accoring to the mouse input The pitch angle is limited by the pitchLowerLimit and the pitchUpperLimit. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -84,10 +84,10 @@ Definition at line 7 of file CameraRotateMouse.cs.</para>
 <indexterm><primary>CameraRotateMouse</primary><secondary>RotateYawAndPitch</secondary></indexterm>
 <para><computeroutput>void CameraRotateMouse.RotateYawAndPitch ( )<computeroutput>[private]</computeroutput></computeroutput></para><para>
 
-<para>This function rotate the yaw and pitch pivot accoring to the mouse input. </para>
+<para>This function rotate the yaw and pitch pivot accoring to the mouse input The pitch angle is limited by the pitchLowerLimit and the pitchUpperLimit. </para>
 </para>
 <para>
-Definition at line 36 of file CameraRotateMouse.cs.</para>
+Definition at line 37 of file CameraRotateMouse.cs.</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>

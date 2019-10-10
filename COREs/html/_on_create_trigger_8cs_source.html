@@ -74,29 +74,29 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> UnityEngine.Events;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_on_create_trigger.html">    6</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_on_create_trigger.html">OnCreateTrigger</a> : MonoBehaviour</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    [SerializeField]</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_on_create_trigger.html#ab402bf869697f3ec7a353fc1c8eaa9a2">    9</a></span>&#160;    UnityEvent <a class="code" href="class_on_create_trigger.html#ab402bf869697f3ec7a353fc1c8eaa9a2">triggerEvent</a> = <span class="keyword">null</span>;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="comment">// Start is called before the first frame update</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_on_create_trigger.html#a3bc7dd0afc5b1073e533c710500b559f">   11</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_on_create_trigger.html#a3bc7dd0afc5b1073e533c710500b559f">Start</a>()</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_on_create_trigger.html#ab402bf869697f3ec7a353fc1c8eaa9a2">triggerEvent</a> != <span class="keyword">null</span>) {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <a class="code" href="class_on_create_trigger.html#ab402bf869697f3ec7a353fc1c8eaa9a2">triggerEvent</a>.Invoke();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        }</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    }</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">// Update is called once per frame</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_on_create_trigger.html#a62470bc9f743cb3a05ffdaa1453d0ca0">   19</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_on_create_trigger.html#a62470bc9f743cb3a05ffdaa1453d0ca0">Update</a>()</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_on_create_trigger.html">    9</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_on_create_trigger.html">OnCreateTrigger</a> : MonoBehaviour</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    [SerializeField]</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_on_create_trigger.html#ab402bf869697f3ec7a353fc1c8eaa9a2">   12</a></span>&#160;    UnityEvent <a class="code" href="class_on_create_trigger.html#ab402bf869697f3ec7a353fc1c8eaa9a2">triggerEvent</a> = <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">// Start is called before the first frame update</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_on_create_trigger.html#a3bc7dd0afc5b1073e533c710500b559f">   14</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_on_create_trigger.html#a3bc7dd0afc5b1073e533c710500b559f">Start</a>()</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_on_create_trigger.html#ab402bf869697f3ec7a353fc1c8eaa9a2">triggerEvent</a> != <span class="keyword">null</span>) {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <a class="code" href="class_on_create_trigger.html#ab402bf869697f3ec7a353fc1c8eaa9a2">triggerEvent</a>.Invoke();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">// Update is called once per frame</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_on_create_trigger.html#a62470bc9f743cb3a05ffdaa1453d0ca0">   22</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_on_create_trigger.html#a62470bc9f743cb3a05ffdaa1453d0ca0">Update</a>()</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_on_create_trigger_html_a3bc7dd0afc5b1073e533c710500b559f"><div class="ttname"><a href="class_on_create_trigger.html#a3bc7dd0afc5b1073e533c710500b559f">OnCreateTrigger.Start</a></div><div class="ttdeci">void Start()</div><div class="ttdef"><b>Definition:</b> <a href="_on_create_trigger_8cs_source.html#l00011">OnCreateTrigger.cs:11</a></div></div>
-<div class="ttc" id="aclass_on_create_trigger_html_a62470bc9f743cb3a05ffdaa1453d0ca0"><div class="ttname"><a href="class_on_create_trigger.html#a62470bc9f743cb3a05ffdaa1453d0ca0">OnCreateTrigger.Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition:</b> <a href="_on_create_trigger_8cs_source.html#l00019">OnCreateTrigger.cs:19</a></div></div>
-<div class="ttc" id="aclass_on_create_trigger_html_ab402bf869697f3ec7a353fc1c8eaa9a2"><div class="ttname"><a href="class_on_create_trigger.html#ab402bf869697f3ec7a353fc1c8eaa9a2">OnCreateTrigger.triggerEvent</a></div><div class="ttdeci">UnityEvent triggerEvent</div><div class="ttdef"><b>Definition:</b> <a href="_on_create_trigger_8cs_source.html#l00009">OnCreateTrigger.cs:9</a></div></div>
-<div class="ttc" id="aclass_on_create_trigger_html"><div class="ttname"><a href="class_on_create_trigger.html">OnCreateTrigger</a></div><div class="ttdef"><b>Definition:</b> <a href="_on_create_trigger_8cs_source.html#l00006">OnCreateTrigger.cs:6</a></div></div>
+<div class="ttc" id="aclass_on_create_trigger_html_a3bc7dd0afc5b1073e533c710500b559f"><div class="ttname"><a href="class_on_create_trigger.html#a3bc7dd0afc5b1073e533c710500b559f">OnCreateTrigger.Start</a></div><div class="ttdeci">void Start()</div><div class="ttdef"><b>Definition:</b> <a href="_on_create_trigger_8cs_source.html#l00014">OnCreateTrigger.cs:14</a></div></div>
+<div class="ttc" id="aclass_on_create_trigger_html_a62470bc9f743cb3a05ffdaa1453d0ca0"><div class="ttname"><a href="class_on_create_trigger.html#a62470bc9f743cb3a05ffdaa1453d0ca0">OnCreateTrigger.Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition:</b> <a href="_on_create_trigger_8cs_source.html#l00022">OnCreateTrigger.cs:22</a></div></div>
+<div class="ttc" id="aclass_on_create_trigger_html_ab402bf869697f3ec7a353fc1c8eaa9a2"><div class="ttname"><a href="class_on_create_trigger.html#ab402bf869697f3ec7a353fc1c8eaa9a2">OnCreateTrigger.triggerEvent</a></div><div class="ttdeci">UnityEvent triggerEvent</div><div class="ttdef"><b>Definition:</b> <a href="_on_create_trigger_8cs_source.html#l00012">OnCreateTrigger.cs:12</a></div></div>
+<div class="ttc" id="aclass_on_create_trigger_html"><div class="ttname"><a href="class_on_create_trigger.html">OnCreateTrigger</a></div><div class="ttdef"><b>Definition:</b> <a href="_on_create_trigger_8cs_source.html#l00009">OnCreateTrigger.cs:9</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

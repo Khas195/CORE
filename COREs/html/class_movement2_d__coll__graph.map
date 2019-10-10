@@ -1,5 +1,5 @@
 <map id="Movement2D" name="Movement2D">
-<area shape="rect" id="node1" title=" " alt="" coords="32,472,177,696"/>
+<area shape="rect" id="node1" title="This class handles all movement related behavior in 2D." alt="" coords="25,472,184,637"/>
 <area shape="rect" id="node2" href="$class_i_movement.html" title="The IMovement interface acts as a generalization of all type of movements in the game." alt="" coords="12,301,197,423"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,147,116,224"/>
 <area shape="rect" id="node4" href="$class_movement_data.html" title="The container for all movement related datas in the game Can be created in the Unity Editor." alt="" coords="140,132,248,239"/>

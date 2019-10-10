@@ -4,7 +4,7 @@
 <indexterm><primary>Movement</primary></indexterm>
 <para>
 
-<para>This class handle all movement related behaviors in 3D The host object (mentioned in blow) is the object which this script will perform its functions on . </para>
+<para>This class handles all movement related behaviors in 3D The host object (mentioned in blow) is the object which this script will perform its functions on . </para>
  
 </para>
 Inheritance diagram for Movement:<para>
@@ -126,7 +126,7 @@ Collaboration diagram for Movement:<para>
 <section>
 <title>Detailed Description</title>
 
-<para>This class handle all movement related behaviors in 3D The host object (mentioned in blow) is the object which this script will perform its functions on . </para>
+<para>This class handles all movement related behaviors in 3D The host object (mentioned in blow) is the object which this script will perform its functions on . </para>
 
 
 

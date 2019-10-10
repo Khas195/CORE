@@ -39,7 +39,7 @@ Collaboration diagram for OnCreateTrigger:<para>
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line 6 of file OnCreateTrigger.cs.</para>
+Definition at line 9 of file OnCreateTrigger.cs.</para>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -48,13 +48,13 @@ Definition at line 6 of file OnCreateTrigger.cs.</para>
 <indexterm><primary>Start</primary><secondary>OnCreateTrigger</secondary></indexterm>
 <indexterm><primary>OnCreateTrigger</primary><secondary>Start</secondary></indexterm>
 <para><computeroutput>void OnCreateTrigger.Start ( )<computeroutput>[private]</computeroutput></computeroutput></para><para>
-Definition at line 11 of file OnCreateTrigger.cs.</para>
+Definition at line 14 of file OnCreateTrigger.cs.</para>
     </section><anchor xml:id="_class_on_create_trigger_1a62470bc9f743cb3a05ffdaa1453d0ca0"/>    <section>
     <title>Update()</title>
 <indexterm><primary>Update</primary><secondary>OnCreateTrigger</secondary></indexterm>
 <indexterm><primary>OnCreateTrigger</primary><secondary>Update</secondary></indexterm>
 <para><computeroutput>void OnCreateTrigger.Update ( )<computeroutput>[private]</computeroutput></computeroutput></para><para>
-Definition at line 19 of file OnCreateTrigger.cs.</para>
+Definition at line 22 of file OnCreateTrigger.cs.</para>
 </section>
 </section>
 <section>
@@ -64,7 +64,7 @@ Definition at line 19 of file OnCreateTrigger.cs.</para>
 <indexterm><primary>triggerEvent</primary><secondary>OnCreateTrigger</secondary></indexterm>
 <indexterm><primary>OnCreateTrigger</primary><secondary>triggerEvent</secondary></indexterm>
 <para><computeroutput>UnityEvent OnCreateTrigger.triggerEvent = null<computeroutput>[private]</computeroutput></computeroutput></para><para>
-Definition at line 9 of file OnCreateTrigger.cs.</para>
+Definition at line 12 of file OnCreateTrigger.cs.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>
