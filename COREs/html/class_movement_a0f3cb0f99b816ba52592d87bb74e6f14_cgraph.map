@@ -1,0 +1,4 @@
+<map id="Movement.RotateTowardCameraDirection" name="Movement.RotateTowardCameraDirection">
+<area shape="rect" id="node1" title="Rotate the host game object toward the camera entity&#39;s facing direction." alt="" coords="5,5,215,47"/>
+<area shape="rect" id="node2" href="$class_definition.html#a0a2f05396256aef00d2ec13e62d48b02" title=" " alt="" coords="263,13,437,39"/>
+</map>

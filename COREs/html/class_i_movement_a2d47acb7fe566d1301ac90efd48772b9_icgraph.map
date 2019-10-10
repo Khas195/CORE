@@ -1,0 +1,5 @@
+<map id="IMovement.SignalJump" name="IMovement.SignalJump">
+<area shape="rect" id="node1" title="Signaled that the jump command had been called." alt="" coords="419,13,573,39"/>
+<area shape="rect" id="node2" href="$class_player_controller.html#a52d074ae80211c21828023a6e381812b" title="All inputs by the player are and should be done in this function ." alt="" coords="212,5,371,47"/>
+<area shape="rect" id="node3" href="$class_player_controller.html#ae8bc83dffb99867a04be016473ed2c43" title=" " alt="" coords="5,13,164,39"/>
+</map>

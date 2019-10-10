@@ -1,0 +1,4 @@
+<map id="CameraRotateMouse.Update" name="CameraRotateMouse.Update">
+<area shape="rect" id="node1" title=" " alt="" coords="5,13,195,39"/>
+<area shape="rect" id="node2" href="$class_camera_rotate_mouse.html#a3997817baeecd83148f3eb3d17df47d8" title="This function rotate the yaw and pitch pivot accoring to the mouse input." alt="" coords="243,5,429,47"/>
+</map>

@@ -1,0 +1,570 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_movement">
+<title>Movement Class Reference</title>
+<indexterm><primary>Movement</primary></indexterm>
+<para>
+
+<para>This class handle all movement related behaviors in 3D The host object (mentioned in blow) is the object which this script will perform its functions on . </para>
+ 
+</para>
+Inheritance diagram for Movement:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_movement__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for Movement:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_movement__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_movement_1a8ff6031ad6e03730fbe2cae1ab8c21de">Move</link> (float forward, float side)</para>
+
+<para>This function received the player&apos;s inputs (forward and side) then saved them to be processed in the next fixed update. </para>
+</listitem>
+            <listitem><para>override void <link linkend="_class_movement_1a24a35054a243546e8d3318927034423a">SignalJump</link> ()</para>
+
+<para>This function will signal the target object to jump in the next FixedUpdate. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_movement_1ae07aa4fe92b07c78cb87ee057d704e1f">IsTouchingGround</link> ()</para>
+
+<para>Check whether the rigid body of the host object is touching the ground by raycasting from the list of points (checkGroundsList) </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_movement_1a5382914e6da64dbf89460062fdb4a08a">Start</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_movement_1aa48b6d3425dafaeef32461ba63a7fd13">Initalize</link> ()</para>
+
+<para>Initalize all the cached variables. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_movement_1a0f3cb0f99b816ba52592d87bb74e6f14">RotateTowardCameraDirection</link> (float forward, float side)</para>
+
+<para>Rotate the host game object toward the camera entity&apos;s facing direction. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_movement_1a5f4a7ab8b5ed85d47eda043b6a1d19be">Step</link> (float speed, int forward, int side, bool isAirborne)</para>
+
+<para>This function move the host object according to the forward and side inputs of the player. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_movement_1a9687a887cb7ae16793f2fdc42d00d11c">FixedUpdate</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_movement_1a905b8f5912002eda95b1c42849a99d20">ProcessMovement</link> ()</para>
+
+<para>This function process the movement of the host object according to the forward, side and jump inputs The movement speed is also changed if the host object is airborned. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_movement_1a5da7e0919d0a3391146e9e14f9e45035">Jump</link> ()</para>
+
+<para>Perform the jumping action by adding an impulse force to the host&apos;s rigid body according to its up direction. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Rigidbody <link linkend="_class_movement_1a41c26e56e3fb18f58703cb29f324c3aa">targetRigidBody</link> = null</para>
+
+<para>The rigid body of the host object. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_movement_1a290c56cad0392b795a2c331a763a2804">shouldMoveTowardCameraDirection</link></para>
+
+<para>Decide if the host object should move foward accodring the camera&apos;s facing direction. </para>
+</listitem>
+            <listitem><para>float <link linkend="_class_movement_1a7c590f7eff8f8f553a0862007f1195f4">rotateSpeed</link></para>
+
+<para>The rotate speed of the host object toward the camera&apos;s facing direction. </para>
+</listitem>
+            <listitem><para>GameObject <link linkend="_class_movement_1aaeafd31432f293269f16e4accb19a0b6">charCameraEntity</link></para>
+
+<para>The camera entity that the host entity is facing toward. </para>
+</listitem>
+            <listitem><para>List&lt; Transform &gt; <link linkend="_class_movement_1a1b0dfbfa22a2ac11a60583d365cd8c49">checkGroundsList</link></para>
+
+<para>The list of points which is needed to know whether the host object is airborned or not. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_movement_1adb0c2b1365bd3c6214946c76136a3116">moveForward</link> = 0</para>
+
+<para>cached the forward value in the Move function </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_movement_1ab96b4f05db69348433e6802732759e15">moveSide</link> = 0</para>
+
+<para>cached the side value in the Move function </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_movement_1a5f34d7479aeee7ced2e2d5e5d1953975">jumpSignal</link> = false</para>
+
+<para>cached the jump signal in the Signal Jump function </para>
+</listitem>
+            <listitem><para>float <link linkend="_class_movement_1ad1351d483ed6f55ea02d1e1e8a4e1f41">speedReductionWhileAirborne</link></para>
+
+<para>The percentage of movement speed reduction while the host object is airborned. </para>
+</listitem>
+            <listitem><para>Transform <link linkend="_class_movement_1ae627ac9640050f425e9645febd491784">targetTransform</link> = null</para>
+
+<para>Cached transform of the host object. </para>
+</listitem>
+            <listitem><para>float <link linkend="_class_movement_1a68a60ec3ebb1dedcb3a224a758532b33">distToGround</link></para>
+
+<para>The distance from the center of the host object to its y boundary. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This class handle all movement related behaviors in 3D The host object (mentioned in blow) is the object which this script will perform its functions on . </para>
+
+
+
+<para>!&#8211; The host object is not necessary be the parent gameobject of the script.!&#8211; </para>
+<para>
+Definition at line 10 of file Movement.cs.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_movement_1a9687a887cb7ae16793f2fdc42d00d11c"/>    <section>
+    <title>FixedUpdate()</title>
+<indexterm><primary>FixedUpdate</primary><secondary>Movement</secondary></indexterm>
+<indexterm><primary>Movement</primary><secondary>FixedUpdate</secondary></indexterm>
+<para><computeroutput>void Movement.FixedUpdate ( )<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 154 of file Movement.cs.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_movement_a9687a887cb7ae16793f2fdc42d00d11c_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_movement_1aa48b6d3425dafaeef32461ba63a7fd13"/>    <section>
+    <title>Initalize()</title>
+<indexterm><primary>Initalize</primary><secondary>Movement</secondary></indexterm>
+<indexterm><primary>Movement</primary><secondary>Initalize</secondary></indexterm>
+<para><computeroutput>void Movement.Initalize ( )<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Initalize all the cached variables. </para>
+</para>
+<para>
+Definition at line 65 of file Movement.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_movement_aa48b6d3425dafaeef32461ba63a7fd13_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_movement_1ae07aa4fe92b07c78cb87ee057d704e1f"/>    <section>
+    <title>IsTouchingGround()</title>
+<indexterm><primary>IsTouchingGround</primary><secondary>Movement</secondary></indexterm>
+<indexterm><primary>Movement</primary><secondary>IsTouchingGround</secondary></indexterm>
+<para><computeroutput>bool Movement.IsTouchingGround ( )</computeroutput></para><para>
+
+<para>Check whether the rigid body of the host object is touching the ground by raycasting from the list of points (checkGroundsList) </para>
+</para>
+<para>
+Definition at line 197 of file Movement.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_movement_ae07aa4fe92b07c78cb87ee057d704e1f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_movement_1a5da7e0919d0a3391146e9e14f9e45035"/>    <section>
+    <title>Jump()</title>
+<indexterm><primary>Jump</primary><secondary>Movement</secondary></indexterm>
+<indexterm><primary>Movement</primary><secondary>Jump</secondary></indexterm>
+<para><computeroutput>void Movement.Jump ( )<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Perform the jumping action by adding an impulse force to the host&apos;s rigid body according to its up direction. </para>
+</para>
+
+<para>!&#8211; </para>
+<para>
+Definition at line 190 of file Movement.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_movement_a5da7e0919d0a3391146e9e14f9e45035_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_movement_1a8ff6031ad6e03730fbe2cae1ab8c21de"/>    <section>
+    <title>Move()</title>
+<indexterm><primary>Move</primary><secondary>Movement</secondary></indexterm>
+<indexterm><primary>Movement</primary><secondary>Move</secondary></indexterm>
+<para><computeroutput>override void Movement.Move (float forward, float side)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>This function received the player&apos;s inputs (forward and side) then saved them to be processed in the next fixed update. </para>
+</para>
+
+<para>If shouldMoveTowardCameraDirection is true then it will rotate the host game object toward the camera&apos;s faciing direction first. 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>fordward</entry>
+                                <entry>
+<para>is how much the host game object should move forward and backward </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>side</entry>
+                                <entry>
+<para>is how much the host game object should move sideway </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_class_i_movement_1abeb4f7bb7a84ba21041dd4ac88081f23">IMovement</link>.</para>
+<para>
+Definition at line 77 of file Movement.cs.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_movement_a8ff6031ad6e03730fbe2cae1ab8c21de_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_movement_1a905b8f5912002eda95b1c42849a99d20"/>    <section>
+    <title>ProcessMovement()</title>
+<indexterm><primary>ProcessMovement</primary><secondary>Movement</secondary></indexterm>
+<indexterm><primary>Movement</primary><secondary>ProcessMovement</secondary></indexterm>
+<para><computeroutput>void Movement.ProcessMovement ( )<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>This function process the movement of the host object according to the forward, side and jump inputs The movement speed is also changed if the host object is airborned. </para>
+</para>
+<para>
+Definition at line 162 of file Movement.cs.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_movement_a905b8f5912002eda95b1c42849a99d20_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_movement_a905b8f5912002eda95b1c42849a99d20_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_movement_1a0f3cb0f99b816ba52592d87bb74e6f14"/>    <section>
+    <title>RotateTowardCameraDirection()</title>
+<indexterm><primary>RotateTowardCameraDirection</primary><secondary>Movement</secondary></indexterm>
+<indexterm><primary>Movement</primary><secondary>RotateTowardCameraDirection</secondary></indexterm>
+<para><computeroutput>void Movement.RotateTowardCameraDirection (float forward, float side)<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Rotate the host game object toward the camera entity&apos;s facing direction. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>fordward</entry>
+                                <entry>
+<para>is how much the host game object should move forward and backward </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>side</entry>
+                                <entry>
+<para>is how much the host game object should move sideway </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 109 of file Movement.cs.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_movement_a0f3cb0f99b816ba52592d87bb74e6f14_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_movement_a0f3cb0f99b816ba52592d87bb74e6f14_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_movement_1a24a35054a243546e8d3318927034423a"/>    <section>
+    <title>SignalJump()</title>
+<indexterm><primary>SignalJump</primary><secondary>Movement</secondary></indexterm>
+<indexterm><primary>Movement</primary><secondary>SignalJump</secondary></indexterm>
+<para><computeroutput>override void Movement.SignalJump ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>This function will signal the target object to jump in the next FixedUpdate. </para>
+</para>
+<para>
+Implements <link linkend="_class_i_movement_1a2d47acb7fe566d1301ac90efd48772b9">IMovement</link>.</para>
+<para>
+Definition at line 122 of file Movement.cs.</para>
+    </section><anchor xml:id="_class_movement_1a5382914e6da64dbf89460062fdb4a08a"/>    <section>
+    <title>Start()</title>
+<indexterm><primary>Start</primary><secondary>Movement</secondary></indexterm>
+<indexterm><primary>Movement</primary><secondary>Start</secondary></indexterm>
+<para><computeroutput>void Movement.Start ( )<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 58 of file Movement.cs.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_movement_a5382914e6da64dbf89460062fdb4a08a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_movement_1a5f4a7ab8b5ed85d47eda043b6a1d19be"/>    <section>
+    <title>Step()</title>
+<indexterm><primary>Step</primary><secondary>Movement</secondary></indexterm>
+<indexterm><primary>Movement</primary><secondary>Step</secondary></indexterm>
+<para><computeroutput>void Movement.Step (float speed, int forward, int side, bool isAirborne)<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>This function move the host object according to the forward and side inputs of the player. </para>
+</para>
+
+<para>The movement is performed by manipulating the velocity property of the rigidbody. The speed of the movement is reduced if the host object is airborned. 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>speed</entry>
+                                <entry>
+<para>is the desired movement speed for the host object. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>forward</entry>
+                                <entry>
+<para>is how much the player need to move forward or backward. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>side</entry>
+                                <entry>
+<para>is how much the player need to move sideway. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>isAirborne</entry>
+                                <entry>
+<para>is whether the host object is in the air or not. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 135 of file Movement.cs.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_movement_a5f4a7ab8b5ed85d47eda043b6a1d19be_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_movement_a5f4a7ab8b5ed85d47eda043b6a1d19be_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_movement_1aaeafd31432f293269f16e4accb19a0b6"/>    <section>
+    <title>charCameraEntity</title>
+<indexterm><primary>charCameraEntity</primary><secondary>Movement</secondary></indexterm>
+<indexterm><primary>Movement</primary><secondary>charCameraEntity</secondary></indexterm>
+<para><computeroutput>GameObject Movement.charCameraEntity<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>The camera entity that the host entity is facing toward. </para>
+</para>
+
+<para>!&#8211; Needed to be assigned in the unity editor if shouldMoveTowardCameraDirection is true </para>
+<para>
+Definition at line 35 of file Movement.cs.</para>
+    </section><anchor xml:id="_class_movement_1a1b0dfbfa22a2ac11a60583d365cd8c49"/>    <section>
+    <title>checkGroundsList</title>
+<indexterm><primary>checkGroundsList</primary><secondary>Movement</secondary></indexterm>
+<indexterm><primary>Movement</primary><secondary>checkGroundsList</secondary></indexterm>
+<para><computeroutput>List&lt;Transform&gt; Movement.checkGroundsList<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>The list of points which is needed to know whether the host object is airborned or not. </para>
+</para>
+<para>
+Definition at line 40 of file Movement.cs.</para>
+    </section><anchor xml:id="_class_movement_1a68a60ec3ebb1dedcb3a224a758532b33"/>    <section>
+    <title>distToGround</title>
+<indexterm><primary>distToGround</primary><secondary>Movement</secondary></indexterm>
+<indexterm><primary>Movement</primary><secondary>distToGround</secondary></indexterm>
+<para><computeroutput>float Movement.distToGround<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>The distance from the center of the host object to its y boundary. </para>
+</para>
+<para>
+Definition at line 55 of file Movement.cs.</para>
+    </section><anchor xml:id="_class_movement_1a5f34d7479aeee7ced2e2d5e5d1953975"/>    <section>
+    <title>jumpSignal</title>
+<indexterm><primary>jumpSignal</primary><secondary>Movement</secondary></indexterm>
+<indexterm><primary>Movement</primary><secondary>jumpSignal</secondary></indexterm>
+<para><computeroutput>bool Movement.jumpSignal = false<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>cached the jump signal in the Signal Jump function </para>
+</para>
+<para>
+Definition at line 47 of file Movement.cs.</para>
+    </section><anchor xml:id="_class_movement_1adb0c2b1365bd3c6214946c76136a3116"/>    <section>
+    <title>moveForward</title>
+<indexterm><primary>moveForward</primary><secondary>Movement</secondary></indexterm>
+<indexterm><primary>Movement</primary><secondary>moveForward</secondary></indexterm>
+<para><computeroutput>int Movement.moveForward = 0<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>cached the forward value in the Move function </para>
+</para>
+<para>
+Definition at line 43 of file Movement.cs.</para>
+    </section><anchor xml:id="_class_movement_1ab96b4f05db69348433e6802732759e15"/>    <section>
+    <title>moveSide</title>
+<indexterm><primary>moveSide</primary><secondary>Movement</secondary></indexterm>
+<indexterm><primary>Movement</primary><secondary>moveSide</secondary></indexterm>
+<para><computeroutput>int Movement.moveSide = 0<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>cached the side value in the Move function </para>
+</para>
+<para>
+Definition at line 45 of file Movement.cs.</para>
+    </section><anchor xml:id="_class_movement_1a7c590f7eff8f8f553a0862007f1195f4"/>    <section>
+    <title>rotateSpeed</title>
+<indexterm><primary>rotateSpeed</primary><secondary>Movement</secondary></indexterm>
+<indexterm><primary>Movement</primary><secondary>rotateSpeed</secondary></indexterm>
+<para><computeroutput>float Movement.rotateSpeed<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>The rotate speed of the host object toward the camera&apos;s facing direction. </para>
+</para>
+
+<para>!&#8211; Not needed if shouldMoveTowardCameraDirection is false </para>
+<para>
+Definition at line 29 of file Movement.cs.</para>
+    </section><anchor xml:id="_class_movement_1a290c56cad0392b795a2c331a763a2804"/>    <section>
+    <title>shouldMoveTowardCameraDirection</title>
+<indexterm><primary>shouldMoveTowardCameraDirection</primary><secondary>Movement</secondary></indexterm>
+<indexterm><primary>Movement</primary><secondary>shouldMoveTowardCameraDirection</secondary></indexterm>
+<para><computeroutput>bool Movement.shouldMoveTowardCameraDirection<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Decide if the host object should move foward accodring the camera&apos;s facing direction. </para>
+</para>
+
+<para>!&#8211; Instead of move forward according to its own facing direction </para>
+<para>
+Definition at line 23 of file Movement.cs.</para>
+    </section><anchor xml:id="_class_movement_1ad1351d483ed6f55ea02d1e1e8a4e1f41"/>    <section>
+    <title>speedReductionWhileAirborne</title>
+<indexterm><primary>speedReductionWhileAirborne</primary><secondary>Movement</secondary></indexterm>
+<indexterm><primary>Movement</primary><secondary>speedReductionWhileAirborne</secondary></indexterm>
+<para><computeroutput>float Movement.speedReductionWhileAirborne<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>The percentage of movement speed reduction while the host object is airborned. </para>
+</para>
+<para>
+Definition at line 51 of file Movement.cs.</para>
+    </section><anchor xml:id="_class_movement_1a41c26e56e3fb18f58703cb29f324c3aa"/>    <section>
+    <title>targetRigidBody</title>
+<indexterm><primary>targetRigidBody</primary><secondary>Movement</secondary></indexterm>
+<indexterm><primary>Movement</primary><secondary>targetRigidBody</secondary></indexterm>
+<para><computeroutput>Rigidbody Movement.targetRigidBody = null<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>The rigid body of the host object. </para>
+</para>
+
+<para>!&#8211; Needed to be assigned in the unity editor </para>
+<para>
+Definition at line 17 of file Movement.cs.</para>
+    </section><anchor xml:id="_class_movement_1ae627ac9640050f425e9645febd491784"/>    <section>
+    <title>targetTransform</title>
+<indexterm><primary>targetTransform</primary><secondary>Movement</secondary></indexterm>
+<indexterm><primary>Movement</primary><secondary>targetTransform</secondary></indexterm>
+<para><computeroutput>Transform Movement.targetTransform = null<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Cached transform of the host object. </para>
+</para>
+<para>
+Definition at line 53 of file Movement.cs.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Assets/Scripts/3D/Movement/<link linkend="__movement_8cs">Movement.cs</link></section>
+</section>

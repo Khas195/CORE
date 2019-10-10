@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_camera_zoom">
+<title>CameraZoom Class Reference</title>
+<indexterm><primary>CameraZoom</primary></indexterm>
+Inheritance diagram for CameraZoom:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_camera_zoom__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for CameraZoom:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_camera_zoom__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_camera_zoom_1a6cb710e441b19e986f514dc9a4d873a6">Clear</link> (bool clearPlayer)</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_camera_zoom_1aa4c5acb9ea3803e87c938fe8deb639a6">GetMaxZoom</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_camera_zoom_1a6a6d2e2b57d12d711d506edf83c15505">SetMaxZoom</link> (float newMaxZoom)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_camera_zoom_1a1ab31573320b1ed6307ff28069154378">AddEncapsolateObject</link> (Transform obj)</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_camera_zoom_1aaaef9d33a52ab1108cc8763b888e4f33">GetFollowPercentage</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_camera_zoom_1acd663317667d93c079e882ff2b77cb61">SetFollowPercentage</link> (float zoomFollowPercentage)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_camera_zoom_1ab5bd1ecf04a7452ec64f55379a4050ce">Start</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_camera_zoom_1a60f7073f8331c718d14cd692cbf9b982">FixedUpdate</link> ()</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_camera_zoom_1ae9ab6d82de369c1b7ed4f4f33fb78b64">GetGreatestDistance</link> (List&lt; Transform &gt; <link linkend="_class_camera_zoom_1a7f89ef134e9ca7cedc95ea38e19c49ba">encapsulatedTargets</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Camera <link linkend="_class_camera_zoom_1a6d459c51144f11adac8c426c2af12c2a">host</link> = null</para>
+</listitem>
+            <listitem><para>List&lt; Transform &gt; <link linkend="_class_camera_zoom_1a7f89ef134e9ca7cedc95ea38e19c49ba">encapsulatedTargets</link> = new List&lt;Transform&gt;()</para>
+</listitem>
+            <listitem><para>Transform <link linkend="_class_camera_zoom_1aa9fef0a16ac5b5301be307fe9ad73308">character</link> = null</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_camera_zoom_1a8f97e56b8f9ee759a4e83a62b49feda8">minZoom</link> = 0</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_camera_zoom_1abb4f06ca11d71cd452a556093c686d25">maxZoom</link> = 1</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_camera_zoom_1a8025847768e405c0a61a73888484c182">followPercentage</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 6 of file CameraZoom.cs.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_camera_zoom_1a1ab31573320b1ed6307ff28069154378"/>    <section>
+    <title>AddEncapsolateObject()</title>
+<indexterm><primary>AddEncapsolateObject</primary><secondary>CameraZoom</secondary></indexterm>
+<indexterm><primary>CameraZoom</primary><secondary>AddEncapsolateObject</secondary></indexterm>
+<para><computeroutput>void CameraZoom.AddEncapsolateObject (Transform obj)</computeroutput></para><para>
+Definition at line 56 of file CameraZoom.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_camera_zoom_a1ab31573320b1ed6307ff28069154378_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_camera_zoom_1a6cb710e441b19e986f514dc9a4d873a6"/>    <section>
+    <title>Clear()</title>
+<indexterm><primary>Clear</primary><secondary>CameraZoom</secondary></indexterm>
+<indexterm><primary>CameraZoom</primary><secondary>Clear</secondary></indexterm>
+<para><computeroutput>void CameraZoom.Clear (bool clearPlayer)</computeroutput></para><para>
+Definition at line 38 of file CameraZoom.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_camera_zoom_a6cb710e441b19e986f514dc9a4d873a6_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_camera_zoom_1a60f7073f8331c718d14cd692cbf9b982"/>    <section>
+    <title>FixedUpdate()</title>
+<indexterm><primary>FixedUpdate</primary><secondary>CameraZoom</secondary></indexterm>
+<indexterm><primary>CameraZoom</primary><secondary>FixedUpdate</secondary></indexterm>
+<para><computeroutput>void CameraZoom.FixedUpdate ( )<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 30 of file CameraZoom.cs.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_camera_zoom_a60f7073f8331c718d14cd692cbf9b982_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_camera_zoom_1aaaef9d33a52ab1108cc8763b888e4f33"/>    <section>
+    <title>GetFollowPercentage()</title>
+<indexterm><primary>GetFollowPercentage</primary><secondary>CameraZoom</secondary></indexterm>
+<indexterm><primary>CameraZoom</primary><secondary>GetFollowPercentage</secondary></indexterm>
+<para><computeroutput>float CameraZoom.GetFollowPercentage ( )</computeroutput></para><para>
+Definition at line 61 of file CameraZoom.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_camera_zoom_aaaef9d33a52ab1108cc8763b888e4f33_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_camera_zoom_1ae9ab6d82de369c1b7ed4f4f33fb78b64"/>    <section>
+    <title>GetGreatestDistance()</title>
+<indexterm><primary>GetGreatestDistance</primary><secondary>CameraZoom</secondary></indexterm>
+<indexterm><primary>CameraZoom</primary><secondary>GetGreatestDistance</secondary></indexterm>
+<para><computeroutput>float CameraZoom.GetGreatestDistance (List&lt; Transform &gt; encapsulatedTargets)<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 66 of file CameraZoom.cs.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_camera_zoom_ae9ab6d82de369c1b7ed4f4f33fb78b64_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_camera_zoom_ae9ab6d82de369c1b7ed4f4f33fb78b64_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_camera_zoom_1aa4c5acb9ea3803e87c938fe8deb639a6"/>    <section>
+    <title>GetMaxZoom()</title>
+<indexterm><primary>GetMaxZoom</primary><secondary>CameraZoom</secondary></indexterm>
+<indexterm><primary>CameraZoom</primary><secondary>GetMaxZoom</secondary></indexterm>
+<para><computeroutput>float CameraZoom.GetMaxZoom ( )</computeroutput></para><para>
+Definition at line 46 of file CameraZoom.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_camera_zoom_aa4c5acb9ea3803e87c938fe8deb639a6_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_camera_zoom_1acd663317667d93c079e882ff2b77cb61"/>    <section>
+    <title>SetFollowPercentage()</title>
+<indexterm><primary>SetFollowPercentage</primary><secondary>CameraZoom</secondary></indexterm>
+<indexterm><primary>CameraZoom</primary><secondary>SetFollowPercentage</secondary></indexterm>
+<para><computeroutput>void CameraZoom.SetFollowPercentage (float zoomFollowPercentage)</computeroutput></para><para>
+Definition at line 81 of file CameraZoom.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_camera_zoom_acd663317667d93c079e882ff2b77cb61_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_camera_zoom_1a6a6d2e2b57d12d711d506edf83c15505"/>    <section>
+    <title>SetMaxZoom()</title>
+<indexterm><primary>SetMaxZoom</primary><secondary>CameraZoom</secondary></indexterm>
+<indexterm><primary>CameraZoom</primary><secondary>SetMaxZoom</secondary></indexterm>
+<para><computeroutput>void CameraZoom.SetMaxZoom (float newMaxZoom)</computeroutput></para><para>
+Definition at line 51 of file CameraZoom.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_camera_zoom_a6a6d2e2b57d12d711d506edf83c15505_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_camera_zoom_1ab5bd1ecf04a7452ec64f55379a4050ce"/>    <section>
+    <title>Start()</title>
+<indexterm><primary>Start</primary><secondary>CameraZoom</secondary></indexterm>
+<indexterm><primary>CameraZoom</primary><secondary>Start</secondary></indexterm>
+<para><computeroutput>void CameraZoom.Start ( )<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 24 of file CameraZoom.cs.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_camera_zoom_1aa9fef0a16ac5b5301be307fe9ad73308"/>    <section>
+    <title>character</title>
+<indexterm><primary>character</primary><secondary>CameraZoom</secondary></indexterm>
+<indexterm><primary>CameraZoom</primary><secondary>character</secondary></indexterm>
+<para><computeroutput>Transform CameraZoom.character = null<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 13 of file CameraZoom.cs.</para>
+    </section><anchor xml:id="_class_camera_zoom_1a7f89ef134e9ca7cedc95ea38e19c49ba"/>    <section>
+    <title>encapsulatedTargets</title>
+<indexterm><primary>encapsulatedTargets</primary><secondary>CameraZoom</secondary></indexterm>
+<indexterm><primary>CameraZoom</primary><secondary>encapsulatedTargets</secondary></indexterm>
+<para><computeroutput>List&lt;Transform&gt; CameraZoom.encapsulatedTargets = new List&lt;Transform&gt;()<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 11 of file CameraZoom.cs.</para>
+    </section><anchor xml:id="_class_camera_zoom_1a8025847768e405c0a61a73888484c182"/>    <section>
+    <title>followPercentage</title>
+<indexterm><primary>followPercentage</primary><secondary>CameraZoom</secondary></indexterm>
+<indexterm><primary>CameraZoom</primary><secondary>followPercentage</secondary></indexterm>
+<para><computeroutput>float CameraZoom.followPercentage<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 21 of file CameraZoom.cs.</para>
+    </section><anchor xml:id="_class_camera_zoom_1a6d459c51144f11adac8c426c2af12c2a"/>    <section>
+    <title>host</title>
+<indexterm><primary>host</primary><secondary>CameraZoom</secondary></indexterm>
+<indexterm><primary>CameraZoom</primary><secondary>host</secondary></indexterm>
+<para><computeroutput>Camera CameraZoom.host = null<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 9 of file CameraZoom.cs.</para>
+    </section><anchor xml:id="_class_camera_zoom_1abb4f06ca11d71cd452a556093c686d25"/>    <section>
+    <title>maxZoom</title>
+<indexterm><primary>maxZoom</primary><secondary>CameraZoom</secondary></indexterm>
+<indexterm><primary>CameraZoom</primary><secondary>maxZoom</secondary></indexterm>
+<para><computeroutput>float CameraZoom.maxZoom = 1<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 18 of file CameraZoom.cs.</para>
+    </section><anchor xml:id="_class_camera_zoom_1a8f97e56b8f9ee759a4e83a62b49feda8"/>    <section>
+    <title>minZoom</title>
+<indexterm><primary>minZoom</primary><secondary>CameraZoom</secondary></indexterm>
+<indexterm><primary>CameraZoom</primary><secondary>minZoom</secondary></indexterm>
+<para><computeroutput>float CameraZoom.minZoom = 0<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 16 of file CameraZoom.cs.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Assets/Scripts/2D/Camera2D/<link linkend="__camera_zoom_8cs">CameraZoom.cs</link></section>
+</section>

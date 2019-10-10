@@ -1,0 +1,5 @@
+<map id="Movement.Step" name="Movement.Step">
+<area shape="rect" id="node1" title="This function move the host object according to the forward and side inputs of the player." alt="" coords="452,5,564,32"/>
+<area shape="rect" id="node2" href="$class_movement.html#a905b8f5912002eda95b1c42849a99d20" title="This function process the movement of the host object according to the forward, side and jump inputs ..." alt="" coords="212,5,404,32"/>
+<area shape="rect" id="node3" href="$class_movement.html#a9687a887cb7ae16793f2fdc42d00d11c" title=" " alt="" coords="5,5,164,32"/>
+</map>

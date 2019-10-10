@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_i_movement">
+<title>IMovement Class Reference</title>
+<indexterm><primary>IMovement</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_i_movement">IMovement</link> interface acts as a generalization of all type of movements in the game. </para>
+ 
+</para>
+Inheritance diagram for IMovement:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_i_movement__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for IMovement:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_i_movement__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_i_movement_1a27174271007699a25c49af4a4ee50c40">MovementMode</link> { <link linkend="_class_i_movement_1a27174271007699a25c49af4a4ee50c40a7a16a854f32231a8df9326136b09ee62">MovementMode.Walk</link>, 
+<link linkend="_class_i_movement_1a27174271007699a25c49af4a4ee50c40ac5301693c4e792bcd5a479ef38fb8f8d">MovementMode.Run</link>
+ }</para>
+
+<para>Different types of movement mode in the game. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>abstract void <link linkend="_class_i_movement_1abeb4f7bb7a84ba21041dd4ac88081f23">Move</link> (float forward, float side)</para>
+
+<para>All movements actions should be handle in this function. </para>
+</listitem>
+            <listitem><para>abstract void <link linkend="_class_i_movement_1a2d47acb7fe566d1301ac90efd48772b9">SignalJump</link> ()</para>
+
+<para>Signaled that the jump command had been called. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_i_movement_1a6c04585e3e788c0b308cb00f61cdb295">SetMovementMode</link> (<link linkend="_class_i_movement_1a27174271007699a25c49af4a4ee50c40">MovementMode</link> newMode)</para>
+
+<para>Set the current movement mode. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>float <link linkend="_class_i_movement_1a9cbf026ffe723f7d41166c64da9ce157">GetSpeedBasedOnMode</link> ()</para>
+
+<para>Get the correspondence speed in the data container(MovementData) based on the currnt movement mode. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_movement_data">MovementData</link> <link linkend="_class_i_movement_1a67ec344a60681000b657db752bc21971">data</link> = null</para>
+
+<para>The container for all movement related data. </para>
+</listitem>
+            <listitem><para><link linkend="_class_i_movement_1a27174271007699a25c49af4a4ee50c40">MovementMode</link> <link linkend="_class_i_movement_1afff2a26f0dcb004ae43cb293decdab18">moveMode</link> = <link linkend="_class_i_movement_1a27174271007699a25c49af4a4ee50c40a7a16a854f32231a8df9326136b09ee62">MovementMode.Walk</link></para>
+
+<para>The current movement mode. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_i_movement">IMovement</link> interface acts as a generalization of all type of movements in the game. </para>
+
+
+
+<para>!&#8211; It is used by the Player controller to move the target gameobject </para>
+<para>
+Definition at line 6 of file IMovement.cs.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_i_movement_1a27174271007699a25c49af4a4ee50c40"/>    <section>
+    <title>MovementMode</title>
+<indexterm><primary>MovementMode</primary><secondary>IMovement</secondary></indexterm>
+<indexterm><primary>IMovement</primary><secondary>MovementMode</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_i_movement_1a27174271007699a25c49af4a4ee50c40">IMovement.MovementMode</link><computeroutput>[strong]</computeroutput></computeroutput></para><para>
+
+<para>Different types of movement mode in the game. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>Walk</primary><secondary>IMovement</secondary></indexterm>
+<indexterm><primary>IMovement</primary><secondary>Walk</secondary></indexterm>
+<anchor xml:id="_class_i_movement_1a27174271007699a25c49af4a4ee50c40a7a16a854f32231a8df9326136b09ee62"/>Walk</entry><entry></entry></row><row><entry><indexterm><primary>Run</primary><secondary>IMovement</secondary></indexterm>
+<indexterm><primary>IMovement</primary><secondary>Run</secondary></indexterm>
+<anchor xml:id="_class_i_movement_1a27174271007699a25c49af4a4ee50c40ac5301693c4e792bcd5a479ef38fb8f8d"/>Run</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line 11 of file IMovement.cs.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_i_movement_1a9cbf026ffe723f7d41166c64da9ce157"/>    <section>
+    <title>GetSpeedBasedOnMode()</title>
+<indexterm><primary>GetSpeedBasedOnMode</primary><secondary>IMovement</secondary></indexterm>
+<indexterm><primary>IMovement</primary><secondary>GetSpeedBasedOnMode</secondary></indexterm>
+<para><computeroutput>float IMovement.GetSpeedBasedOnMode ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Get the correspondence speed in the data container(MovementData) based on the currnt movement mode. </para>
+</para>
+<para>
+Definition at line 33 of file IMovement.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_i_movement_a9cbf026ffe723f7d41166c64da9ce157_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_i_movement_1abeb4f7bb7a84ba21041dd4ac88081f23"/>    <section>
+    <title>Move()</title>
+<indexterm><primary>Move</primary><secondary>IMovement</secondary></indexterm>
+<indexterm><primary>IMovement</primary><secondary>Move</secondary></indexterm>
+<para><computeroutput>abstract void IMovement.Move (float forward, float side)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>All movements actions should be handle in this function. </para>
+</para>
+<para>
+Implemented in <link linkend="_class_movement_1a8ff6031ad6e03730fbe2cae1ab8c21de">Movement</link>, <link linkend="_class_movement_root_motion_1a0f3c41856efec842d5f28375b18b24de">MovementRootMotion</link>, and <link linkend="_class_movement2_d_1aea00f7aee904a57de7b8679208265ce8">Movement2D</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_i_movement_abeb4f7bb7a84ba21041dd4ac88081f23_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_i_movement_1a6c04585e3e788c0b308cb00f61cdb295"/>    <section>
+    <title>SetMovementMode()</title>
+<indexterm><primary>SetMovementMode</primary><secondary>IMovement</secondary></indexterm>
+<indexterm><primary>IMovement</primary><secondary>SetMovementMode</secondary></indexterm>
+<para><computeroutput>void IMovement.SetMovementMode (<link linkend="_class_i_movement_1a27174271007699a25c49af4a4ee50c40">MovementMode</link> newMode)</computeroutput></para><para>
+
+<para>Set the current movement mode. </para>
+</para>
+<para>
+Definition at line 26 of file IMovement.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_i_movement_a6c04585e3e788c0b308cb00f61cdb295_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_i_movement_1a2d47acb7fe566d1301ac90efd48772b9"/>    <section>
+    <title>SignalJump()</title>
+<indexterm><primary>SignalJump</primary><secondary>IMovement</secondary></indexterm>
+<indexterm><primary>IMovement</primary><secondary>SignalJump</secondary></indexterm>
+<para><computeroutput>abstract void IMovement.SignalJump ( )<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Signaled that the jump command had been called. </para>
+</para>
+<para>
+Implemented in <link linkend="_class_movement_1a24a35054a243546e8d3318927034423a">Movement</link>, <link linkend="_class_movement2_d_1ad644849dbe54e82815ee2a4bca79756e">Movement2D</link>, and <link linkend="_class_movement_root_motion_1a5eeadefa1382d44fb403377d5d46f332">MovementRootMotion</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_i_movement_a2d47acb7fe566d1301ac90efd48772b9_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_i_movement_1a67ec344a60681000b657db752bc21971"/>    <section>
+    <title>data</title>
+<indexterm><primary>data</primary><secondary>IMovement</secondary></indexterm>
+<indexterm><primary>IMovement</primary><secondary>data</secondary></indexterm>
+<para><computeroutput><link linkend="_class_movement_data">MovementData</link> IMovement.data = null<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>The container for all movement related data. </para>
+</para>
+<para>
+Definition at line 18 of file IMovement.cs.</para>
+    </section><anchor xml:id="_class_i_movement_1afff2a26f0dcb004ae43cb293decdab18"/>    <section>
+    <title>moveMode</title>
+<indexterm><primary>moveMode</primary><secondary>IMovement</secondary></indexterm>
+<indexterm><primary>IMovement</primary><secondary>moveMode</secondary></indexterm>
+<para><computeroutput><link linkend="_class_i_movement_1a27174271007699a25c49af4a4ee50c40">MovementMode</link> IMovement.moveMode = <link linkend="_class_i_movement_1a27174271007699a25c49af4a4ee50c40a7a16a854f32231a8df9326136b09ee62">MovementMode.Walk</link><computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>The current movement mode. </para>
+</para>
+<para>
+Definition at line 20 of file IMovement.cs.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Assets/Scripts/Interfaces/<link linkend="__i_movement_8cs">IMovement.cs</link></section>
+</section>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_e5a5b1a0501f8aa25567a10395b1a7b9">
+<title>Assets/Scripts/Movement Directory Reference</title>
+<indexterm><primary>Assets/Scripts/Movement Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__movement_8cs">Movement.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__movement_root_motion_8cs">MovementRootMotion.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

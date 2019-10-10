@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_front_back_sorting_manager">
+<title>FrontBackSortingManager Class Reference</title>
+<indexterm><primary>FrontBackSortingManager</primary></indexterm>
+Inheritance diagram for FrontBackSortingManager:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_front_back_sorting_manager__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for FrontBackSortingManager:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_front_back_sorting_manager__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_front_back_sorting_manager_1ad6149c84ffb9ead088f8980552b6f98b">Start</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_front_back_sorting_manager_1ac72a83d8b2a826734ce8c023da339f3d">Update</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>List&lt; <link linkend="_class_i_front_back_sorting">IFrontBackSorting</link> &gt; <link linkend="_class_front_back_sorting_manager_1a1f207cd24751437f114a5b8f91197909">sortingObjects</link> = new List&lt;<link linkend="_class_i_front_back_sorting">IFrontBackSorting</link>&gt;()</para>
+</listitem>
+            <listitem><para>Transform <link linkend="_class_front_back_sorting_manager_1a9f68a490bc7f9e03978efe7cc430c3ab">character</link> = null</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 5 of file FrontBackSortingManager.cs.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_front_back_sorting_manager_1ad6149c84ffb9ead088f8980552b6f98b"/>    <section>
+    <title>Start()</title>
+<indexterm><primary>Start</primary><secondary>FrontBackSortingManager</secondary></indexterm>
+<indexterm><primary>FrontBackSortingManager</primary><secondary>Start</secondary></indexterm>
+<para><computeroutput>void FrontBackSortingManager.Start ( )<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 12 of file FrontBackSortingManager.cs.</para>
+    </section><anchor xml:id="_class_front_back_sorting_manager_1ac72a83d8b2a826734ce8c023da339f3d"/>    <section>
+    <title>Update()</title>
+<indexterm><primary>Update</primary><secondary>FrontBackSortingManager</secondary></indexterm>
+<indexterm><primary>FrontBackSortingManager</primary><secondary>Update</secondary></indexterm>
+<para><computeroutput>void FrontBackSortingManager.Update ( )<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 22 of file FrontBackSortingManager.cs.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_front_back_sorting_manager_1a9f68a490bc7f9e03978efe7cc430c3ab"/>    <section>
+    <title>character</title>
+<indexterm><primary>character</primary><secondary>FrontBackSortingManager</secondary></indexterm>
+<indexterm><primary>FrontBackSortingManager</primary><secondary>character</secondary></indexterm>
+<para><computeroutput>Transform FrontBackSortingManager.character = null<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 10 of file FrontBackSortingManager.cs.</para>
+    </section><anchor xml:id="_class_front_back_sorting_manager_1a1f207cd24751437f114a5b8f91197909"/>    <section>
+    <title>sortingObjects</title>
+<indexterm><primary>sortingObjects</primary><secondary>FrontBackSortingManager</secondary></indexterm>
+<indexterm><primary>FrontBackSortingManager</primary><secondary>sortingObjects</secondary></indexterm>
+<para><computeroutput>List&lt;<link linkend="_class_i_front_back_sorting">IFrontBackSorting</link>&gt; FrontBackSortingManager.sortingObjects = new List&lt;<link linkend="_class_i_front_back_sorting">IFrontBackSorting</link>&gt;()<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 8 of file FrontBackSortingManager.cs.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Assets/Scripts/2D/LayerSorting2D/<link linkend="__front_back_sorting_manager_8cs">FrontBackSortingManager.cs</link></section>
+</section>

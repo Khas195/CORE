@@ -1,41 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/**
+ * This class roate the camera entity based on the motion of the mouse.
+ */
 public class CameraRotateMouse : MonoBehaviour
 {
     [SerializeField]
+    /** Determined the speed of the rotation */
     float sensitivity = 0;
+    /** The limit of which the camera will not rotate */
     [SerializeField]
-    float headUpperLimit = 0;
+    float pitchUpperLimit = 0;
     [SerializeField]
-    float headLowerLimit = 0;
+    /** The limit of which the camera will not rotate */
+    float pitchLowerLimit = 0;
     [SerializeField]
+    /** The pivot of which the script will rotate vertically*/
     Transform pitchPivot = null;
     [SerializeField]
-    Transform yawnPivot = null;
-    float curPitch;
-        // Start is called before the first frame update
-    void Start()
-    {    }
-
-    // Update is called once per frame
+    /** The pivot of which the script will rotate horizontally*/
+    Transform yawPivot = null;
+    /** The current pitch of the pitch pivot*/
+    float pitch = 0f;
+    /** the current yaw of the yaw pivot*/
+    float yaw = 0f;
     void Update()
     {
-        var yawn = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
-        yawnPivot.Rotate(Vector3.up * yawn );
-        var pitch = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
-        curPitch += pitch;
-        if (curPitch > headUpperLimit)
-        {
-            curPitch = headUpperLimit;
-            pitch = 0;
-        } else if (curPitch < headLowerLimit)  {
-            curPitch = headLowerLimit;
-            pitch = 0;
-        }
-        pitchPivot.Rotate(Vector3.left* pitch );
+        RotateYawAndPitch();
+    }
 
-    }  
-    
+    /** 
+     * This function rotate the yaw and pitch pivot accoring to the mouse input
+     */
+    private void RotateYawAndPitch()
+    {
+        yaw += Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
+        pitch -= Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
+        pitch = Mathf.Clamp(pitch, pitchLowerLimit, pitchUpperLimit);
+        yawPivot.localEulerAngles = new Vector3(0f, yaw, 0f);
+        pitchPivot.localEulerAngles = new Vector3(pitch, 0f, 0f);
+    }
 }

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index">
+    <info>
+    <title>Core</title>
+    </info>
+<chapter>
+    <title>Class Documentation</title>
+    <xi:include href="class_area_view.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_camera_follow.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_camera_rotate_mouse.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_camera_zoom.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_constraint_camera.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_definition.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_front_back_sorting.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_front_back_sorting_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_front_back_two_point_sort.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_i_front_back_sorting.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_i_interactable.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_i_movement.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_monologue_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_monologue_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_movement.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_movement2_d.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_movement_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_movement_root_motion.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_on_create_trigger.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_on_player_see_object.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_player_controller.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_state.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_state_stack.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_tweener.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_ultilities.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="_area_view_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_camera_zoom_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_constraint_camera_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_front_back_sorting_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_front_back_sorting_manager_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_front_back_two_point_sort_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_i_front_back_sorting_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_movement2_d_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_camera_rotate_mouse_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_movement_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_movement_root_motion_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_camera_follow_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_monologue_data_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_movement_data_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_definition_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_i_interactable_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_i_movement_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_monologue_manager_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_state_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_state_stack_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_on_player_see_object_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_player_controller_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_r_e_a_d_m_e_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_on_create_trigger_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_tweener_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_ultilities_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

@@ -1,0 +1,5 @@
+<map id="Movement.Jump" name="Movement.Jump">
+<area shape="rect" id="node1" title="Perform the jumping action by adding an impulse force to the host&#39;s rigid body according to its up di..." alt="" coords="452,5,568,32"/>
+<area shape="rect" id="node2" href="$class_movement.html#a905b8f5912002eda95b1c42849a99d20" title="This function process the movement of the host object according to the forward, side and jump inputs ..." alt="" coords="212,5,404,32"/>
+<area shape="rect" id="node3" href="$class_movement.html#a9687a887cb7ae16793f2fdc42d00d11c" title=" " alt="" coords="5,5,164,32"/>
+</map>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_on_player_see_object">
+<title>OnPlayerSeeObject Class Reference</title>
+<indexterm><primary>OnPlayerSeeObject</primary></indexterm>
+Inheritance diagram for OnPlayerSeeObject:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_on_player_see_object__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for OnPlayerSeeObject:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_on_player_see_object__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 4 of file OnPlayerSeeObject.cs.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+Assets/Scripts/Player/<link linkend="__on_player_see_object_8cs">OnPlayerSeeObject.cs</link></section>
+</section>

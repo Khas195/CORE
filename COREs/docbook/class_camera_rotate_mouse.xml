@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_camera_rotate_mouse">
+<title>CameraRotateMouse Class Reference</title>
+<indexterm><primary>CameraRotateMouse</primary></indexterm>
+<para>
+
+<para>This class roate the camera entity based on the motion of the mouse. </para>
+ 
+</para>
+Inheritance diagram for CameraRotateMouse:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_camera_rotate_mouse__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for CameraRotateMouse:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_camera_rotate_mouse__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_camera_rotate_mouse_1aca7afbcc2c4ad7382189208144002439">Update</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_camera_rotate_mouse_1a3997817baeecd83148f3eb3d17df47d8">RotateYawAndPitch</link> ()</para>
+
+<para>This function rotate the yaw and pitch pivot accoring to the mouse input. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>float <link linkend="_class_camera_rotate_mouse_1a7bedbc8e73f8edccbd885842dfb3aa74">sensitivity</link> = 0</para>
+
+<para>Determined the speed of the rotation. </para>
+</listitem>
+            <listitem><para>float <link linkend="_class_camera_rotate_mouse_1ae231073158cf0faf399c364d21521608">pitchUpperLimit</link> = 0</para>
+
+<para>The limit of which the camera will not rotate. </para>
+</listitem>
+            <listitem><para>float <link linkend="_class_camera_rotate_mouse_1ae0d8f15604ffa8c2e857f55790f02f5e">pitchLowerLimit</link> = 0</para>
+
+<para>The limit of which the camera will not rotate. </para>
+</listitem>
+            <listitem><para>Transform <link linkend="_class_camera_rotate_mouse_1a3c8dafb1a541380b7cddfa4aa50e1746">pitchPivot</link> = null</para>
+
+<para>The pivot of which the script will rotate vertically. </para>
+</listitem>
+            <listitem><para>Transform <link linkend="_class_camera_rotate_mouse_1a1489e03f27c0bd2bc53553fa46a804e4">yawPivot</link> = null</para>
+
+<para>The pivot of which the script will rotate horizontally. </para>
+</listitem>
+            <listitem><para>float <link linkend="_class_camera_rotate_mouse_1a55b21b7ec84d3101d323c43cafa22960">pitch</link> = 0f</para>
+
+<para>The current pitch of the pitch pivot. </para>
+</listitem>
+            <listitem><para>float <link linkend="_class_camera_rotate_mouse_1a3d4c8fbc80c5ce1ca35408d27e89b0ab">yaw</link> = 0f</para>
+
+<para>the current yaw of the yaw pivot </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This class roate the camera entity based on the motion of the mouse. </para>
+<para>
+Definition at line 7 of file CameraRotateMouse.cs.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_camera_rotate_mouse_1a3997817baeecd83148f3eb3d17df47d8"/>    <section>
+    <title>RotateYawAndPitch()</title>
+<indexterm><primary>RotateYawAndPitch</primary><secondary>CameraRotateMouse</secondary></indexterm>
+<indexterm><primary>CameraRotateMouse</primary><secondary>RotateYawAndPitch</secondary></indexterm>
+<para><computeroutput>void CameraRotateMouse.RotateYawAndPitch ( )<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>This function rotate the yaw and pitch pivot accoring to the mouse input. </para>
+</para>
+<para>
+Definition at line 36 of file CameraRotateMouse.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_camera_rotate_mouse_a3997817baeecd83148f3eb3d17df47d8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_camera_rotate_mouse_1aca7afbcc2c4ad7382189208144002439"/>    <section>
+    <title>Update()</title>
+<indexterm><primary>Update</primary><secondary>CameraRotateMouse</secondary></indexterm>
+<indexterm><primary>CameraRotateMouse</primary><secondary>Update</secondary></indexterm>
+<para><computeroutput>void CameraRotateMouse.Update ( )<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 28 of file CameraRotateMouse.cs.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_camera_rotate_mouse_aca7afbcc2c4ad7382189208144002439_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_camera_rotate_mouse_1a55b21b7ec84d3101d323c43cafa22960"/>    <section>
+    <title>pitch</title>
+<indexterm><primary>pitch</primary><secondary>CameraRotateMouse</secondary></indexterm>
+<indexterm><primary>CameraRotateMouse</primary><secondary>pitch</secondary></indexterm>
+<para><computeroutput>float CameraRotateMouse.pitch = 0f<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>The current pitch of the pitch pivot. </para>
+</para>
+<para>
+Definition at line 25 of file CameraRotateMouse.cs.</para>
+    </section><anchor xml:id="_class_camera_rotate_mouse_1ae0d8f15604ffa8c2e857f55790f02f5e"/>    <section>
+    <title>pitchLowerLimit</title>
+<indexterm><primary>pitchLowerLimit</primary><secondary>CameraRotateMouse</secondary></indexterm>
+<indexterm><primary>CameraRotateMouse</primary><secondary>pitchLowerLimit</secondary></indexterm>
+<para><computeroutput>float CameraRotateMouse.pitchLowerLimit = 0<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>The limit of which the camera will not rotate. </para>
+</para>
+<para>
+Definition at line 17 of file CameraRotateMouse.cs.</para>
+    </section><anchor xml:id="_class_camera_rotate_mouse_1a3c8dafb1a541380b7cddfa4aa50e1746"/>    <section>
+    <title>pitchPivot</title>
+<indexterm><primary>pitchPivot</primary><secondary>CameraRotateMouse</secondary></indexterm>
+<indexterm><primary>CameraRotateMouse</primary><secondary>pitchPivot</secondary></indexterm>
+<para><computeroutput>Transform CameraRotateMouse.pitchPivot = null<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>The pivot of which the script will rotate vertically. </para>
+</para>
+<para>
+Definition at line 20 of file CameraRotateMouse.cs.</para>
+    </section><anchor xml:id="_class_camera_rotate_mouse_1ae231073158cf0faf399c364d21521608"/>    <section>
+    <title>pitchUpperLimit</title>
+<indexterm><primary>pitchUpperLimit</primary><secondary>CameraRotateMouse</secondary></indexterm>
+<indexterm><primary>CameraRotateMouse</primary><secondary>pitchUpperLimit</secondary></indexterm>
+<para><computeroutput>float CameraRotateMouse.pitchUpperLimit = 0<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>The limit of which the camera will not rotate. </para>
+</para>
+<para>
+Definition at line 14 of file CameraRotateMouse.cs.</para>
+    </section><anchor xml:id="_class_camera_rotate_mouse_1a7bedbc8e73f8edccbd885842dfb3aa74"/>    <section>
+    <title>sensitivity</title>
+<indexterm><primary>sensitivity</primary><secondary>CameraRotateMouse</secondary></indexterm>
+<indexterm><primary>CameraRotateMouse</primary><secondary>sensitivity</secondary></indexterm>
+<para><computeroutput>float CameraRotateMouse.sensitivity = 0<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Determined the speed of the rotation. </para>
+</para>
+<para>
+Definition at line 11 of file CameraRotateMouse.cs.</para>
+    </section><anchor xml:id="_class_camera_rotate_mouse_1a3d4c8fbc80c5ce1ca35408d27e89b0ab"/>    <section>
+    <title>yaw</title>
+<indexterm><primary>yaw</primary><secondary>CameraRotateMouse</secondary></indexterm>
+<indexterm><primary>CameraRotateMouse</primary><secondary>yaw</secondary></indexterm>
+<para><computeroutput>float CameraRotateMouse.yaw = 0f<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>the current yaw of the yaw pivot </para>
+</para>
+<para>
+Definition at line 27 of file CameraRotateMouse.cs.</para>
+    </section><anchor xml:id="_class_camera_rotate_mouse_1a1489e03f27c0bd2bc53553fa46a804e4"/>    <section>
+    <title>yawPivot</title>
+<indexterm><primary>yawPivot</primary><secondary>CameraRotateMouse</secondary></indexterm>
+<indexterm><primary>CameraRotateMouse</primary><secondary>yawPivot</secondary></indexterm>
+<para><computeroutput>Transform CameraRotateMouse.yawPivot = null<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>The pivot of which the script will rotate horizontally. </para>
+</para>
+<para>
+Definition at line 23 of file CameraRotateMouse.cs.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Assets/Scripts/3D/Camera/<link linkend="__camera_rotate_mouse_8cs">CameraRotateMouse.cs</link></section>
+</section>

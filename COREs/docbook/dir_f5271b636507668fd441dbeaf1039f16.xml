@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_f5271b636507668fd441dbeaf1039f16">
+<title>Assets/Scripts/Triggers Directory Reference</title>
+<indexterm><primary>Assets/Scripts/Triggers Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__on_create_trigger_8cs">OnCreateTrigger.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

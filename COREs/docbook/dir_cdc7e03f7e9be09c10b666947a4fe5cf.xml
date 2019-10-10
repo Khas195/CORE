@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_cdc7e03f7e9be09c10b666947a4fe5cf">
+<title>Assets/Scripts/2D/LayerSorting2D Directory Reference</title>
+<indexterm><primary>Assets/Scripts/2D/LayerSorting2D Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__front_back_sorting_8cs">FrontBackSorting.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__front_back_sorting_manager_8cs">FrontBackSortingManager.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__front_back_two_point_sort_8cs">FrontBackTwoPointSort.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__i_front_back_sorting_8cs">IFrontBackSorting.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

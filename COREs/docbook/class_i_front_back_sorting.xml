@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_i_front_back_sorting">
+<title>IFrontBackSorting Class Reference</title>
+<indexterm><primary>IFrontBackSorting</primary></indexterm>
+Inheritance diagram for IFrontBackSorting:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_i_front_back_sorting__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for IFrontBackSorting:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_i_front_back_sorting__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual Vector3 <link linkend="_class_i_front_back_sorting_1adbe37ea0cc860fb42e104118f9d5d53a">HostPosition</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_i_front_back_sorting_1a5d6df14782d89a78ba5e001af5db8c2e">SetHostPosition</link> (Vector3 pos)</para>
+</listitem>
+            <listitem><para>abstract bool <link linkend="_class_i_front_back_sorting_1a6c65584e6e36b38b9637d0caef2e9584">IsAboveCharacter</link> (Vector3 characterPos, Vector3 hostPos)</para>
+</listitem>
+            <listitem><para>abstract bool <link linkend="_class_i_front_back_sorting_1a536050d8c6f539ef2355f7d060405a7d">IsBelowCharacter</link> (Vector3 characterPos, Vector3 hostPos)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Transform <link linkend="_class_i_front_back_sorting_1a9467a90de94948ea2e8d904b4a87c1b7">host</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_i_front_back_sorting_1ad82f49f13560530041f62240a659f0d2">useSelfAsHost</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 4 of file IFrontBackSorting.cs.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_i_front_back_sorting_1adbe37ea0cc860fb42e104118f9d5d53a"/>    <section>
+    <title>HostPosition()</title>
+<indexterm><primary>HostPosition</primary><secondary>IFrontBackSorting</secondary></indexterm>
+<indexterm><primary>IFrontBackSorting</primary><secondary>HostPosition</secondary></indexterm>
+<para><computeroutput>virtual Vector3 IFrontBackSorting.HostPosition ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Definition at line 10 of file IFrontBackSorting.cs.</para>
+    </section><anchor xml:id="_class_i_front_back_sorting_1a6c65584e6e36b38b9637d0caef2e9584"/>    <section>
+    <title>IsAboveCharacter()</title>
+<indexterm><primary>IsAboveCharacter</primary><secondary>IFrontBackSorting</secondary></indexterm>
+<indexterm><primary>IFrontBackSorting</primary><secondary>IsAboveCharacter</secondary></indexterm>
+<para><computeroutput>abstract bool IFrontBackSorting.IsAboveCharacter (Vector3 characterPos, Vector3 hostPos)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_class_front_back_sorting_1abc2e254b2fbff454376536629e885314">FrontBackSorting</link>, and <link linkend="_class_front_back_two_point_sort_1a86f542a772da319879bf828415d9e941">FrontBackTwoPointSort</link>.</para>
+    </section><anchor xml:id="_class_i_front_back_sorting_1a536050d8c6f539ef2355f7d060405a7d"/>    <section>
+    <title>IsBelowCharacter()</title>
+<indexterm><primary>IsBelowCharacter</primary><secondary>IFrontBackSorting</secondary></indexterm>
+<indexterm><primary>IFrontBackSorting</primary><secondary>IsBelowCharacter</secondary></indexterm>
+<para><computeroutput>abstract bool IFrontBackSorting.IsBelowCharacter (Vector3 characterPos, Vector3 hostPos)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_class_front_back_two_point_sort_1a56fc34ef3da1096a925c9aceedba20a2">FrontBackTwoPointSort</link>, and <link linkend="_class_front_back_sorting_1afbbb62d35be9a2622caf7ad3dd528cd0">FrontBackSorting</link>.</para>
+    </section><anchor xml:id="_class_i_front_back_sorting_1a5d6df14782d89a78ba5e001af5db8c2e"/>    <section>
+    <title>SetHostPosition()</title>
+<indexterm><primary>SetHostPosition</primary><secondary>IFrontBackSorting</secondary></indexterm>
+<indexterm><primary>IFrontBackSorting</primary><secondary>SetHostPosition</secondary></indexterm>
+<para><computeroutput>virtual void IFrontBackSorting.SetHostPosition (Vector3 pos)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Definition at line 14 of file IFrontBackSorting.cs.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_i_front_back_sorting_1a9467a90de94948ea2e8d904b4a87c1b7"/>    <section>
+    <title>host</title>
+<indexterm><primary>host</primary><secondary>IFrontBackSorting</secondary></indexterm>
+<indexterm><primary>IFrontBackSorting</primary><secondary>host</secondary></indexterm>
+<para><computeroutput>Transform IFrontBackSorting.host<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line 7 of file IFrontBackSorting.cs.</para>
+    </section><anchor xml:id="_class_i_front_back_sorting_1ad82f49f13560530041f62240a659f0d2"/>    <section>
+    <title>useSelfAsHost</title>
+<indexterm><primary>useSelfAsHost</primary><secondary>IFrontBackSorting</secondary></indexterm>
+<indexterm><primary>IFrontBackSorting</primary><secondary>useSelfAsHost</secondary></indexterm>
+<para><computeroutput>bool IFrontBackSorting.useSelfAsHost<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line 9 of file IFrontBackSorting.cs.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Assets/Scripts/2D/LayerSorting2D/<link linkend="__i_front_back_sorting_8cs">IFrontBackSorting.cs</link></section>
+</section>

@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_definition">
+<title>Definition Class Reference</title>
+<indexterm><primary>Definition</primary></indexterm>
+Collaboration diagram for Definition:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_definition__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_class_definition_1a4fda01e848cc6110b6e9f734b27dd0c7">StateStackDebug</link> (string message)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_definition_1a1b2b4702132d28cd59cb9d831a9c2eea">InteractableDebug</link> (string message)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_definition_1ac8f4beb12f4cdc7a69e3a0c5096a698a">InitalizeErrors</link> (string message)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_definition_1af26cae00523f1e3be0215836ddf6e463">CameraDebug</link> (string message)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_definition_1a0a2f05396256aef00d2ec13e62d48b02">MovementDebug</link> (string message)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 5 of file Definition.cs.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_definition_1af26cae00523f1e3be0215836ddf6e463"/>    <section>
+    <title>CameraDebug()</title>
+<indexterm><primary>CameraDebug</primary><secondary>Definition</secondary></indexterm>
+<indexterm><primary>Definition</primary><secondary>CameraDebug</secondary></indexterm>
+<para><computeroutput>static void Definition.CameraDebug (string message)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line 23 of file Definition.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_definition_af26cae00523f1e3be0215836ddf6e463_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_definition_1ac8f4beb12f4cdc7a69e3a0c5096a698a"/>    <section>
+    <title>InitalizeErrors()</title>
+<indexterm><primary>InitalizeErrors</primary><secondary>Definition</secondary></indexterm>
+<indexterm><primary>Definition</primary><secondary>InitalizeErrors</secondary></indexterm>
+<para><computeroutput>static void Definition.InitalizeErrors (string message)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line 17 of file Definition.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_definition_ac8f4beb12f4cdc7a69e3a0c5096a698a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_definition_1a1b2b4702132d28cd59cb9d831a9c2eea"/>    <section>
+    <title>InteractableDebug()</title>
+<indexterm><primary>InteractableDebug</primary><secondary>Definition</secondary></indexterm>
+<indexterm><primary>Definition</primary><secondary>InteractableDebug</secondary></indexterm>
+<para><computeroutput>static void Definition.InteractableDebug (string message)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line 12 of file Definition.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_definition_a1b2b4702132d28cd59cb9d831a9c2eea_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_definition_1a0a2f05396256aef00d2ec13e62d48b02"/>    <section>
+    <title>MovementDebug()</title>
+<indexterm><primary>MovementDebug</primary><secondary>Definition</secondary></indexterm>
+<indexterm><primary>Definition</primary><secondary>MovementDebug</secondary></indexterm>
+<para><computeroutput>static void Definition.MovementDebug (string message)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line 28 of file Definition.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_definition_a0a2f05396256aef00d2ec13e62d48b02_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_definition_1a4fda01e848cc6110b6e9f734b27dd0c7"/>    <section>
+    <title>StateStackDebug()</title>
+<indexterm><primary>StateStackDebug</primary><secondary>Definition</secondary></indexterm>
+<indexterm><primary>Definition</primary><secondary>StateStackDebug</secondary></indexterm>
+<para><computeroutput>static void Definition.StateStackDebug (string message)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line 7 of file Definition.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_definition_a4fda01e848cc6110b6e9f734b27dd0c7_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Assets/Scripts/<link linkend="__definition_8cs">Definition.cs</link></section>
+</section>

@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_camera_follow">
+<title>CameraFollow Class Reference</title>
+<indexterm><primary>CameraFollow</primary></indexterm>
+Inheritance diagram for CameraFollow:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_camera_follow__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for CameraFollow:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_camera_follow__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_camera_follow_1a38e5fe767af1a7f7f0983eb95e911567">SetFollowPercentage</link> (float value)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_camera_follow_1afe8f90ce8dcb5582c32e0971567f4fc9">Clear</link> (bool clearPlayer)</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_camera_follow_1a91abed0cd1fb485e5fb2fd531185e8f5">GetFollowPercentage</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_camera_follow_1aa7fc79bdb7d71410f19383973e1f707b">AddEncapsolateObject</link> (Transform obj)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_camera_follow_1adbbbae516b9d54ffc9afe287dcb72cd5">Start</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_camera_follow_1ab8ce2043b1a47917b8b970f5579af9ec">FixedUpdate</link> ()</para>
+</listitem>
+            <listitem><para>Vector3 <link linkend="_class_camera_follow_1af01ec816d70679ea8bfe388f71d07704">GetCenterPosition</link> (List&lt; Transform &gt; listOfTargets)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Transform <link linkend="_class_camera_follow_1a8f0a00e96ade546e8711f952d0bf66cb">host</link> = null</para>
+</listitem>
+            <listitem><para>List&lt; Transform &gt; <link linkend="_class_camera_follow_1a74eb89469936936582d3dad9d633dea0">encapsolatedTarget</link> = new List&lt;Transform&gt;()</para>
+</listitem>
+            <listitem><para>Transform <link linkend="_class_camera_follow_1a7f84b1a538ef291cb9b2a02fb407aac3">character</link> = null</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_camera_follow_1a84fef30d89972200d520d068e108e624">followPercentage</link> = 0.02f</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_camera_follow_1a830dc2986d722e78186d05b7af25bebf">followX</link> = false</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_camera_follow_1acb30ca174771a79306af65c0d3d95338">followY</link> = false</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_camera_follow_1a0c065826af6f896189a9dd0899ab43ec">followZ</link> = false</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 6 of file CameraFollow.cs.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_camera_follow_1aa7fc79bdb7d71410f19383973e1f707b"/>    <section>
+    <title>AddEncapsolateObject()</title>
+<indexterm><primary>AddEncapsolateObject</primary><secondary>CameraFollow</secondary></indexterm>
+<indexterm><primary>CameraFollow</primary><secondary>AddEncapsolateObject</secondary></indexterm>
+<para><computeroutput>void CameraFollow.AddEncapsolateObject (Transform obj)</computeroutput></para><para>
+Definition at line 70 of file CameraFollow.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_camera_follow_aa7fc79bdb7d71410f19383973e1f707b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_camera_follow_1afe8f90ce8dcb5582c32e0971567f4fc9"/>    <section>
+    <title>Clear()</title>
+<indexterm><primary>Clear</primary><secondary>CameraFollow</secondary></indexterm>
+<indexterm><primary>CameraFollow</primary><secondary>Clear</secondary></indexterm>
+<para><computeroutput>void CameraFollow.Clear (bool clearPlayer)</computeroutput></para><para>
+Definition at line 56 of file CameraFollow.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_camera_follow_afe8f90ce8dcb5582c32e0971567f4fc9_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_camera_follow_1ab8ce2043b1a47917b8b970f5579af9ec"/>    <section>
+    <title>FixedUpdate()</title>
+<indexterm><primary>FixedUpdate</primary><secondary>CameraFollow</secondary></indexterm>
+<indexterm><primary>CameraFollow</primary><secondary>FixedUpdate</secondary></indexterm>
+<para><computeroutput>void CameraFollow.FixedUpdate ( )<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 32 of file CameraFollow.cs.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_camera_follow_ab8ce2043b1a47917b8b970f5579af9ec_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_camera_follow_1af01ec816d70679ea8bfe388f71d07704"/>    <section>
+    <title>GetCenterPosition()</title>
+<indexterm><primary>GetCenterPosition</primary><secondary>CameraFollow</secondary></indexterm>
+<indexterm><primary>CameraFollow</primary><secondary>GetCenterPosition</secondary></indexterm>
+<para><computeroutput>Vector3 CameraFollow.GetCenterPosition (List&lt; Transform &gt; listOfTargets)<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 75 of file CameraFollow.cs.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_camera_follow_af01ec816d70679ea8bfe388f71d07704_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_camera_follow_af01ec816d70679ea8bfe388f71d07704_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_camera_follow_1a91abed0cd1fb485e5fb2fd531185e8f5"/>    <section>
+    <title>GetFollowPercentage()</title>
+<indexterm><primary>GetFollowPercentage</primary><secondary>CameraFollow</secondary></indexterm>
+<indexterm><primary>CameraFollow</primary><secondary>GetFollowPercentage</secondary></indexterm>
+<para><computeroutput>float CameraFollow.GetFollowPercentage ( )</computeroutput></para><para>
+Definition at line 65 of file CameraFollow.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_camera_follow_a91abed0cd1fb485e5fb2fd531185e8f5_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_camera_follow_1a38e5fe767af1a7f7f0983eb95e911567"/>    <section>
+    <title>SetFollowPercentage()</title>
+<indexterm><primary>SetFollowPercentage</primary><secondary>CameraFollow</secondary></indexterm>
+<indexterm><primary>CameraFollow</primary><secondary>SetFollowPercentage</secondary></indexterm>
+<para><computeroutput>void CameraFollow.SetFollowPercentage (float value)</computeroutput></para><para>
+Definition at line 51 of file CameraFollow.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_camera_follow_a38e5fe767af1a7f7f0983eb95e911567_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_camera_follow_1adbbbae516b9d54ffc9afe287dcb72cd5"/>    <section>
+    <title>Start()</title>
+<indexterm><primary>Start</primary><secondary>CameraFollow</secondary></indexterm>
+<indexterm><primary>CameraFollow</primary><secondary>Start</secondary></indexterm>
+<para><computeroutput>void CameraFollow.Start ( )<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 27 of file CameraFollow.cs.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_camera_follow_1a7f84b1a538ef291cb9b2a02fb407aac3"/>    <section>
+    <title>character</title>
+<indexterm><primary>character</primary><secondary>CameraFollow</secondary></indexterm>
+<indexterm><primary>CameraFollow</primary><secondary>character</secondary></indexterm>
+<para><computeroutput>Transform CameraFollow.character = null<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 13 of file CameraFollow.cs.</para>
+    </section><anchor xml:id="_class_camera_follow_1a74eb89469936936582d3dad9d633dea0"/>    <section>
+    <title>encapsolatedTarget</title>
+<indexterm><primary>encapsolatedTarget</primary><secondary>CameraFollow</secondary></indexterm>
+<indexterm><primary>CameraFollow</primary><secondary>encapsolatedTarget</secondary></indexterm>
+<para><computeroutput>List&lt;Transform&gt; CameraFollow.encapsolatedTarget = new List&lt;Transform&gt;()<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 11 of file CameraFollow.cs.</para>
+    </section><anchor xml:id="_class_camera_follow_1a84fef30d89972200d520d068e108e624"/>    <section>
+    <title>followPercentage</title>
+<indexterm><primary>followPercentage</primary><secondary>CameraFollow</secondary></indexterm>
+<indexterm><primary>CameraFollow</primary><secondary>followPercentage</secondary></indexterm>
+<para><computeroutput>float CameraFollow.followPercentage = 0.02f<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 17 of file CameraFollow.cs.</para>
+    </section><anchor xml:id="_class_camera_follow_1a830dc2986d722e78186d05b7af25bebf"/>    <section>
+    <title>followX</title>
+<indexterm><primary>followX</primary><secondary>CameraFollow</secondary></indexterm>
+<indexterm><primary>CameraFollow</primary><secondary>followX</secondary></indexterm>
+<para><computeroutput>bool CameraFollow.followX = false<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 19 of file CameraFollow.cs.</para>
+    </section><anchor xml:id="_class_camera_follow_1acb30ca174771a79306af65c0d3d95338"/>    <section>
+    <title>followY</title>
+<indexterm><primary>followY</primary><secondary>CameraFollow</secondary></indexterm>
+<indexterm><primary>CameraFollow</primary><secondary>followY</secondary></indexterm>
+<para><computeroutput>bool CameraFollow.followY = false<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 21 of file CameraFollow.cs.</para>
+    </section><anchor xml:id="_class_camera_follow_1a0c065826af6f896189a9dd0899ab43ec"/>    <section>
+    <title>followZ</title>
+<indexterm><primary>followZ</primary><secondary>CameraFollow</secondary></indexterm>
+<indexterm><primary>CameraFollow</primary><secondary>followZ</secondary></indexterm>
+<para><computeroutput>bool CameraFollow.followZ = false<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 23 of file CameraFollow.cs.</para>
+    </section><anchor xml:id="_class_camera_follow_1a8f0a00e96ade546e8711f952d0bf66cb"/>    <section>
+    <title>host</title>
+<indexterm><primary>host</primary><secondary>CameraFollow</secondary></indexterm>
+<indexterm><primary>CameraFollow</primary><secondary>host</secondary></indexterm>
+<para><computeroutput>Transform CameraFollow.host = null<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 9 of file CameraFollow.cs.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Assets/Scripts/Camera/<link linkend="__camera_follow_8cs">CameraFollow.cs</link></section>
+</section>

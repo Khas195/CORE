@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_state_stack">
+<title>StateStack Class Reference</title>
+<indexterm><primary>StateStack</primary></indexterm>
+Collaboration diagram for StateStack:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_state_stack__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_state_stack_1a4b4516153a095577b4866d87b9584fc0">Push</link> (<link linkend="_class_state">State</link> newState)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_state_stack_1af913ff675174c5678d1f8fa45a08e1f7">IsStackEmpty</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_state">State</link> <link linkend="_class_state_stack_1a761f0ba6b0561beba5f307f78a39c346">Pop</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_state_stack_1acc7e34b7f00751505b0bc63a80ed9172">EmptyStack</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_state">State</link> <link linkend="_class_state_stack_1aa7e9b23bbeb69e47e460ecd93cd176c9">GetPeek</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_state_stack_1a3dce6691e1553fc9a7bcb7eb925d012e">Contains</link> (<link linkend="_class_state">State</link> playingState)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Stack&lt; <link linkend="_class_state">State</link> &gt; <link linkend="_class_state_stack_1aa875322362f3546c8f9093059157baa8">stack</link> = new Stack&lt;<link linkend="_class_state">State</link>&gt;()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 4 of file StateStack.cs.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_state_stack_1a3dce6691e1553fc9a7bcb7eb925d012e"/>    <section>
+    <title>Contains()</title>
+<indexterm><primary>Contains</primary><secondary>StateStack</secondary></indexterm>
+<indexterm><primary>StateStack</primary><secondary>Contains</secondary></indexterm>
+<para><computeroutput>bool StateStack.Contains (<link linkend="_class_state">State</link> playingState)</computeroutput></para><para>
+Definition at line 67 of file StateStack.cs.</para>
+    </section><anchor xml:id="_class_state_stack_1acc7e34b7f00751505b0bc63a80ed9172"/>    <section>
+    <title>EmptyStack()</title>
+<indexterm><primary>EmptyStack</primary><secondary>StateStack</secondary></indexterm>
+<indexterm><primary>StateStack</primary><secondary>EmptyStack</secondary></indexterm>
+<para><computeroutput>void StateStack.EmptyStack ( )</computeroutput></para><para>
+Definition at line 54 of file StateStack.cs.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_state_stack_acc7e34b7f00751505b0bc63a80ed9172_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_state_stack_1aa7e9b23bbeb69e47e460ecd93cd176c9"/>    <section>
+    <title>GetPeek()</title>
+<indexterm><primary>GetPeek</primary><secondary>StateStack</secondary></indexterm>
+<indexterm><primary>StateStack</primary><secondary>GetPeek</secondary></indexterm>
+<para><computeroutput><link linkend="_class_state">State</link> StateStack.GetPeek ( )</computeroutput></para><para>
+Definition at line 62 of file StateStack.cs.</para>
+    </section><anchor xml:id="_class_state_stack_1af913ff675174c5678d1f8fa45a08e1f7"/>    <section>
+    <title>IsStackEmpty()</title>
+<indexterm><primary>IsStackEmpty</primary><secondary>StateStack</secondary></indexterm>
+<indexterm><primary>StateStack</primary><secondary>IsStackEmpty</secondary></indexterm>
+<para><computeroutput>bool StateStack.IsStackEmpty ( )</computeroutput></para><para>
+Definition at line 28 of file StateStack.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_state_stack_af913ff675174c5678d1f8fa45a08e1f7_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_state_stack_1a761f0ba6b0561beba5f307f78a39c346"/>    <section>
+    <title>Pop()</title>
+<indexterm><primary>Pop</primary><secondary>StateStack</secondary></indexterm>
+<indexterm><primary>StateStack</primary><secondary>Pop</secondary></indexterm>
+<para><computeroutput><link linkend="_class_state">State</link> StateStack.Pop ( )</computeroutput></para><para>
+Definition at line 33 of file StateStack.cs.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_state_stack_a761f0ba6b0561beba5f307f78a39c346_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_state_stack_a761f0ba6b0561beba5f307f78a39c346_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_state_stack_1a4b4516153a095577b4866d87b9584fc0"/>    <section>
+    <title>Push()</title>
+<indexterm><primary>Push</primary><secondary>StateStack</secondary></indexterm>
+<indexterm><primary>StateStack</primary><secondary>Push</secondary></indexterm>
+<para><computeroutput>void StateStack.Push (<link linkend="_class_state">State</link> newState)</computeroutput></para><para>
+Definition at line 8 of file StateStack.cs.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_state_stack_a4b4516153a095577b4866d87b9584fc0_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_state_stack_1aa875322362f3546c8f9093059157baa8"/>    <section>
+    <title>stack</title>
+<indexterm><primary>stack</primary><secondary>StateStack</secondary></indexterm>
+<indexterm><primary>StateStack</primary><secondary>stack</secondary></indexterm>
+<para><computeroutput>Stack&lt;<link linkend="_class_state">State</link>&gt; StateStack.stack = new Stack&lt;<link linkend="_class_state">State</link>&gt;()<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 6 of file StateStack.cs.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Assets/Scripts/Patterns/<link linkend="__state_stack_8cs">StateStack.cs</link></section>
+</section>

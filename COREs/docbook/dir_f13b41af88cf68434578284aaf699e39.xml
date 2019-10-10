@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_f13b41af88cf68434578284aaf699e39">
+<title>Assets/Scripts Directory Reference</title>
+<indexterm><primary>Assets/Scripts Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_e3b691a402a52c2eeb46cb4ad4a9b599">2D</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_e670794786ea88869484b70f865ea59e">3D</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_0bf270a3dff40e62f0f506b27c955a6e">Camera</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_aa3b7ab08f4c107d50e2677e19a5d9e6">Data</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_39efc4d023d4f81da2d8230a64d19d36">Interfaces</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_b7efb6267344c1014d476646234dd8bc">Manager</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_c82623923465f332e5816a02955ca842">Patterns</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_c7fafc839a0585736011c21bdabf2a37">Player</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_f5271b636507668fd441dbeaf1039f16">Triggers</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_851449946dd216572c0d9f38eaadf738">Ultilities</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__definition_8cs">Definition.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

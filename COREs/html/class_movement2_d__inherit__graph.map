@@ -1,0 +1,5 @@
+<map id="Movement2D" name="Movement2D">
+<area shape="rect" id="node1" title=" " alt="" coords="25,315,171,539"/>
+<area shape="rect" id="node2" href="$class_i_movement.html" title="The IMovement interface acts as a generalization of all type of movements in the game." alt="" coords="5,131,191,267"/>
+<area shape="rect" id="node3" title=" " alt="" coords="43,5,153,83"/>
+</map>

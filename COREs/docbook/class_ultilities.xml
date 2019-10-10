@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_ultilities">
+<title>Ultilities Class Reference</title>
+<indexterm><primary>Ultilities</primary></indexterm>
+Collaboration diagram for Ultilities:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_ultilities__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static float <link linkend="_class_ultilities_1ae463e7bbaf110896f71de6a736bc581b">CalculateAsymptoticAverage</link> (float currentValue, float target, float percentage)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 5 of file Ultilities.cs.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_ultilities_1ae463e7bbaf110896f71de6a736bc581b"/>    <section>
+    <title>CalculateAsymptoticAverage()</title>
+<indexterm><primary>CalculateAsymptoticAverage</primary><secondary>Ultilities</secondary></indexterm>
+<indexterm><primary>Ultilities</primary><secondary>CalculateAsymptoticAverage</secondary></indexterm>
+<para><computeroutput>static float Ultilities.CalculateAsymptoticAverage (float currentValue, float target, float percentage)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line 8 of file Ultilities.cs.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Assets/Scripts/Ultilities/<link linkend="__ultilities_8cs">Ultilities.cs</link></section>
+</section>

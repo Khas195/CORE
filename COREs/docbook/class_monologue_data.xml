@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_monologue_data">
+<title>MonologueData Class Reference</title>
+<indexterm><primary>MonologueData</primary></indexterm>
+Inheritance diagram for MonologueData:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_monologue_data__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for MonologueData:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_monologue_data__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_monologue_data_1ab78f4c8f59bd684d1bcdf3772f55cb4c">GetSentence</link> (int index)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_monologue_data_1ab86a7777175f09cd5157bbf5498cfe28">GetNumberOfSentences</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>float <link linkend="_class_monologue_data_1a8314737d50d45fa3907b377fa14a1ba3">timeBetweenEachSentence</link> = 2f</para>
+</listitem>
+            <listitem><para>List&lt; string &gt; <link linkend="_class_monologue_data_1a97375904ff4fd5262e8706afd482a381">sentences</link> = new List&lt;string&gt;()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 5 of file MonologueData.cs.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_monologue_data_1ab86a7777175f09cd5157bbf5498cfe28"/>    <section>
+    <title>GetNumberOfSentences()</title>
+<indexterm><primary>GetNumberOfSentences</primary><secondary>MonologueData</secondary></indexterm>
+<indexterm><primary>MonologueData</primary><secondary>GetNumberOfSentences</secondary></indexterm>
+<para><computeroutput>int MonologueData.GetNumberOfSentences ( )</computeroutput></para><para>
+Definition at line 15 of file MonologueData.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_monologue_data_ab86a7777175f09cd5157bbf5498cfe28_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_monologue_data_1ab78f4c8f59bd684d1bcdf3772f55cb4c"/>    <section>
+    <title>GetSentence()</title>
+<indexterm><primary>GetSentence</primary><secondary>MonologueData</secondary></indexterm>
+<indexterm><primary>MonologueData</primary><secondary>GetSentence</secondary></indexterm>
+<para><computeroutput>string MonologueData.GetSentence (int index)</computeroutput></para><para>
+Definition at line 10 of file MonologueData.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_monologue_data_ab78f4c8f59bd684d1bcdf3772f55cb4c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_monologue_data_1a97375904ff4fd5262e8706afd482a381"/>    <section>
+    <title>sentences</title>
+<indexterm><primary>sentences</primary><secondary>MonologueData</secondary></indexterm>
+<indexterm><primary>MonologueData</primary><secondary>sentences</secondary></indexterm>
+<para><computeroutput>List&lt;string&gt; MonologueData.sentences = new List&lt;string&gt;()</computeroutput></para><para>
+Definition at line 8 of file MonologueData.cs.</para>
+    </section><anchor xml:id="_class_monologue_data_1a8314737d50d45fa3907b377fa14a1ba3"/>    <section>
+    <title>timeBetweenEachSentence</title>
+<indexterm><primary>timeBetweenEachSentence</primary><secondary>MonologueData</secondary></indexterm>
+<indexterm><primary>MonologueData</primary><secondary>timeBetweenEachSentence</secondary></indexterm>
+<para><computeroutput>float MonologueData.timeBetweenEachSentence = 2f</computeroutput></para><para>
+Definition at line 7 of file MonologueData.cs.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Assets/Scripts/Data/<link linkend="__monologue_data_8cs">MonologueData.cs</link></section>
+</section>

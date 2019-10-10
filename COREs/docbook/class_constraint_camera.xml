@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_constraint_camera">
+<title>ConstraintCamera Class Reference</title>
+<indexterm><primary>ConstraintCamera</primary></indexterm>
+Inheritance diagram for ConstraintCamera:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_constraint_camera__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for ConstraintCamera:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_constraint_camera__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_constraint_camera_1a21883de2633996fc8ed9ee36251bc5f4">Start</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_constraint_camera_1aab19fca1b8d144f9bcb6566eec50e90e">LateUpdate</link> ()</para>
+</listitem>
+            <listitem><para>Vector3 <link linkend="_class_constraint_camera_1a57c0efd1e0230f2745fffa61fbc4055a">Constraint</link> (Vector3 hostPos, float cameraSizeY, float cameraSizeX)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Transform <link linkend="_class_constraint_camera_1a221ae8ff40c04861373648b95b40ebb3">host</link> = null</para>
+</listitem>
+            <listitem><para>BoxCollider2D <link linkend="_class_constraint_camera_1ab226bb4c03be78b8e8b88431ffa72989">boundary</link> = null</para>
+</listitem>
+            <listitem><para>Camera <link linkend="_class_constraint_camera_1a27d32ffbccc481cad3e557c8626da5d1">cam</link> = null</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 5 of file ConstraintCamera.cs.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_constraint_camera_1a57c0efd1e0230f2745fffa61fbc4055a"/>    <section>
+    <title>Constraint()</title>
+<indexterm><primary>Constraint</primary><secondary>ConstraintCamera</secondary></indexterm>
+<indexterm><primary>ConstraintCamera</primary><secondary>Constraint</secondary></indexterm>
+<para><computeroutput>Vector3 ConstraintCamera.Constraint (Vector3 hostPos, float cameraSizeY, float cameraSizeX)<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 29 of file ConstraintCamera.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_constraint_camera_a57c0efd1e0230f2745fffa61fbc4055a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_constraint_camera_1aab19fca1b8d144f9bcb6566eec50e90e"/>    <section>
+    <title>LateUpdate()</title>
+<indexterm><primary>LateUpdate</primary><secondary>ConstraintCamera</secondary></indexterm>
+<indexterm><primary>ConstraintCamera</primary><secondary>LateUpdate</secondary></indexterm>
+<para><computeroutput>void ConstraintCamera.LateUpdate ( )<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 18 of file ConstraintCamera.cs.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_constraint_camera_aab19fca1b8d144f9bcb6566eec50e90e_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_constraint_camera_1a21883de2633996fc8ed9ee36251bc5f4"/>    <section>
+    <title>Start()</title>
+<indexterm><primary>Start</primary><secondary>ConstraintCamera</secondary></indexterm>
+<indexterm><primary>ConstraintCamera</primary><secondary>Start</secondary></indexterm>
+<para><computeroutput>void ConstraintCamera.Start ( )<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 14 of file ConstraintCamera.cs.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_constraint_camera_1ab226bb4c03be78b8e8b88431ffa72989"/>    <section>
+    <title>boundary</title>
+<indexterm><primary>boundary</primary><secondary>ConstraintCamera</secondary></indexterm>
+<indexterm><primary>ConstraintCamera</primary><secondary>boundary</secondary></indexterm>
+<para><computeroutput>BoxCollider2D ConstraintCamera.boundary = null<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 10 of file ConstraintCamera.cs.</para>
+    </section><anchor xml:id="_class_constraint_camera_1a27d32ffbccc481cad3e557c8626da5d1"/>    <section>
+    <title>cam</title>
+<indexterm><primary>cam</primary><secondary>ConstraintCamera</secondary></indexterm>
+<indexterm><primary>ConstraintCamera</primary><secondary>cam</secondary></indexterm>
+<para><computeroutput>Camera ConstraintCamera.cam = null<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 12 of file ConstraintCamera.cs.</para>
+    </section><anchor xml:id="_class_constraint_camera_1a221ae8ff40c04861373648b95b40ebb3"/>    <section>
+    <title>host</title>
+<indexterm><primary>host</primary><secondary>ConstraintCamera</secondary></indexterm>
+<indexterm><primary>ConstraintCamera</primary><secondary>host</secondary></indexterm>
+<para><computeroutput>Transform ConstraintCamera.host = null<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 8 of file ConstraintCamera.cs.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Assets/Scripts/2D/Camera2D/<link linkend="__constraint_camera_8cs">ConstraintCamera.cs</link></section>
+</section>

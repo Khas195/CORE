@@ -1,0 +1,6 @@
+<map id="AreaView" name="AreaView">
+<area shape="rect" id="node1" title=" " alt="" coords="30,463,242,701"/>
+<area shape="rect" id="node2" title=" " alt="" coords="80,5,191,83"/>
+<area shape="rect" id="node3" href="$class_camera_zoom.html" title=" " alt="" coords="48,132,223,400"/>
+<area shape="rect" id="node4" href="$class_camera_follow.html" title=" " alt="" coords="247,139,422,393"/>
+</map>

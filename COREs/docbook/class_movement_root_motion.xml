@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_movement_root_motion">
+<title>MovementRootMotion Class Reference</title>
+<indexterm><primary>MovementRootMotion</primary></indexterm>
+<para>
+
+<para>This class move the host object by ultilize root motion in the animations of the host object. </para>
+ 
+</para>
+Inheritance diagram for MovementRootMotion:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_movement_root_motion__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for MovementRootMotion:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_movement_root_motion__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_movement_root_motion_1a0f3c41856efec842d5f28375b18b24de">Move</link> (float forward, float side)</para>
+
+<para>All movements actions should be handle in this function. </para>
+</listitem>
+            <listitem><para>override void <link linkend="_class_movement_root_motion_1a5eeadefa1382d44fb403377d5d46f332">SignalJump</link> ()</para>
+
+<para>Signaled that the jump command had been called. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>float <link linkend="_class_movement_root_motion_1a1d5b8ae409380097f4d881b99cedabb8">lastForward</link><computeroutput> [get, private set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_movement_root_motion_1a12e0a3ca4d9ee40192100de753d9a907">Start</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_movement_root_motion_1aea34a6348e63c77642dbe1bd1c6dcdde">Update</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Animator <link linkend="_class_movement_root_motion_1ac182931ffbfd392ab012e35465734169">anim</link> = null</para>
+
+<para>The animator of the host object. </para>
+</listitem>
+            <listitem><para>float <link linkend="_class_movement_root_motion_1af81701795fb69926c09fe0d35317675e">speedStep</link> = 0</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_movement_root_motion_1a0a12159417ca6d6826da9552342b0f02">targetForwardSpeed</link> = 0</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_movement_root_motion_1aba81550eeb6011c36fe29c809e3d04b7">targetSideSpeed</link> = 0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This class move the host object by ultilize root motion in the animations of the host object. </para>
+
+
+
+<para>This class is greatly dependent on the settings of the animation state machine. This is class should be changed according to the settings of the animation state machine. </para>
+<para>
+Definition at line 9 of file MovementRootMotion.cs.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_movement_root_motion_1a0f3c41856efec842d5f28375b18b24de"/>    <section>
+    <title>Move()</title>
+<indexterm><primary>Move</primary><secondary>MovementRootMotion</secondary></indexterm>
+<indexterm><primary>MovementRootMotion</primary><secondary>Move</secondary></indexterm>
+<para><computeroutput>override void MovementRootMotion.Move (float forward, float side)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>All movements actions should be handle in this function. </para>
+</para>
+<para>
+Implements <link linkend="_class_i_movement_1abeb4f7bb7a84ba21041dd4ac88081f23">IMovement</link>.</para>
+<para>
+Definition at line 41 of file MovementRootMotion.cs.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_movement_root_motion_a0f3c41856efec842d5f28375b18b24de_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_movement_root_motion_1a5eeadefa1382d44fb403377d5d46f332"/>    <section>
+    <title>SignalJump()</title>
+<indexterm><primary>SignalJump</primary><secondary>MovementRootMotion</secondary></indexterm>
+<indexterm><primary>MovementRootMotion</primary><secondary>SignalJump</secondary></indexterm>
+<para><computeroutput>override void MovementRootMotion.SignalJump ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Signaled that the jump command had been called. </para>
+</para>
+<para>
+Implements <link linkend="_class_i_movement_1a2d47acb7fe566d1301ac90efd48772b9">IMovement</link>.</para>
+<para>
+Definition at line 59 of file MovementRootMotion.cs.</para>
+    </section><anchor xml:id="_class_movement_root_motion_1a12e0a3ca4d9ee40192100de753d9a907"/>    <section>
+    <title>Start()</title>
+<indexterm><primary>Start</primary><secondary>MovementRootMotion</secondary></indexterm>
+<indexterm><primary>MovementRootMotion</primary><secondary>Start</secondary></indexterm>
+<para><computeroutput>void MovementRootMotion.Start ( )<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 23 of file MovementRootMotion.cs.</para>
+    </section><anchor xml:id="_class_movement_root_motion_1aea34a6348e63c77642dbe1bd1c6dcdde"/>    <section>
+    <title>Update()</title>
+<indexterm><primary>Update</primary><secondary>MovementRootMotion</secondary></indexterm>
+<indexterm><primary>MovementRootMotion</primary><secondary>Update</secondary></indexterm>
+<para><computeroutput>void MovementRootMotion.Update ( )<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 29 of file MovementRootMotion.cs.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_movement_root_motion_1ac182931ffbfd392ab012e35465734169"/>    <section>
+    <title>anim</title>
+<indexterm><primary>anim</primary><secondary>MovementRootMotion</secondary></indexterm>
+<indexterm><primary>MovementRootMotion</primary><secondary>anim</secondary></indexterm>
+<para><computeroutput>Animator MovementRootMotion.anim = null<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>The animator of the host object. </para>
+</para>
+<para>
+Definition at line 15 of file MovementRootMotion.cs.</para>
+    </section><anchor xml:id="_class_movement_root_motion_1af81701795fb69926c09fe0d35317675e"/>    <section>
+    <title>speedStep</title>
+<indexterm><primary>speedStep</primary><secondary>MovementRootMotion</secondary></indexterm>
+<indexterm><primary>MovementRootMotion</primary><secondary>speedStep</secondary></indexterm>
+<para><computeroutput>float MovementRootMotion.speedStep = 0<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 17 of file MovementRootMotion.cs.</para>
+    </section><anchor xml:id="_class_movement_root_motion_1a0a12159417ca6d6826da9552342b0f02"/>    <section>
+    <title>targetForwardSpeed</title>
+<indexterm><primary>targetForwardSpeed</primary><secondary>MovementRootMotion</secondary></indexterm>
+<indexterm><primary>MovementRootMotion</primary><secondary>targetForwardSpeed</secondary></indexterm>
+<para><computeroutput>float MovementRootMotion.targetForwardSpeed = 0<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 18 of file MovementRootMotion.cs.</para>
+    </section><anchor xml:id="_class_movement_root_motion_1aba81550eeb6011c36fe29c809e3d04b7"/>    <section>
+    <title>targetSideSpeed</title>
+<indexterm><primary>targetSideSpeed</primary><secondary>MovementRootMotion</secondary></indexterm>
+<indexterm><primary>MovementRootMotion</primary><secondary>targetSideSpeed</secondary></indexterm>
+<para><computeroutput>float MovementRootMotion.targetSideSpeed = 0<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 19 of file MovementRootMotion.cs.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_movement_root_motion_1a1d5b8ae409380097f4d881b99cedabb8"/>    <section>
+    <title>lastForward</title>
+<indexterm><primary>lastForward</primary><secondary>MovementRootMotion</secondary></indexterm>
+<indexterm><primary>MovementRootMotion</primary><secondary>lastForward</secondary></indexterm>
+<para><computeroutput>float MovementRootMotion.lastForward<computeroutput>[get]</computeroutput>, <computeroutput>[private set]</computeroutput></computeroutput></para><para>
+Definition at line 20 of file MovementRootMotion.cs.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Assets/Scripts/3D/Movement/<link linkend="__movement_root_motion_8cs">MovementRootMotion.cs</link></section>
+</section>

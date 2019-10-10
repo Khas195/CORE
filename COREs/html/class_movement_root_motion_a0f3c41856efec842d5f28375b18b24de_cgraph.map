@@ -1,0 +1,5 @@
+<map id="MovementRootMotion.Move" name="MovementRootMotion.Move">
+<area shape="rect" id="node1" title="All movements actions should be handle in this function." alt="" coords="5,31,187,57"/>
+<area shape="rect" id="node2" href="$class_i_movement.html#a9cbf026ffe723f7d41166c64da9ce157" title="Get the correspondence speed in the data container(MovementData) based on the currnt movement mode." alt="" coords="235,5,467,32"/>
+<area shape="rect" id="node3" href="$class_definition.html#a0a2f05396256aef00d2ec13e62d48b02" title=" " alt="" coords="263,56,438,83"/>
+</map>

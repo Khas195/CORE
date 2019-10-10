@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_e3b691a402a52c2eeb46cb4ad4a9b599">
+<title>Assets/Scripts/2D Directory Reference</title>
+<indexterm><primary>Assets/Scripts/2D Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_ded820cf85645280a3ffc504c4ec7777">Camera2D</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_cdc7e03f7e9be09c10b666947a4fe5cf">LayerSorting2D</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_47043e11653df19544325b690471f227">Movement2D</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

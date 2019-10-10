@@ -1,0 +1,5 @@
+<map id="Movement.Move" name="Movement.Move">
+<area shape="rect" id="node1" title="This function received the player&#39;s inputs (forward and side) then saved them to be processed in the ..." alt="" coords="5,5,120,32"/>
+<area shape="rect" id="node2" href="$class_definition.html#a0a2f05396256aef00d2ec13e62d48b02" title=" " alt="" coords="425,5,600,32"/>
+<area shape="rect" id="node3" href="$class_movement.html#a0f3cb0f99b816ba52592d87bb74e6f14" title="Rotate the host game object toward the camera entity&#39;s facing direction." alt="" coords="168,27,377,69"/>
+</map>

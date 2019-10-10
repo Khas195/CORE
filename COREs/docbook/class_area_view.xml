@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_area_view">
+<title>AreaView Class Reference</title>
+<indexterm><primary>AreaView</primary></indexterm>
+Inheritance diagram for AreaView:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_area_view__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for AreaView:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_area_view__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_area_view_1a58d5c95f3bbe4adc940e4497caeb3447">View</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_area_view_1a514648446a8d5ebebf5afbd5381bc996">UnView</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_area_view_1a94cd296c2564d82c519c8a208c3688c8">Start</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_area_view_1a817f1dd1a3a1077c3b9e8817b2af532b">Update</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>List&lt; Transform &gt; <link linkend="_class_area_view_1a6073af19e1ba29d7a0627be51085a18d">objectsInArea</link> = new List&lt;Transform&gt;()</para>
+</listitem>
+            <listitem><para><link linkend="_class_camera_follow">CameraFollow</link> <link linkend="_class_area_view_1ab3961055d36b219297525a6aa508b045">cameraFollow</link> = null</para>
+</listitem>
+            <listitem><para><link linkend="_class_camera_zoom">CameraZoom</link> <link linkend="_class_area_view_1acd3b21db3b872dc7655a54bc4b58b074">cameraZoom</link> = null</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_area_view_1a43ab6534dfd9a19a9971507d89154c3e">viewTime</link> = 0</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_area_view_1aed278fdb482bf2b63e401aa60dcb4974">zoomFollowPercentage</link> = 0</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_area_view_1a0fcfa79bdfb2bdd50535e301277486e8">focusCenterPercentage</link> = 0</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_area_view_1ac7536c3ccc0438e6c93884b9d9447ee9">isViewing</link> = false</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_area_view_1a6e923d647068eeac4e851eb156143541">personalMaxZoom</link> = 20</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_area_view_1abc07a48f6340d313d11a4116cc0d5578">cachedZoomFollowPercentage</link> = 0</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_area_view_1ae22188844bfe1dcc7d8bc9ab2ac37eea">cachedZoomValued</link> = 0</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_area_view_1a20644710f4dafc9d343d80e33e211534">cachedFocusCenterPercentage</link> = 0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 5 of file AreaView.cs.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_area_view_1a94cd296c2564d82c519c8a208c3688c8"/>    <section>
+    <title>Start()</title>
+<indexterm><primary>Start</primary><secondary>AreaView</secondary></indexterm>
+<indexterm><primary>AreaView</primary><secondary>Start</secondary></indexterm>
+<para><computeroutput>void AreaView.Start ( )<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 28 of file AreaView.cs.</para>
+    </section><anchor xml:id="_class_area_view_1a514648446a8d5ebebf5afbd5381bc996"/>    <section>
+    <title>UnView()</title>
+<indexterm><primary>UnView</primary><secondary>AreaView</secondary></indexterm>
+<indexterm><primary>AreaView</primary><secondary>UnView</secondary></indexterm>
+<para><computeroutput>void AreaView.UnView ( )</computeroutput></para><para>
+Definition at line 61 of file AreaView.cs.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_area_view_a514648446a8d5ebebf5afbd5381bc996_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_area_view_1a817f1dd1a3a1077c3b9e8817b2af532b"/>    <section>
+    <title>Update()</title>
+<indexterm><primary>Update</primary><secondary>AreaView</secondary></indexterm>
+<indexterm><primary>AreaView</primary><secondary>Update</secondary></indexterm>
+<para><computeroutput>void AreaView.Update ( )<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 34 of file AreaView.cs.</para>
+    </section><anchor xml:id="_class_area_view_1a58d5c95f3bbe4adc940e4497caeb3447"/>    <section>
+    <title>View()</title>
+<indexterm><primary>View</primary><secondary>AreaView</secondary></indexterm>
+<indexterm><primary>AreaView</primary><secondary>View</secondary></indexterm>
+<para><computeroutput>void AreaView.View ( )</computeroutput></para><para>
+Definition at line 37 of file AreaView.cs.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_area_view_a58d5c95f3bbe4adc940e4497caeb3447_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_area_view_1a20644710f4dafc9d343d80e33e211534"/>    <section>
+    <title>cachedFocusCenterPercentage</title>
+<indexterm><primary>cachedFocusCenterPercentage</primary><secondary>AreaView</secondary></indexterm>
+<indexterm><primary>AreaView</primary><secondary>cachedFocusCenterPercentage</secondary></indexterm>
+<para><computeroutput>float AreaView.cachedFocusCenterPercentage = 0<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 26 of file AreaView.cs.</para>
+    </section><anchor xml:id="_class_area_view_1abc07a48f6340d313d11a4116cc0d5578"/>    <section>
+    <title>cachedZoomFollowPercentage</title>
+<indexterm><primary>cachedZoomFollowPercentage</primary><secondary>AreaView</secondary></indexterm>
+<indexterm><primary>AreaView</primary><secondary>cachedZoomFollowPercentage</secondary></indexterm>
+<para><computeroutput>float AreaView.cachedZoomFollowPercentage = 0<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 24 of file AreaView.cs.</para>
+    </section><anchor xml:id="_class_area_view_1ae22188844bfe1dcc7d8bc9ab2ac37eea"/>    <section>
+    <title>cachedZoomValued</title>
+<indexterm><primary>cachedZoomValued</primary><secondary>AreaView</secondary></indexterm>
+<indexterm><primary>AreaView</primary><secondary>cachedZoomValued</secondary></indexterm>
+<para><computeroutput>float AreaView.cachedZoomValued = 0<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 25 of file AreaView.cs.</para>
+    </section><anchor xml:id="_class_area_view_1ab3961055d36b219297525a6aa508b045"/>    <section>
+    <title>cameraFollow</title>
+<indexterm><primary>cameraFollow</primary><secondary>AreaView</secondary></indexterm>
+<indexterm><primary>AreaView</primary><secondary>cameraFollow</secondary></indexterm>
+<para><computeroutput><link linkend="_class_camera_follow">CameraFollow</link> AreaView.cameraFollow = null<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 11 of file AreaView.cs.</para>
+    </section><anchor xml:id="_class_area_view_1acd3b21db3b872dc7655a54bc4b58b074"/>    <section>
+    <title>cameraZoom</title>
+<indexterm><primary>cameraZoom</primary><secondary>AreaView</secondary></indexterm>
+<indexterm><primary>AreaView</primary><secondary>cameraZoom</secondary></indexterm>
+<para><computeroutput><link linkend="_class_camera_zoom">CameraZoom</link> AreaView.cameraZoom = null<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 13 of file AreaView.cs.</para>
+    </section><anchor xml:id="_class_area_view_1a0fcfa79bdfb2bdd50535e301277486e8"/>    <section>
+    <title>focusCenterPercentage</title>
+<indexterm><primary>focusCenterPercentage</primary><secondary>AreaView</secondary></indexterm>
+<indexterm><primary>AreaView</primary><secondary>focusCenterPercentage</secondary></indexterm>
+<para><computeroutput>float AreaView.focusCenterPercentage = 0<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 19 of file AreaView.cs.</para>
+    </section><anchor xml:id="_class_area_view_1ac7536c3ccc0438e6c93884b9d9447ee9"/>    <section>
+    <title>isViewing</title>
+<indexterm><primary>isViewing</primary><secondary>AreaView</secondary></indexterm>
+<indexterm><primary>AreaView</primary><secondary>isViewing</secondary></indexterm>
+<para><computeroutput>bool AreaView.isViewing = false<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 20 of file AreaView.cs.</para>
+    </section><anchor xml:id="_class_area_view_1a6073af19e1ba29d7a0627be51085a18d"/>    <section>
+    <title>objectsInArea</title>
+<indexterm><primary>objectsInArea</primary><secondary>AreaView</secondary></indexterm>
+<indexterm><primary>AreaView</primary><secondary>objectsInArea</secondary></indexterm>
+<para><computeroutput>List&lt;Transform&gt; AreaView.objectsInArea = new List&lt;Transform&gt;()<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 8 of file AreaView.cs.</para>
+    </section><anchor xml:id="_class_area_view_1a6e923d647068eeac4e851eb156143541"/>    <section>
+    <title>personalMaxZoom</title>
+<indexterm><primary>personalMaxZoom</primary><secondary>AreaView</secondary></indexterm>
+<indexterm><primary>AreaView</primary><secondary>personalMaxZoom</secondary></indexterm>
+<para><computeroutput>float AreaView.personalMaxZoom = 20<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 22 of file AreaView.cs.</para>
+    </section><anchor xml:id="_class_area_view_1a43ab6534dfd9a19a9971507d89154c3e"/>    <section>
+    <title>viewTime</title>
+<indexterm><primary>viewTime</primary><secondary>AreaView</secondary></indexterm>
+<indexterm><primary>AreaView</primary><secondary>viewTime</secondary></indexterm>
+<para><computeroutput>float AreaView.viewTime = 0<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 15 of file AreaView.cs.</para>
+    </section><anchor xml:id="_class_area_view_1aed278fdb482bf2b63e401aa60dcb4974"/>    <section>
+    <title>zoomFollowPercentage</title>
+<indexterm><primary>zoomFollowPercentage</primary><secondary>AreaView</secondary></indexterm>
+<indexterm><primary>AreaView</primary><secondary>zoomFollowPercentage</secondary></indexterm>
+<para><computeroutput>float AreaView.zoomFollowPercentage = 0<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 17 of file AreaView.cs.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Assets/Scripts/2D/Camera2D/<link linkend="__area_view_8cs">AreaView.cs</link></section>
+</section>

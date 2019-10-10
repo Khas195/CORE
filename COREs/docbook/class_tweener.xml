@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_tweener">
+<title>Tweener Class Reference</title>
+<indexterm><primary>Tweener</primary></indexterm>
+Collaboration diagram for Tweener:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_tweener__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_tweener_1ae0bb19752c20d7484f42f7ca2d130229">TweenType</link> { <link linkend="_class_tweener_1ae0bb19752c20d7484f42f7ca2d130229a3d7967c2580f02f1ec2e8d1d3d7f7c95">TweenType.LinearTween</link>, 
+<link linkend="_class_tweener_1ae0bb19752c20d7484f42f7ca2d130229a52afbedefc192687be6606155b5bf593">TweenType.EaseInQuad</link>, 
+<link linkend="_class_tweener_1ae0bb19752c20d7484f42f7ca2d130229afa3017a8e690c168c1c1ae13360e65df">TweenType.EaseOutQuad</link>, 
+<link linkend="_class_tweener_1ae0bb19752c20d7484f42f7ca2d130229ad37eb834b1eb836f03c9aafdc55e2e6d">TweenType.EaseInOutQuad</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static float <link linkend="_class_tweener_1a7e97dcc14ea647a69db665b601dc510f">Tween</link> (<link linkend="_class_tweener_1ae0bb19752c20d7484f42f7ca2d130229">TweenType</link> type, float curTime, float beginingValue, float changeInValue, float duration)</para>
+</listitem>
+            <listitem><para>static float <link linkend="_class_tweener_1a983b4e6232ca4c2b9e93d4220ebe5f80">LinearTween</link> (float curTime, float beginingValue, float changeInValue, float duration)</para>
+</listitem>
+            <listitem><para>static Color <link linkend="_class_tweener_1a151f2faff98630a3d3eb5cbaa9f9c234">TweenColor</link> (<link linkend="_class_tweener_1ae0bb19752c20d7484f42f7ca2d130229">TweenType</link> type, float curTime, Color originColor, Color changeInValue, float duration)</para>
+</listitem>
+            <listitem><para>static float <link linkend="_class_tweener_1a2f94312fb2f166eb6778b0a5a3d43cfb">EaseInQuad</link> (float curTime, float beginingValue, float changeInValue, float duration)</para>
+</listitem>
+            <listitem><para>static float <link linkend="_class_tweener_1a0c38ba76d2665c81ae00c57cf2636371">EaseOutQuad</link> (float curTime, float beginingValue, float changeInValue, float duration)</para>
+</listitem>
+            <listitem><para>static float <link linkend="_class_tweener_1a3c67bb99722d5c59a34d4ecde9cdffbc">EaseInOutQuad</link> (float curTime, float beginingValue, float changeInValue, float duration)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 9 of file Tweener.cs.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_tweener_1ae0bb19752c20d7484f42f7ca2d130229"/>    <section>
+    <title>TweenType</title>
+<indexterm><primary>TweenType</primary><secondary>Tweener</secondary></indexterm>
+<indexterm><primary>Tweener</primary><secondary>TweenType</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_tweener_1ae0bb19752c20d7484f42f7ca2d130229">Tweener.TweenType</link><computeroutput>[strong]</computeroutput></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>LinearTween</primary><secondary>Tweener</secondary></indexterm>
+<indexterm><primary>Tweener</primary><secondary>LinearTween</secondary></indexterm>
+<anchor xml:id="_class_tweener_1ae0bb19752c20d7484f42f7ca2d130229a3d7967c2580f02f1ec2e8d1d3d7f7c95"/>LinearTween</entry><entry></entry></row><row><entry><indexterm><primary>EaseInQuad</primary><secondary>Tweener</secondary></indexterm>
+<indexterm><primary>Tweener</primary><secondary>EaseInQuad</secondary></indexterm>
+<anchor xml:id="_class_tweener_1ae0bb19752c20d7484f42f7ca2d130229a52afbedefc192687be6606155b5bf593"/>EaseInQuad</entry><entry></entry></row><row><entry><indexterm><primary>EaseOutQuad</primary><secondary>Tweener</secondary></indexterm>
+<indexterm><primary>Tweener</primary><secondary>EaseOutQuad</secondary></indexterm>
+<anchor xml:id="_class_tweener_1ae0bb19752c20d7484f42f7ca2d130229afa3017a8e690c168c1c1ae13360e65df"/>EaseOutQuad</entry><entry></entry></row><row><entry><indexterm><primary>EaseInOutQuad</primary><secondary>Tweener</secondary></indexterm>
+<indexterm><primary>Tweener</primary><secondary>EaseInOutQuad</secondary></indexterm>
+<anchor xml:id="_class_tweener_1ae0bb19752c20d7484f42f7ca2d130229ad37eb834b1eb836f03c9aafdc55e2e6d"/>EaseInOutQuad</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line 11 of file Tweener.cs.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_tweener_1a3c67bb99722d5c59a34d4ecde9cdffbc"/>    <section>
+    <title>EaseInOutQuad()</title>
+<indexterm><primary>EaseInOutQuad</primary><secondary>Tweener</secondary></indexterm>
+<indexterm><primary>Tweener</primary><secondary>EaseInOutQuad</secondary></indexterm>
+<para><computeroutput>static float Tweener.EaseInOutQuad (float curTime, float beginingValue, float changeInValue, float duration)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line 65 of file Tweener.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_tweener_a3c67bb99722d5c59a34d4ecde9cdffbc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_tweener_1a2f94312fb2f166eb6778b0a5a3d43cfb"/>    <section>
+    <title>EaseInQuad()</title>
+<indexterm><primary>EaseInQuad</primary><secondary>Tweener</secondary></indexterm>
+<indexterm><primary>Tweener</primary><secondary>EaseInQuad</secondary></indexterm>
+<para><computeroutput>static float Tweener.EaseInQuad (float curTime, float beginingValue, float changeInValue, float duration)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line 56 of file Tweener.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_tweener_a2f94312fb2f166eb6778b0a5a3d43cfb_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_tweener_1a0c38ba76d2665c81ae00c57cf2636371"/>    <section>
+    <title>EaseOutQuad()</title>
+<indexterm><primary>EaseOutQuad</primary><secondary>Tweener</secondary></indexterm>
+<indexterm><primary>Tweener</primary><secondary>EaseOutQuad</secondary></indexterm>
+<para><computeroutput>static float Tweener.EaseOutQuad (float curTime, float beginingValue, float changeInValue, float duration)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line 60 of file Tweener.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_tweener_a0c38ba76d2665c81ae00c57cf2636371_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_tweener_1a983b4e6232ca4c2b9e93d4220ebe5f80"/>    <section>
+    <title>LinearTween()</title>
+<indexterm><primary>LinearTween</primary><secondary>Tweener</secondary></indexterm>
+<indexterm><primary>Tweener</primary><secondary>LinearTween</secondary></indexterm>
+<para><computeroutput>static float Tweener.LinearTween (float curTime, float beginingValue, float changeInValue, float duration)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line 41 of file Tweener.cs.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_tweener_a983b4e6232ca4c2b9e93d4220ebe5f80_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_tweener_1a7e97dcc14ea647a69db665b601dc510f"/>    <section>
+    <title>Tween()</title>
+<indexterm><primary>Tween</primary><secondary>Tweener</secondary></indexterm>
+<indexterm><primary>Tweener</primary><secondary>Tween</secondary></indexterm>
+<para><computeroutput>static float Tweener.Tween (<link linkend="_class_tweener_1ae0bb19752c20d7484f42f7ca2d130229">TweenType</link> type, float curTime, float beginingValue, float changeInValue, float duration)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line 18 of file Tweener.cs.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_tweener_a7e97dcc14ea647a69db665b601dc510f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_tweener_a7e97dcc14ea647a69db665b601dc510f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_tweener_1a151f2faff98630a3d3eb5cbaa9f9c234"/>    <section>
+    <title>TweenColor()</title>
+<indexterm><primary>TweenColor</primary><secondary>Tweener</secondary></indexterm>
+<indexterm><primary>Tweener</primary><secondary>TweenColor</secondary></indexterm>
+<para><computeroutput>static Color Tweener.TweenColor (<link linkend="_class_tweener_1ae0bb19752c20d7484f42f7ca2d130229">TweenType</link> type, float curTime, Color originColor, Color changeInValue, float duration)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line 46 of file Tweener.cs.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_tweener_a151f2faff98630a3d3eb5cbaa9f9c234_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Assets/Scripts/Ultilities/<link linkend="__tweener_8cs">Tweener.cs</link></section>
+</section>

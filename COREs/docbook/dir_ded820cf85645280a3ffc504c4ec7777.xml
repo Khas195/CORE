@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_ded820cf85645280a3ffc504c4ec7777">
+<title>Assets/Scripts/2D/Camera2D Directory Reference</title>
+<indexterm><primary>Assets/Scripts/2D/Camera2D Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__area_view_8cs">AreaView.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__camera_zoom_8cs">CameraZoom.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__constraint_camera_8cs">ConstraintCamera.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

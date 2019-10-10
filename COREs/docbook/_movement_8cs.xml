@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__movement_8cs">
+<title>Assets/Scripts/3D/Movement/Movement.cs File Reference</title>
+<indexterm><primary>Assets/Scripts/3D/Movement/Movement.cs</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_movement">Movement</link></para>
+
+<para>This class handle all movement related behaviors in 3D The host object (mentioned in blow) is the object which this script will perform its functions on . </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

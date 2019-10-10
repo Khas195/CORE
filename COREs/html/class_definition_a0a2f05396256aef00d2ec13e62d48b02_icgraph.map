@@ -1,0 +1,9 @@
+<map id="Definition.MovementDebug" name="Definition.MovementDebug">
+<area shape="rect" id="node1" title=" " alt="" coords="709,85,884,112"/>
+<area shape="rect" id="node2" href="$class_movement_root_motion.html#a0f3c41856efec842d5f28375b18b24de" title="All movements actions should be handle in this function." alt="" coords="466,5,647,32"/>
+<area shape="rect" id="node3" href="$class_movement.html#a8ff6031ad6e03730fbe2cae1ab8c21de" title="This function received the player&#39;s inputs (forward and side) then saved them to be processed in the ..." alt="" coords="251,85,365,112"/>
+<area shape="rect" id="node4" href="$class_movement.html#a0f3cb0f99b816ba52592d87bb74e6f14" title="Rotate the host game object toward the camera entity&#39;s facing direction." alt="" coords="452,107,661,149"/>
+<area shape="rect" id="node5" href="$class_movement.html#a5f4a7ab8b5ed85d47eda043b6a1d19be" title="This function move the host object according to the forward and side inputs of the player." alt="" coords="501,173,613,200"/>
+<area shape="rect" id="node6" href="$class_movement.html#a905b8f5912002eda95b1c42849a99d20" title="This function process the movement of the host object according to the forward, side and jump inputs ..." alt="" coords="212,173,404,200"/>
+<area shape="rect" id="node7" href="$class_movement.html#a9687a887cb7ae16793f2fdc42d00d11c" title=" " alt="" coords="5,173,164,200"/>
+</map>

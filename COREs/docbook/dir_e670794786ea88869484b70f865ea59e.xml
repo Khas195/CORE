@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_e670794786ea88869484b70f865ea59e">
+<title>Assets/Scripts/3D Directory Reference</title>
+<indexterm><primary>Assets/Scripts/3D Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_c046f26feba94cdabdb5c7767b030b0f">Camera</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_8819305290bc73f7b768644b28f83f5c">Movement</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

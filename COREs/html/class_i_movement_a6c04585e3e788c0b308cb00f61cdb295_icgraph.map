@@ -1,0 +1,7 @@
+<map id="IMovement.SetMovementMode" name="IMovement.SetMovementMode">
+<area shape="rect" id="node1" title="Set the current movement mode." alt="" coords="452,42,651,69"/>
+<area shape="rect" id="node2" href="$class_player_controller.html#a52d074ae80211c21828023a6e381812b" title="All inputs by the player are and should be done in this function ." alt="" coords="229,5,387,47"/>
+<area shape="rect" id="node4" href="$class_movement.html#a905b8f5912002eda95b1c42849a99d20" title="This function process the movement of the host object according to the forward, side and jump inputs ..." alt="" coords="212,71,404,98"/>
+<area shape="rect" id="node3" href="$class_player_controller.html#ae8bc83dffb99867a04be016473ed2c43" title=" " alt="" coords="5,13,164,39"/>
+<area shape="rect" id="node5" href="$class_movement.html#a9687a887cb7ae16793f2fdc42d00d11c" title=" " alt="" coords="5,71,164,98"/>
+</map>

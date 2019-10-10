@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_aa3b7ab08f4c107d50e2677e19a5d9e6">
+<title>Assets/Scripts/Data Directory Reference</title>
+<indexterm><primary>Assets/Scripts/Data Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__monologue_data_8cs">MonologueData.cs</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__movement_data_8cs">MovementData.cs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

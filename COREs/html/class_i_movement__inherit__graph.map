@@ -1,0 +1,7 @@
+<map id="IMovement" name="IMovement">
+<area shape="rect" id="node1" title="The IMovement interface acts as a generalization of all type of movements in the game." alt="" coords="245,131,430,267"/>
+<area shape="rect" id="node3" href="$class_movement.html" title="This class handle all movement related behaviors in 3D The host object (mentioned in blow) is the obj..." alt="" coords="5,315,240,671"/>
+<area shape="rect" id="node4" href="$class_movement2_d.html" title=" " alt="" coords="265,381,410,605"/>
+<area shape="rect" id="node5" href="$class_movement_root_motion.html" title="This class move the host object by ultilize root motion in the animations of the host object." alt="" coords="435,403,581,583"/>
+<area shape="rect" id="node2" title=" " alt="" coords="282,5,393,83"/>
+</map>

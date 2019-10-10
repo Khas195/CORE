@@ -1,0 +1,6 @@
+<map id="PlayerController.ControlMovement" name="PlayerController.ControlMovement">
+<area shape="rect" id="node1" title="All inputs by the player are and should be done in this function ." alt="" coords="5,49,164,90"/>
+<area shape="rect" id="node2" href="$class_i_movement.html#abeb4f7bb7a84ba21041dd4ac88081f23" title="All movements actions should be handle in this function." alt="" coords="252,5,371,32"/>
+<area shape="rect" id="node3" href="$class_i_movement.html#a6c04585e3e788c0b308cb00f61cdb295" title="Set the current movement mode." alt="" coords="212,56,411,83"/>
+<area shape="rect" id="node4" href="$class_i_movement.html#a2d47acb7fe566d1301ac90efd48772b9" title="Signaled that the jump command had been called." alt="" coords="234,107,389,133"/>
+</map>
