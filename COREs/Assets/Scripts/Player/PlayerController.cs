@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     /** \brief Reference to the movement interface */
     IMovement moveBehavior = null;
+    [SerializeField]
+    CharacterAnimatorControl animControl;
 
     void Update()
     {
@@ -30,18 +32,29 @@ public class PlayerController : MonoBehaviour
 
         var horizontal = Input.GetAxisRaw("Horizontal");
         var vertical = Input.GetAxisRaw("Vertical");
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetMouseButtonDown(0) && moveBehavior.IsTouchingGround() == true)
+        {
+            animControl.TriggerAttackAnimation();
+            Debug.Log("Character Attack");
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             moveBehavior.SetMovementMode(IMovement.MovementMode.Run);
         }
-        if (Input.GetKeyUp(KeyCode.LeftShift))
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             moveBehavior.SetMovementMode(IMovement.MovementMode.Walk);
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        else if (Input.GetKeyDown(KeyCode.Space) && moveBehavior.IsTouchingGround() == true && animControl.IsAttacking() == false)
         {
             moveBehavior.SignalJump();
         }
+        if (animControl.IsAttacking() == true)
+        {
+            horizontal = 0;
+            vertical = 0;
+        }
         moveBehavior.Move(vertical, horizontal);
+
     }
 }

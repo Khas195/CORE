@@ -7,7 +7,7 @@ using UnityEngine;
  * The host object (mentioned in blow) is the object which this script will perform its functions on .!--
  * The host object is not necessary be the parent gameobject of the script.!-- 
  */
-public class Movement: IMovement
+public class Movement : IMovement
 {
     [SerializeField]
     [Tooltip("The RigidBody of the moving object")]
@@ -32,29 +32,20 @@ public class Movement: IMovement
      * The camera entity that the host entity is facing toward.!--
      * Needed to be assigned in the unity editor if shouldMoveTowardCameraDirection is true
      */
-    GameObject charCameraEntity;
-    [SerializeField]
+    GameObject cameraYawPivot;
     /**
      * The list of points which is needed to know whether the host object is airborned or not
      */
+    [SerializeField]
     List<Transform> checkGroundsList;
-
     /** cached the forward value in the Move function*/
     int moveForward = 0;
     /** cached the side value in the Move function*/
     int moveSide = 0;
     /** cached the jump signal in the Signal Jump function*/
     bool jumpSignal = false;
-    [SerializeField]
-    [Range(0.0f, 1.0f)]
-    /** The percentage of movement speed reduction while the host object is airborned */
-    float speedReductionWhileAirborne;
     /** Cached transform of the host object */
     Transform targetTransform = null;
-    /** The distance from the center of the host object to its y boundary */
-    private float distToGround;
-    
-
     void Start()
     {
         Initalize();
@@ -65,7 +56,6 @@ public class Movement: IMovement
     private void Initalize()
     {
         targetTransform = targetRigidBody.transform;
-        distToGround = this.targetRigidBody.gameObject.GetComponent<Collider>().bounds.extents.y;
     }
 
     /**
@@ -108,16 +98,18 @@ public class Movement: IMovement
      */
     private void RotateTowardCameraDirection(float forward, float side)
     {
-        var forwardDir = charCameraEntity.transform.forward * forward;
-        var sideDir = charCameraEntity.transform.right * side;
+        var forwardDir = cameraYawPivot.transform.forward * forward;
+        var sideDir = cameraYawPivot.transform.right * side;
         var moveDir = forwardDir + sideDir;
+        moveDir.y = 0;
         Definition.MovementDebug("Camera Move Direction" + moveDir);
         var rotation = Quaternion.LookRotation(moveDir);
         targetRigidBody.rotation = Quaternion.Slerp(targetRigidBody.rotation, rotation, rotateSpeed * Time.deltaTime);
     }
 
     /**
-    * This function will signal the target object to jump in the next FixedUpdate
+    * This function will signal the target object to jump in the next FixedUpdate.
+    * If the character's jump is on cd then nothing will happen.
     */
     public override void SignalJump()
     {
@@ -130,22 +122,15 @@ public class Movement: IMovement
      * \param speed is the desired movement speed for the host object.
      * \param forward is how much the player need to move forward or backward. 
      * \param side is how much the player need to move sideway.
-     * \param isAirborne is whether the host object is in the air or not.
      */
-    void Step(float speed, int forward, int side, bool isAirborne)
+    void Step(float speed, int forward, int side)
     {
-
         var forwardDirection = targetTransform.forward * forward;
         var sideDirection = targetTransform.right * side;
 
         var moveDirection = forwardDirection + sideDirection;
         Definition.MovementDebug("Movement Direction: " + moveDirection);
-        var moveSpeed = speed;
-        if (isAirborne)
-        {
-            moveSpeed *= 1 - speedReductionWhileAirborne;
-        }
-        var velocity = moveDirection * moveSpeed + Vector3.up * targetRigidBody.velocity.y;
+        var velocity = moveDirection * speed + Vector3.up * targetRigidBody.velocity.y;
         targetRigidBody.velocity = velocity;
 
         Definition.MovementDebug("Movement Velocity after each step: " + targetRigidBody.velocity);
@@ -155,33 +140,21 @@ public class Movement: IMovement
     {
         ProcessMovement();
     }
+
     /**
      * This function process the movement of the host object according to the forward, side and jump inputs
      * The movement speed is also changed if the host object is airborned
      */
     private void ProcessMovement()
     {
-        bool isAirborned = !IsTouchingGround();
-        float moveSpeed = 0;
-
-        if (!isAirborned && moveForward < 0 && moveMode == MovementMode.Run)
-        {
-            SetMovementMode(MovementMode.Walk);
-            moveSpeed = GetSpeedBasedOnMode();
-        }
-        else
-        {
-            moveSpeed = GetSpeedBasedOnMode();
-        }
-        Step(moveSpeed, moveForward, moveSide, isAirborned);
         if (jumpSignal)
         {
-            if (!isAirborned)
-            {
-                Jump();
-            }
+            Jump();
             jumpSignal = false;
         }
+        float moveSpeed = 0;
+        moveSpeed = GetSpeedBasedOnMode();
+        Step(moveSpeed, moveForward, moveSide);
     }
 
     /** 
@@ -189,20 +162,25 @@ public class Movement: IMovement
      */
     private void Jump()
     {
-        targetRigidBody.AddForce(targetRigidBody.transform.up * data.jumpForce, ForceMode.Impulse);
+        Debug.Log("Character jump with force of " + data.jumpForce);
+        targetRigidBody.AddForce(Vector3.up * data.jumpForce, ForceMode.Impulse);
     }
     /**
      * Check whether the rigid body of the host object is touching the ground by raycasting from the list of points (checkGroundsList)
+     * It is important to know that the desired pivot should be on the bottom of the object.
      */
-    public bool IsTouchingGround()
+    public override bool IsTouchingGround()
     {
-        foreach(var trans in checkGroundsList) {
-            if (Physics.Raycast(trans.position, -Vector3.up, distToGround + 0.3f)){
+        foreach (var trans in checkGroundsList)
+        {
+            if (Physics.Raycast(trans.position, -Vector3.up, 0.1f))
+            {
                 return true;
             }
         }
         return false;
     }
+    
 
 
 }

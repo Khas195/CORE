@@ -10,7 +10,7 @@ using UnityEngine;
  */
 public class MovementData : ScriptableObject
 {
-    public float walkSpeed = 10;
-    public float runSpeed = 20;
-    public float jumpForce = 50;
+    public float walkSpeed = 5;
+    public float runSpeed = 10;
+    public float jumpForce = 5;
 }

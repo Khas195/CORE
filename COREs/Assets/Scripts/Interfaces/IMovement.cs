@@ -48,4 +48,7 @@ public abstract class IMovement : MonoBehaviour {
 
         return moveSpeed;
     }
+    public virtual bool IsTouchingGround() {
+        return true;
+    }
 }
