@@ -20,24 +20,24 @@ public class Movement : IMovement
      * Instead of move forward according to its own facing direction
      */
     [SerializeField]
-    bool shouldMoveTowardCameraDirection;
+    bool shouldMoveTowardCameraDirection = false;
     [SerializeField]
     /**
      * The rotate speed of the host object toward the camera's facing direction.!--
      * Not needed if shouldMoveTowardCameraDirection is false 
      */
-    float rotateSpeed;
+    float rotateSpeed = 0;
     [SerializeField]
     /**
      * The camera entity that the host entity is facing toward.!--
      * Needed to be assigned in the unity editor if shouldMoveTowardCameraDirection is true
      */
-    GameObject cameraYawPivot;
+    GameObject cameraYawPivot = null;
     /**
      * The list of points which is needed to know whether the host object is airborned or not
      */
     [SerializeField]
-    List<Transform> checkGroundsList;
+    List<Transform> checkGroundsList = null;
     /** cached the forward value in the Move function*/
     int moveForward = 0;
     /** cached the side value in the Move function*/
@@ -88,7 +88,6 @@ public class Movement : IMovement
             moveForward = (int)forward;
             moveSide = (int)side;
         }
-        Definition.MovementDebug("Movement(forward, side): " + moveForward + ", " + moveSide);
     }
 
     /**
@@ -102,7 +101,6 @@ public class Movement : IMovement
         var sideDir = cameraYawPivot.transform.right * side;
         var moveDir = forwardDir + sideDir;
         moveDir.y = 0;
-        Definition.MovementDebug("Camera Move Direction" + moveDir);
         var rotation = Quaternion.LookRotation(moveDir);
         targetRigidBody.rotation = Quaternion.Slerp(targetRigidBody.rotation, rotation, rotateSpeed * Time.deltaTime);
     }
@@ -129,11 +127,8 @@ public class Movement : IMovement
         var sideDirection = targetTransform.right * side;
 
         var moveDirection = forwardDirection + sideDirection;
-        Definition.MovementDebug("Movement Direction: " + moveDirection);
         var velocity = moveDirection * speed + Vector3.up * targetRigidBody.velocity.y;
         targetRigidBody.velocity = velocity;
-
-        Definition.MovementDebug("Movement Velocity after each step: " + targetRigidBody.velocity);
     }
 
     private void FixedUpdate()
@@ -180,7 +175,7 @@ public class Movement : IMovement
         }
         return false;
     }
-    
+
 
 
 }

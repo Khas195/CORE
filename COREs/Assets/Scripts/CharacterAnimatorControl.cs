@@ -6,13 +6,13 @@ using UnityEngine;
 public class CharacterAnimatorControl : MonoBehaviour
 {
     [SerializeField]
-    Rigidbody hostRb;
+    Rigidbody hostRb = null;
     [SerializeField]
-    Animator animator;
+    Animator animator = null;
     [SerializeField]
-    List<AnimationClip> attackingAnims;
+    List<AnimationClip> attackingAnims = null;
     [SerializeField]
-    bool isAttacking;
+    bool isAttacking = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,11 +30,13 @@ public class CharacterAnimatorControl : MonoBehaviour
 
     private bool IsAnAttackingClip(AnimatorClipInfo curClip)
     {
-        foreach(var clip in attackingAnims){
-            if (curClip.clip == clip){
+        foreach (var clip in attackingAnims)
+        {
+            if (curClip.clip == clip)
+            {
                 return true;
             }
-        } 
+        }
         return false;
     }
 

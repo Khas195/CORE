@@ -79,7 +79,6 @@ public class CameraFollow : MonoBehaviour
         {
             bounds.Encapsulate(target.position);
         }
-        Definition.CameraDebug("Camera Center position: " + bounds.center);
         return bounds.center;
     }
 

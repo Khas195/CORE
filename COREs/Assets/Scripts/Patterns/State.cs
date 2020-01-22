@@ -1,46 +1,25 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Events;
 
-public class State : MonoBehaviour
+public abstract class State : MonoBehaviour
 {
     [SerializeField]
-    protected UnityEvent OnPressedEvent;
-    [SerializeField]
-    protected UnityEvent OnPoppedEvent;
-    [SerializeField]
-    protected UnityEvent OnReturnPeekEvent;
-    [SerializeField]
-    protected UnityEvent OnPushedEvent;
-    public virtual void OnPressed()
+    List<State> possibleTransitions = new List<State>();
+    public abstract void OnStateEnter();
+    public abstract void OnStateExit();
+    public virtual bool CanTransitionTo(Enum stateEnum)
     {
-        if (OnPressedEvent != null)
+        for (int i = 0; i < possibleTransitions.Count; i++)
         {
-            OnPressedEvent.Invoke();
+            if (possibleTransitions[i].GetEnum().Equals(stateEnum))
+            {
+                return true;
+            }
         }
+        return false;
     }
-    public virtual void OnPushed()
-    {
-        if (OnPushedEvent!= null)
-        {
-            OnPushedEvent.Invoke();
-        }
-    }
-    public virtual void OnPopped()
-    {
-        if (OnPoppedEvent != null)
-        {
-            OnPoppedEvent.Invoke();
-        }
-    }
-    public virtual void OnReturnPeek()
-    {
-        if (OnReturnPeekEvent!= null)
-        {
-            OnReturnPeekEvent.Invoke();
-        }
-    }
-    public virtual void StateUpdate()
-    {
 
-    }
+    public abstract Enum GetEnum();
 }

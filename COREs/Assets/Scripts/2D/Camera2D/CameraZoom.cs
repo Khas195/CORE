@@ -19,11 +19,11 @@ public class CameraZoom : MonoBehaviour
     [SerializeField]
     [Tooltip("Each frame the camera move x percentage closer to the target")]
     float followPercentage;
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -31,14 +31,14 @@ public class CameraZoom : MonoBehaviour
     {
         var greatestDistance = GetGreatestDistance(encapsulatedTargets);
         var clampedZoomValue = Mathf.Clamp(greatestDistance, minZoom, maxZoom);
-        Definition.CameraDebug("Clamped Zoom size : " + clampedZoomValue);
         host.orthographicSize = Mathf.Lerp(host.orthographicSize, clampedZoomValue, followPercentage);
     }
 
     public void Clear(bool clearPlayer)
     {
         encapsulatedTargets.Clear();
-        if (clearPlayer == false) {
+        if (clearPlayer == false)
+        {
             encapsulatedTargets.Add(character);
         }
     }
@@ -65,7 +65,8 @@ public class CameraZoom : MonoBehaviour
 
     float GetGreatestDistance(List<Transform> encapsulatedTargets)
     {
-        if (encapsulatedTargets.Count <= 1) {
+        if (encapsulatedTargets.Count <= 1)
+        {
             return 0;
         }
         var bounds = new Bounds();
@@ -73,8 +74,7 @@ public class CameraZoom : MonoBehaviour
         {
             bounds.Encapsulate(target.position);
         }
-        var result  = bounds.size.x < bounds.size.y ? bounds.size.y : bounds.size.x;
-        Definition.CameraDebug("Greatest distance between focus objects: " + result);
+        var result = bounds.size.x < bounds.size.y ? bounds.size.y : bounds.size.x;
         return result;
     }
 

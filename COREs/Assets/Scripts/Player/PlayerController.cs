@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     /** \brief Reference to the movement interface */
     IMovement moveBehavior = null;
     [SerializeField]
-    CharacterAnimatorControl animControl;
+    CharacterAnimatorControl animControl = null;
 
     void Update()
     {
