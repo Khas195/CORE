@@ -29,6 +29,7 @@ public class SingletonMonobehavior<T> : MonoBehaviour where T : SingletonMonobeh
         {
             // create new instance in scene.
             var newInstance = new GameObject(typeof(T).FullName);
+            newInstance.AddComponent<T>();
             result = FindInstance();
         }
         return result;
