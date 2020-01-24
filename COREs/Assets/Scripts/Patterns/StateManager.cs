@@ -12,6 +12,8 @@ public class StateManager : MonoBehaviour
     [SerializeField]
     [ReadOnly]
     List<State> availableStates = new List<State>();
+
+
     void Start()
     {
         currentState = null;
@@ -21,19 +23,23 @@ public class StateManager : MonoBehaviour
     [Button("Find Available States")]
     private void FindAvailableStates()
     {
+        LogHelper.GetInstance().Log(this + " clearing available states");
         availableStates.Clear();
 
+        LogHelper.GetInstance().Log(this + " finding available states in children");
         var states = this.GetComponentsInChildren<State>();
 
         if (states.Length <= 0)
         {
-            LogHelper.GetInstance(forceAddInEditor: true).LogWarning(this + " has no available states to operate");
+            LogHelper.GetInstance().LogWarning(this + " has no available states to operate");
             return;
         }
 
+        LogHelper.GetInstance().Log(this + " adding available states in children");
         availableStates.AddRange(states);
 
 
+        LogHelper.GetInstance().Log(this + " request first founded state " + availableStates[0].GetEnum() + " to be default starting state");
         RequestState(availableStates[0].GetEnum());
     }
     public void RequestState(Enum requestedStateEnum)
@@ -41,7 +47,7 @@ public class StateManager : MonoBehaviour
         var requestedState = LookUpAvailableState(requestedStateEnum);
         if (requestedState == null)
         {
-            LogHelper.GetInstance(forceAddInEditor: true).LogWarning(this + " trying to request a NULL state");
+            LogHelper.GetInstance().LogWarning(this + " trying to request a NULL state");
             return;
         }
         if (currentState == null)
@@ -56,7 +62,7 @@ public class StateManager : MonoBehaviour
             }
             else
             {
-                LogHelper.GetInstance(forceAddInEditor: true).LogWarning(this + " trying to make an unsupported transition to " + requestedState);
+                LogHelper.GetInstance().LogWarning(this + " trying to make an unsupported transition to " + requestedState);
                 return;
             }
         }
@@ -64,6 +70,7 @@ public class StateManager : MonoBehaviour
 
     public State LookUpAvailableState(Enum requestedStateEnum)
     {
+        LogHelper.GetInstance().Log(this + " looking up available states for " + requestedStateEnum);
         State result = null;
         for (int i = 0; i < availableStates.Count; i++)
         {
@@ -74,6 +81,15 @@ public class StateManager : MonoBehaviour
                 break;
             }
         }
+        if (result)
+        {
+            LogHelper.GetInstance().Log(this + " found a match for " + requestedStateEnum);
+        }
+        else
+        {
+
+            LogHelper.GetInstance().LogWarning(this + " CANNOT found a match for " + requestedStateEnum);
+        }
         return result;
     }
 
@@ -81,14 +97,16 @@ public class StateManager : MonoBehaviour
     {
         if (currentState)
         {
+            LogHelper.GetInstance().Log(this + " call State exit for " + currentState);
             currentState.OnStateExit();
         }
         if (requestedState)
         {
+            LogHelper.GetInstance().Log(this + " call State enter for " + requestedState);
             requestedState.OnStateEnter();
         }
         currentState = requestedState;
-        LogHelper.GetInstance(forceAddInEditor: true).LogWarning("Complete Transition from " + currentState + " to " + requestedState);
+        LogHelper.GetInstance().Log(this + " completed transition from " + currentState + " to " + requestedState);
     }
     public State GetCurrentState()
     {

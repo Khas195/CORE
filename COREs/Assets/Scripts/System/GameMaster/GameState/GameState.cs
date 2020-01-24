@@ -16,6 +16,6 @@ public abstract class GameState : State
 
     protected void Awake()
     {
-        master = GameMaster.GetInstance(forceAddInEditor: true);
+        master = GameMaster.GetInstance();
     }
 }

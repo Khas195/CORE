@@ -24,11 +24,8 @@ public class LoadLevelButton : MonoBehaviour
     }
     public void LoadLevel()
     {
-        var master = GameMaster.GetInstance();
-        if (master == null)
-        {
-            LogHelper.GetInstance(forceAddInEditor: true).LogWarning(this + " need an instance of GameMaster in the scene to work");
-        }
+        var master = GameMaster.FindInstance();
+        LogHelper.GetInstance().Log(this + " loading level with level index " + levelIndex);
         master.SetCurrentInGameLevel(levelIndex);
         master.GetStateManager().RequestState(GameState.GameStateEnum.InGame);
     }

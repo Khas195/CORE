@@ -5,7 +5,7 @@ using UnityEngine;
 public class SingletonMonobehavior<T> : MonoBehaviour where T : SingletonMonobehavior<T>
 {
     static T instance;
-    public static T GetInstance()
+    public static T FindInstance()
     {
         T result = null;
         try
@@ -22,15 +22,16 @@ public class SingletonMonobehavior<T> : MonoBehaviour where T : SingletonMonobeh
         }
         return result;
     }
-    public static T GetInstance(bool forceAddInEditor = false)
+    public static T GetInstance()
     {
-        T result = GetInstance();
-        if (forceAddInEditor && result == null)
+        T result = FindInstance();
+        if (result == null)
         {
+            // create new instance in scene.
             var newInstance = new GameObject(typeof(T).FullName);
-            result = newInstance.AddComponent<T>();
+            result = FindInstance();
         }
-        return GetInstance();
+        return result;
     }
     protected virtual void Awake()
     {

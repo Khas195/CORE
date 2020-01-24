@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60afce984832e2948a4c87749c21dfda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentState: {fileID: 1982691435}
+  currentState: {fileID: 0}
   availableStates:
   - {fileID: 1982691435}
   - {fileID: 1552290342}
