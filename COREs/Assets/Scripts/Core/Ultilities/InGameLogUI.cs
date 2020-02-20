@@ -28,7 +28,7 @@ public class InGameLogUI : SingletonMonobehavior<InGameLogUI>
     void Start()
     {
         var rect = this.layout.GetComponent<RectTransform>();
-        this.layout.cellSize = new Vector2(rect.rect.width, rect.rect.height / 20f);
+        this.layout.cellSize = new Vector2(rect.rect.width, rect.rect.height / 30f);
     }
 
     public void ShowLog(string log)

@@ -12,10 +12,10 @@ public class LogItemPool : ObjectPooling<LogTextItem>
 {
     [SerializeField]
     [Required]
-    InGameLogUI logUI;
+    InGameLogUI logUI = null;
     [SerializeField]
     [Required]
-    GameObject logPrototype;
+    GameObject logPrototype = null;
 
 
     protected override void ActivateOjbect(LogTextItem target)

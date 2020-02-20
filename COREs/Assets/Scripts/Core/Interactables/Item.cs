@@ -17,18 +17,18 @@ public class Item : IInteractable
     void Awake()
     {
     }
-    public override void Defocus(GameObject interacter)
+    public override void Defocus()
     {
-        base.Defocus(interacter);
+        base.Defocus();
         if (useInventoryUI)
         {
             itemCanvas.gameObject.SetActive(false);
         }
     }
 
-    public override void Focus(GameObject interacter)
+    public override void Focus()
     {
-        base.Focus(interacter);
+        base.Focus();
         if (useInventoryUI)
         {
             itemCanvas.gameObject.SetActive(true);
@@ -40,14 +40,10 @@ public class Item : IInteractable
         return "Pick Up";
     }
 
-    public override string GetName()
-    {
-        return itemData.name;
-    }
 
-    public override bool Interact(GameObject interacter)
+    public override bool Interact()
     {
-        if (base.Interact(interacter) == false) return false;
+        if (base.Interact() == false) return false;
         InventorySystem.GetInstance().AddItem(this.itemData);
         Destroy(this.itemEntity);
         return true;

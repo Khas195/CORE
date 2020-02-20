@@ -1,5 +1,4 @@
 using System;
-using Assets.Scripts.Core.CustomAttributes;
 using NaughtyAttributes;
 using UnityEngine;
 [Serializable]

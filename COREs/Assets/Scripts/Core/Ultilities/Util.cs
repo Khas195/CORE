@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class Ultilities
+public static class Util
 {
     // Outdated, use Mathf.Lerp instead 
     public static float CalculateAsymptoticAverage(float currentValue, float target, float percentage)
@@ -59,5 +59,52 @@ public static class Ultilities
         {
             animator.SetTrigger(paramName);
         }
+    }
+    public static String TextMod(this String text, Color color, bool bolden = false, bool italic = false)
+    {
+        var result = text;
+        if (bolden)
+        {
+            result = Bolden(result);
+        }
+        if (italic)
+        {
+            result = Italician(result);
+        }
+        result = Colorize(result, color);
+        return result;
+    }
+    public static String TextMod(this String text, String color, bool bolden = false, bool italic = false)
+    {
+        var result = text;
+        if (bolden)
+        {
+            result = Bolden(result);
+        }
+        if (italic)
+        {
+            result = Italician(result);
+        }
+        if (color.Equals("") == false)
+        {
+            result = Colorize(result, color);
+        }
+        return result;
+    }
+    public static String Colorize(this String text, Color color)
+    {
+        return "<color=#" + ColorUtility.ToHtmlStringRGBA(color) + ">" + text + "</color>";
+    }
+    public static String Colorize(this String text, String color)
+    {
+        return "<color=" + color + ">" + text + "</color>";
+    }
+    public static String Bolden(this String text)
+    {
+        return "<b>" + text + "</b>";
+    }
+    public static String Italician(this String text)
+    {
+        return "<i>" + text + "</i>";
     }
 }

@@ -8,6 +8,9 @@ using UnityEngine.UI;
 public class LoadLevelButton : MonoBehaviour
 {
     [SerializeField]
+    bool loadDesignatedLevel = false;
+    [SerializeField]
+    [ShowIf(" loadDesignatedLevel")]
     int levelIndex = 0;
     [SerializeField]
     Button button = null;
@@ -25,8 +28,14 @@ public class LoadLevelButton : MonoBehaviour
     public void LoadLevel()
     {
         var master = GameMaster.FindInstance();
-        LogHelper.GetInstance().Log(this + " loading level with level index " + levelIndex);
-        master.SetCurrentInGameLevel(levelIndex);
+        if (loadDesignatedLevel)
+        {
+            LogHelper.GetInstance().Log(this + " loading level with level index " + levelIndex);
+            master.SetCurrentInGameLevel(levelIndex);
+
+        }
+
+        master.LoadLevel(master.GetInGameLevelIndex());
         master.GetStateManager().RequestState(GameState.GameStateEnum.InGame);
     }
 }

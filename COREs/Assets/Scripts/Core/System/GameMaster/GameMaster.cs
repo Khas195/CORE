@@ -8,12 +8,14 @@ using UnityEngine.SceneManagement;
 public class GameMaster : SingletonMonobehavior<GameMaster>
 {
     [SerializeField]
+    bool skipMainMenu = false;
+    [SerializeField]
     [Required]
     StateManager gameStateManager = null;
 
 
     [SerializeField]
-    int startLevelIndex = 0;
+    int startLevelIndex = 1;
 
 
 
@@ -28,6 +30,16 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
     {
         String masterSceneName = "MasterScene";
         UnloadAllScenesExcept(masterSceneName);
+        currentInGameLevelIndex = startLevelIndex;
+        if (skipMainMenu)
+        {
+            this.LoadLevel(startLevelIndex);
+            gameStateManager.RequestState(GameState.GameStateEnum.InGame);
+        }
+        else
+        {
+            gameStateManager.RequestState(GameState.GameStateEnum.MainMenu);
+        }
     }
 
     private void UnloadAllScenesExcept(string sceneNotToUnloadName)
@@ -45,13 +57,15 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
 
     public void LoadSceneAdditively(string sceneName)
     {
-        LogHelper.GetInstance().Log(" Loading <b>" + sceneName + "</b>", true);
+        LogHelper.GetInstance().Log(" Loading Additively " + sceneName.Bolden() + "", true);
         SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
+
     }
     public void LoadLevel(int levelIndex)
     {
-        LogHelper.GetInstance().Log(" Loading <b> Level" + levelIndex + "</b>", true);
-        SceneManager.LoadScene("Level" + levelIndex, LoadSceneMode.Single);
+        UnloadAllScenesExcept("MasterScene");
+        LoadSceneAdditively("EntitiesScene");
+        LoadSceneAdditively("Level" + levelIndex);
     }
 
     public void UnloadScene(string sceneName)
@@ -66,6 +80,7 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
         if (Application.CanStreamedLevelBeLoaded("Level" + nextLevelIndex))
         {
             LoadLevel(nextLevelIndex);
+            currentInGameLevelIndex = nextLevelIndex;
         }
         else
         {
@@ -129,7 +144,7 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
     }
     public void RestartLevel()
     {
-        LogHelper.GetInstance().Log("<b>Restarting Level: " + currentInGameLevelIndex + " </b>", true);
+        LogHelper.GetInstance().Log(("Restarting Level: " + currentInGameLevelIndex).Bolden(), true);
         this.LoadLevel(currentInGameLevelIndex);
     }
 }

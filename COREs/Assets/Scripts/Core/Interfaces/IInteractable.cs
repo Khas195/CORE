@@ -1,32 +1,31 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
 public abstract class IInteractable : MonoBehaviour
 {
     [SerializeField]
+    [ReadOnly]
     protected bool isFocus;
 
-    public virtual string GetName()
+    public virtual void Focus()
     {
-        return "";
-    }
-    public virtual void Focus(GameObject interacter)
-    {
-        LogHelper.GetInstance().Log(interacter.name + " try to focus " + this.name);
+        LogHelper.GetInstance().Log("Focusing".Bolden() + " " + this.name.Colorize("cyan").Bolden(), true);
         isFocus = true;
     }
-    public virtual void Defocus(GameObject interacter)
+    public virtual void Defocus()
     {
-        LogHelper.GetInstance().Log(interacter.name + " defocus " + this.name);
+        LogHelper.GetInstance().Log("Defocusing".Bolden() + " " + this.name.Colorize("cyan").Bolden(), true);
         isFocus = false;
     }
 
-    public virtual bool Interact(GameObject interacter)
+    public virtual bool Interact()
     {
-        LogHelper.GetInstance().Log(interacter.name + " try to interact with " + this.name);
+
+        LogHelper.GetInstance().Log(this.GetKindOfInteraction().Bolden() + " " + this.name.Colorize("cyan").Bolden(), true);
         return isFocus;
     }
 

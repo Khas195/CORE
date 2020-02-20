@@ -1,9 +1,6 @@
 using System;
 using UnityEngine;
 
-namespace Assets.Scripts.Core.CustomAttributes
+public class DisplayScriptableObjectPropertiesAttribute : PropertyAttribute
 {
-    public class DisplayScriptableObjectPropertiesAttribute : PropertyAttribute
-    {
-    }
 }

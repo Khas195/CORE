@@ -10,7 +10,7 @@ public class LogHelper : SingletonMonobehavior<LogHelper>
         UnityEngine.Debug.LogError(message);
         if (showLogOnInGame)
         {
-            ShowLogOnUI("<color=red><b>ERROR:</b></color>" + message);
+            ShowLogOnUI("ERROR:".TextMod("red", true, true) + message);
         }
     }
 
@@ -30,7 +30,7 @@ public class LogHelper : SingletonMonobehavior<LogHelper>
         UnityEngine.Debug.LogWarning(message);
         if (showLogOnInGame)
         {
-            ShowLogOnUI("<color=yellow><b>WARNING:</b></color>" + message);
+            ShowLogOnUI("WARNING:".TextMod("yellow", true, true) + message);
         }
     }
     private void ShowLogOnUI(string message)

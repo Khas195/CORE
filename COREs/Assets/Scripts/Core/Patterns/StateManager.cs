@@ -38,9 +38,6 @@ public class StateManager : MonoBehaviour
         LogHelper.GetInstance().Log(this + " adding available states in children");
         availableStates.AddRange(states);
 
-
-        LogHelper.GetInstance().Log(this + " request first founded state " + availableStates[0].GetEnum() + " to be default starting state");
-        RequestState(availableStates[0].GetEnum());
     }
     public void RequestState(Enum requestedStateEnum)
     {
