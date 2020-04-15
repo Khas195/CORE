@@ -60,8 +60,9 @@ public class IMovement : MonoBehaviour
     /// <param name="hostRigidBody"> The rigidbody of the character's model</param>
     public virtual void SetRigidBody(Rigidbody hostRigidBody)
     {
+        return;
     }
-    public virtual void SetRigidBody2D(Rigidbody2D body)
+    public virtual void SetRigidBody(Rigidbody2D body)
     {
         return;
     }

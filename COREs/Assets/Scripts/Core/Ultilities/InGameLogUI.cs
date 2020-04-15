@@ -72,9 +72,6 @@ public class InGameLogUI : SingletonMonobehavior<InGameLogUI>
         }
     }
 
-    void FixedUpdate()
-    {
-    }
     private void FadeLogItem(LogTextItem log)
     {
         var newFadeColor = log.item.color;

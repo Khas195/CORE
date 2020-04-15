@@ -16,6 +16,8 @@ public class LogItemPool : ObjectPooling<LogTextItem>
     [SerializeField]
     [Required]
     GameObject logPrototype = null;
+    [SerializeField]
+    bool bottupUpOrder = false;
 
 
     protected override void ActivateOjbect(LogTextItem target)
@@ -24,6 +26,10 @@ public class LogItemPool : ObjectPooling<LogTextItem>
         target = ResetLogProperties(target);
 
         target.item.gameObject.transform.SetParent(logUI.transform);
+        if (bottupUpOrder == false)
+        {
+            target.item.gameObject.transform.SetAsFirstSibling();
+        }
     }
 
     protected override LogTextItem CreateInstance()

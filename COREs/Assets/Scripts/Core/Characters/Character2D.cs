@@ -19,7 +19,12 @@ public class Character2D : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        movement.SetRigidBody2D(body);
+        movement.SetRigidBody(body);
+    }
+
+    public GameObject GetHost()
+    {
+        return body.gameObject;
     }
 
     public void Jump()
@@ -27,14 +32,14 @@ public class Character2D : MonoBehaviour
         movement.SignalJump();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
-
-    public void Move(int horizontal, int vertical)
+    public void Move(float horizontal, float vertical)
     {
         movement.Move(vertical, horizontal);
+    }
+
+    public string GetName()
+    {
+        return name;
     }
 }

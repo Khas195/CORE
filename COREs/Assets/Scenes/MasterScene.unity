@@ -444,6 +444,16 @@ PrefabInstance:
       propertyPath: m_CellSize.y
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 1891663337051015292, guid: 5f50411c103bd3b47b74085a90978f70,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891663336847751271, guid: 5f50411c103bd3b47b74085a90978f70,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.24951172
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f50411c103bd3b47b74085a90978f70, type: 3}
 --- !u!224 &1675331691 stripped
@@ -766,7 +776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8908253c5bbeca4bb28967ae7e1a840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skipMainMenu: 0
+  skipMainMenu: 1
   gameStateManager: {fileID: 1867409778}
   startLevelIndex: 1
   currentInGameLevelIndex: 0

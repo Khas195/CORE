@@ -14,6 +14,7 @@ public class CameraFollow : MonoBehaviour
 
     [SerializeField]
     [Tooltip("Each frame the camera move x percentage closer to the target")]
+    [Range(0.0f, 1.0f)]
     float followPercentage = 0.02f;
     [SerializeField]
     bool followX = false;
@@ -21,6 +22,8 @@ public class CameraFollow : MonoBehaviour
     bool followY = false;
     [SerializeField]
     bool followZ = false;
+    [SerializeField]
+    float maxDistance = 5f;
 
 
     // Start is called before the first frame update
@@ -47,6 +50,7 @@ public class CameraFollow : MonoBehaviour
         }
         host.transform.position = hostPos;
     }
+
 
     public void SetFollowPercentage(float value)
     {

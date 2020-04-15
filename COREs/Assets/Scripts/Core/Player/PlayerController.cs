@@ -52,10 +52,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (GameMaster.GetInstance().IsInState(GameState.GameStateEnum.InGame))
-            {
-                interact.Invoke();
-            }
+            interact.Invoke();
         }
 
         if ((forward != 0 || side != 0) && character.IsRotationLock() == false)

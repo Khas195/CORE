@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 /** 
  * This class handles all movement related behavior in 2D.
@@ -12,13 +13,14 @@ public class Movement2D : IMovement
     /** The Rigid body of the host object
      * body2D is needed to be assigned for this class to work
      */
+    [ShowIf("noCharacter")]
     Rigidbody2D body2D = null;
     [SerializeField]
     /**
      * this value smoothen the acceleration of the host object while speeding up to his intended speed
      * A value of 1 means the host object will snap to his intended speed
      */
-    float smoothAcceleration = 0;
+    float smoothAcceleration = 0.2f;
     /** The current speed of the host object */
     float currentSpeed;
     /** represents whether the host object is moving or not */
@@ -64,5 +66,23 @@ public class Movement2D : IMovement
     public override void SignalJump()
     {
         return;
+    }
+
+
+
+    public override void SetRigidBody(Rigidbody2D body)
+    {
+        this.body2D = body;
+    }
+
+    public override bool IsTouchingGround()
+    {
+        return base.IsTouchingGround();
+    }
+
+
+    public override void RotateToward(Vector3 direction, bool rotateY)
+    {
+        base.RotateToward(direction, rotateY);
     }
 }

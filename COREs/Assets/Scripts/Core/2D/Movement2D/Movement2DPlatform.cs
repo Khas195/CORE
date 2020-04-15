@@ -60,7 +60,7 @@ public class Movement2DPlatform : IMovement
     {
         jumpSignal = true;
     }
-    public override void SetRigidBody2D(Rigidbody2D body)
+    public override void SetRigidBody(Rigidbody2D body)
     {
         this.body2D = body;
     }
