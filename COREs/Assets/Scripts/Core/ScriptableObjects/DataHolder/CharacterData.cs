@@ -4,8 +4,6 @@ using NaughtyAttributes;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "CharacterData", menuName = "Data/Character", order = 1)]
-
-[XmlInclude(typeof(CharacterData))]
 [Serializable]
 public class CharacterData : ScriptableObject
 {
