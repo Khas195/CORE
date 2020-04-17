@@ -5,6 +5,12 @@ using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[Serializable]
+public class SceneChooser
+{
+    [Scene]
+    public string sceneName;
+}
 public class GameMaster : SingletonMonobehavior<GameMaster>
 {
     [SerializeField]
@@ -13,23 +19,28 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
     [Required]
     StateManager gameStateManager = null;
 
-
     [SerializeField]
+    [Scene]
     int startLevelIndex = 1;
-
-
-
 
     [SerializeField]
     int currentInGameLevelIndex = 1;
+    [SerializeField]
+    List<SceneChooser> prequisiteScene = new List<SceneChooser>();
+
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
     /// any of the Update methods is called the first time.
     /// </summary>
     void Start()
     {
-        String masterSceneName = "MasterScene";
-        UnloadAllScenesExcept(masterSceneName);
+        UnloadAllScenesExcept("");
+
+        foreach (var scene in prequisiteScene)
+        {
+            LoadSceneAdditively(scene.sceneName);
+        }
+
         currentInGameLevelIndex = startLevelIndex;
         if (skipMainMenu)
         {
@@ -63,9 +74,28 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
     }
     public void LoadLevel(int levelIndex)
     {
-        UnloadAllScenesExcept("MasterScene");
+        UnloadAllScenesExcept("GameMaster");
         LoadSceneAdditively("EntitiesScene");
         LoadSceneAdditively("Level" + levelIndex);
+    }
+    public void LoadLevel(string levelName)
+    {
+        UnloadAllScenesExcept("GameMaster");
+        LoadSceneAdditively("EntitiesScene");
+        LoadSceneAdditively(levelName);
+    }
+
+    private void UnloadCurrentLevel()
+    {
+        int numOfScene = SceneManager.sceneCount;
+        for (int i = 0; i < numOfScene; i++)
+        {
+            Scene scene = SceneManager.GetSceneAt(i);
+            if (scene.name.Contains("Level"))
+            {
+                UnloadScene(scene.name);
+            }
+        }
     }
 
     public void UnloadScene(string sceneName)
@@ -110,7 +140,7 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
         // UnityEditor.EditorApplication.isPlaying need to be set to false to end the game
         UnityEditor.EditorApplication.isPlaying = false;
 #else
-         Application.Quit();
+        Application.Quit();
 #endif
     }
 
