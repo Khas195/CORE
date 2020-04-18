@@ -25,4 +25,8 @@ public class MainMenu : MonoBehaviour
     {
         GameMaster.GetInstance().ExitGame();
     }
+    public void LoadFistLevel()
+    {
+        GameMaster.GetInstance().LoadLevel(1);
+    }
 }

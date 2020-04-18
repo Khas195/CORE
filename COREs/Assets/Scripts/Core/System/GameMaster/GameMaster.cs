@@ -25,8 +25,8 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
 
     [SerializeField]
     int currentInGameLevelIndex = 1;
-    [SerializeField]
-    List<SceneChooser> prequisiteScene = new List<SceneChooser>();
+
+
 
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
@@ -34,12 +34,8 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
     /// </summary>
     void Start()
     {
-        UnloadAllScenesExcept("");
+        UnloadAllScenesExcept("MasterScene");
 
-        foreach (var scene in prequisiteScene)
-        {
-            LoadSceneAdditively(scene.sceneName);
-        }
 
         currentInGameLevelIndex = startLevelIndex;
         if (skipMainMenu)
@@ -53,14 +49,48 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
         }
     }
 
+    /// <summary>
+    /// Update is called every frame, if the MonoBehaviour is enabled.
+    /// </summary>
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (gameStateManager.GetCurrentState().GetEnum().Equals(GameState.GameStateEnum.GamePaused))
+            {
+                UnPauseGame();
+            }
+            else
+            {
+                PauseGame();
+            }
+        }
+    }
+
+    public void PauseGame()
+    {
+        this.gameStateManager.RequestState(GameState.GameStateEnum.GamePaused);
+    }
+    public void UnPauseGame()
+    {
+        this.gameStateManager.RequestState(GameState.GameStateEnum.InGame);
+    }
+    public void GoToMainMenu()
+    {
+        UnloadAllScenesExcept("MasterScene");
+        gameStateManager.RequestState(GameState.GameStateEnum.MainMenu);
+    }
+
     private void UnloadAllScenesExcept(string sceneNotToUnloadName)
     {
         int numOfScene = SceneManager.sceneCount;
+        LogHelper.GetInstance().Log("Game Master".Bolden().Colorize(Color.green) + " counts " + numOfScene + " at start", true);
         for (int i = 0; i < numOfScene; i++)
         {
             Scene scene = SceneManager.GetSceneAt(i);
             if (scene.name != sceneNotToUnloadName)
             {
+                LogHelper.GetInstance().Log("Game Master".Bolden().Colorize(Color.green) + " unloading " + scene.name, true);
                 UnloadScene(scene.name);
             }
         }
@@ -70,19 +100,27 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
     {
         LogHelper.GetInstance().Log(" Loading Additively " + sceneName.Bolden() + "", true);
         SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
+        if (SceneManager.GetActiveScene().name.Equals("MasterScene") == false)
+        {
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName("MasterScene"));
+        }
 
     }
     public void LoadLevel(int levelIndex)
     {
-        UnloadAllScenesExcept("GameMaster");
+        UnloadAllScenesExcept("MasterScene");
         LoadSceneAdditively("EntitiesScene");
+        LoadSceneAdditively("InGameMenu");
         LoadSceneAdditively("Level" + levelIndex);
+        gameStateManager.RequestState(GameState.GameStateEnum.InGame);
     }
     public void LoadLevel(string levelName)
     {
-        UnloadAllScenesExcept("GameMaster");
+        UnloadAllScenesExcept("MasterScene");
         LoadSceneAdditively("EntitiesScene");
+        LoadSceneAdditively("InGameMenu");
         LoadSceneAdditively(levelName);
+        gameStateManager.RequestState(GameState.GameStateEnum.InGame);
     }
 
     private void UnloadCurrentLevel()
@@ -176,5 +214,10 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
     {
         LogHelper.GetInstance().Log(("Restarting Level: " + currentInGameLevelIndex).Bolden(), true);
         this.LoadLevel(currentInGameLevelIndex);
+    }
+
+    public void SetGameTimeScale(float newTimeScale)
+    {
+        Time.timeScale = newTimeScale;
     }
 }
