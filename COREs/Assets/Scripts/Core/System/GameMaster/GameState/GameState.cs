@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
-
 public abstract class GameState : State
 {
     public enum GameStateEnum
@@ -11,7 +10,6 @@ public abstract class GameState : State
         MainMenu,
         InGame,
         GamePaused,
-        InInventory
     }
     [SerializeField]
     [ReadOnly]
@@ -21,4 +19,5 @@ public abstract class GameState : State
     {
         master = GameMaster.GetInstance();
     }
+    public abstract void UpdateState();
 }

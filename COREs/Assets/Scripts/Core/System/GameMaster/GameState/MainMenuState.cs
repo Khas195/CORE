@@ -13,12 +13,16 @@ public class MainMenuState : GameState
     public override void OnStateEnter()
     {
         LogHelper.GetInstance().Log("Main Menu Scene Enter", true);
-        this.master.LoadSceneAdditively("MainMenu");
+        this.master.LoadMainMenu();
     }
 
     public override void OnStateExit()
     {
         LogHelper.GetInstance().Log("Main Menu Scene Exit", true);
-        this.master.UnloadScene("MainMenu");
+        this.master.UnloadMainMenu();
+    }
+
+    public override void UpdateState()
+    {
     }
 }

@@ -39,29 +39,30 @@ public class StateManager : MonoBehaviour
         availableStates.AddRange(states);
 
     }
-    public void RequestState(Enum requestedStateEnum)
+    public bool RequestState(Enum requestedStateEnum)
     {
         var requestedState = LookUpAvailableState(requestedStateEnum);
         if (requestedState == null)
         {
             LogHelper.GetInstance().LogWarning(this + " trying to request a NULL state");
-            return;
+            return false;
         }
+
         if (currentState == null)
         {
             CompleteTransition(ref currentState, requestedState);
+            return true;
+        }
+
+        if (currentState.CanTransitionTo(requestedState.GetEnum()))
+        {
+            CompleteTransition(ref currentState, requestedState);
+            return true;
         }
         else
         {
-            if (currentState.CanTransitionTo(requestedState.GetEnum()))
-            {
-                CompleteTransition(ref currentState, requestedState);
-            }
-            else
-            {
-                LogHelper.GetInstance().LogWarning(this + " trying to make an unsupported transition to " + requestedState);
-                return;
-            }
+            LogHelper.GetInstance().LogWarning(this + " trying to make an unsupported transition to " + requestedState);
+            return false;
         }
     }
 
@@ -108,5 +109,9 @@ public class StateManager : MonoBehaviour
     public State GetCurrentState()
     {
         return currentState;
+    }
+    public bool IsCurrentState(Enum stateEnum)
+    {
+        return currentState.GetEnum().Equals(stateEnum);
     }
 }

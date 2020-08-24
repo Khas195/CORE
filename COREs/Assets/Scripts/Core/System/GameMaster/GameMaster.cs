@@ -4,123 +4,124 @@ using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-[Serializable]
-public class SceneChooser
+public class GameMaster : SingletonMonobehavior<GameMaster>, IObserver
 {
-    [Scene]
-    public string sceneName;
-}
-public class GameMaster : SingletonMonobehavior<GameMaster>
-{
-    [SerializeField]
-    bool skipMainMenu = false;
     [SerializeField]
     [Required]
     StateManager gameStateManager = null;
-
     [SerializeField]
-    [Scene]
-    int startLevelIndex = 1;
+    [Required]
+    BuildProfile profile = null;
 
-    [SerializeField]
-    int currentInGameLevelIndex = 1;
-
-
-
-    /// <summary>
-    /// Start is called on the frame when a script is enabled just before
-    /// any of the Update methods is called the first time.
-    /// </summary>
-    void Start()
+    public void LoadMainMenu()
     {
-        UnloadAllScenesExcept("MasterScene");
+        LoadSceneAdditively(profile.menuScenes[0]);
+    }
 
-
-        currentInGameLevelIndex = startLevelIndex;
-        if (skipMainMenu)
-        {
-            this.LoadLevel(startLevelIndex);
-            gameStateManager.RequestState(GameState.GameStateEnum.InGame);
-        }
-        else
-        {
-            gameStateManager.RequestState(GameState.GameStateEnum.MainMenu);
-        }
+    public void UnloadMainMenu()
+    {
+        UnloadScene(profile.menuScenes[0]);
     }
 
     /// <summary>
-    /// Update is called every frame, if the MonoBehaviour is enabled.
+    /// Awake is called when the script instance is being loaded.
     /// </summary>
+    protected override void Awake()
+    {
+        base.Awake();
+        PostOffice.GetInstance().Subscribes(this, GameMasterEvent.ON_GAMESTATE_CHANGED);
+    }
+    void Start()
+    {
+        UnloadAllScenes();
+        LoadScenesList(profile.setupScenes);
+
+
+        if (profile.skipMainMenu)
+        {
+            LoadLevel(profile.levels[0]);
+        }
+        else
+        {
+            GoToMainMenu();
+        }
+    }
+
+    private void NotifyOnGameStateChange(GameState.GameStateEnum newGameState)
+    {
+        var data = DataPool.GetInstance().RequestInstance();
+        data.SetValue(GameMasterEvent.GameStateChangeEvent.New_Game_State, newGameState);
+        PostOffice.GetInstance().SendData(data, GameMasterEvent.ON_GAMESTATE_CHANGED);
+    }
+
+    public void UnloadAllScenes()
+    {
+        int numOfScene = SceneManager.sceneCount;
+        LogHelper.GetInstance().Log(profile.masterScene.Bolden().Colorize(Color.green) + " counts " + numOfScene + " at start", true);
+        for (int i = 0; i < numOfScene; i++)
+        {
+            Scene scene = SceneManager.GetSceneAt(i);
+            if (scene.name != profile.masterScene)
+            {
+                LogHelper.GetInstance().Log(profile.masterScene.Bolden().Colorize(Color.green) + " unloading " + scene.name, true);
+                UnloadScene(scene.name);
+            }
+        }
+    }
+
+    public void LoadScenesList(List<string> scenesToLoad)
+    {
+        for (int i = 0; i < scenesToLoad.Count; i++)
+        {
+            this.LoadSceneAdditively(scenesToLoad[i]);
+        }
+    }
+    public void UnloadScenesList(List<string> scenesToUnload)
+    {
+        for (int i = 0; i < scenesToUnload.Count; i++)
+        {
+            this.UnloadScene(scenesToUnload[i]);
+        }
+    }
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        ((GameState)gameStateManager.GetCurrentState()).UpdateState();
+        if (Input.GetKeyDown(KeyCode.F1))
         {
-            if (gameStateManager.GetCurrentState().GetEnum().Equals(GameState.GameStateEnum.GamePaused))
-            {
-                UnPauseGame();
-            }
-            else
-            {
-                PauseGame();
-            }
+            PostOffice.GetInstance().SendData(null, GameConsoleEvent.CONSOLE_SWITCH);
         }
     }
 
     public void PauseGame()
     {
-        this.gameStateManager.RequestState(GameState.GameStateEnum.GamePaused);
+        ChangeGameState(GameState.GameStateEnum.GamePaused);
     }
     public void UnPauseGame()
     {
-        this.gameStateManager.RequestState(GameState.GameStateEnum.InGame);
+        ChangeGameState(GameState.GameStateEnum.InGame);
     }
     public void GoToMainMenu()
     {
-        UnloadAllScenesExcept("MasterScene");
-        gameStateManager.RequestState(GameState.GameStateEnum.MainMenu);
-    }
-
-    private void UnloadAllScenesExcept(string sceneNotToUnloadName)
-    {
-        int numOfScene = SceneManager.sceneCount;
-        LogHelper.GetInstance().Log("Game Master".Bolden().Colorize(Color.green) + " counts " + numOfScene + " at start", true);
-        for (int i = 0; i < numOfScene; i++)
-        {
-            Scene scene = SceneManager.GetSceneAt(i);
-            if (scene.name != sceneNotToUnloadName)
-            {
-                LogHelper.GetInstance().Log("Game Master".Bolden().Colorize(Color.green) + " unloading " + scene.name, true);
-                UnloadScene(scene.name);
-            }
-        }
+        ChangeGameState(GameState.GameStateEnum.MainMenu);
     }
 
     public void LoadSceneAdditively(string sceneName)
     {
         LogHelper.GetInstance().Log(" Loading Additively " + sceneName.Bolden() + "", true);
         SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
-        if (SceneManager.GetActiveScene().name.Equals("MasterScene") == false)
+        if (SceneManager.GetActiveScene().name.Equals(profile.masterScene) == false)
         {
-            SceneManager.SetActiveScene(SceneManager.GetSceneByName("MasterScene"));
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName(profile.masterScene));
         }
 
     }
-    public void LoadLevel(int levelIndex)
-    {
-        UnloadAllScenesExcept("MasterScene");
-        LoadSceneAdditively("EntitiesScene");
-        LoadSceneAdditively("InGameMenu");
-        LoadSceneAdditively("Level" + levelIndex);
-        gameStateManager.RequestState(GameState.GameStateEnum.InGame);
-    }
     public void LoadLevel(string levelName)
     {
-        UnloadAllScenesExcept("MasterScene");
-        LoadSceneAdditively("EntitiesScene");
-        LoadSceneAdditively("InGameMenu");
+        UnloadScenesList(profile.prequisiteGameScenes);
+        LoadScenesList(profile.prequisiteGameScenes);
         LoadSceneAdditively(levelName);
-        gameStateManager.RequestState(GameState.GameStateEnum.InGame);
+        ChangeGameState(GameState.GameStateEnum.InGame);
     }
 
     private void UnloadCurrentLevel()
@@ -141,22 +142,6 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
         SceneManager.UnloadSceneAsync(sceneName);
     }
 
-    public void LoadNextLevel()
-    {
-        int nextLevelIndex = currentInGameLevelIndex + 1;
-        LogHelper.GetInstance().Log("Checking if level " + nextLevelIndex + " can be loaded", true);
-        if (Application.CanStreamedLevelBeLoaded("Level" + nextLevelIndex))
-        {
-            LoadLevel(nextLevelIndex);
-            currentInGameLevelIndex = nextLevelIndex;
-        }
-        else
-        {
-            LogHelper.GetInstance().LogWarning("Level " + nextLevelIndex + " could not be loaded", true);
-            LogHelper.GetInstance().Log("Restarting current level instead", true);
-            RestartLevel();
-        }
-    }
 
     public void SetMouseVisibility(bool visibility)
     {
@@ -166,7 +151,7 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
 
     public void ResumeGame()
     {
-        this.gameStateManager.RequestState(GameState.GameStateEnum.InGame);
+        ChangeGameState(GameState.GameStateEnum.InGame);
     }
 
 
@@ -182,23 +167,13 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
 #endif
     }
 
-    public void SetCurrentInGameLevel(int levelIndex)
-    {
-        currentInGameLevelIndex = levelIndex;
-    }
+
     public StateManager GetStateManager()
     {
         return gameStateManager;
     }
 
-    public int GetStartLevelIndex()
-    {
-        return startLevelIndex;
-    }
-    public int GetInGameLevelIndex()
-    {
-        return currentInGameLevelIndex;
-    }
+
     public bool IsInState(GameState.GameStateEnum stateToCheck)
     {
         if (gameStateManager == null)
@@ -210,14 +185,28 @@ public class GameMaster : SingletonMonobehavior<GameMaster>
             return gameStateManager.GetCurrentState().GetEnum().Equals(stateToCheck);
         }
     }
-    public void RestartLevel()
-    {
-        LogHelper.GetInstance().Log(("Restarting Level: " + currentInGameLevelIndex).Bolden(), true);
-        this.LoadLevel(currentInGameLevelIndex);
-    }
 
     public void SetGameTimeScale(float newTimeScale)
     {
         Time.timeScale = newTimeScale;
+    }
+
+    public void ReceiveData(DataPack pack, string eventName)
+    {
+    }
+    private void ChangeGameState(GameState.GameStateEnum newState)
+    {
+        if (this.gameStateManager.RequestState(newState))
+        {
+            this.NotifyOnGameStateChange(newState);
+        }
+    }
+    public void FreezeGame()
+    {
+        Time.timeScale = 0.0f;
+    }
+    public void UnFreezeGame()
+    {
+        Time.timeScale = 1.0f;
     }
 }

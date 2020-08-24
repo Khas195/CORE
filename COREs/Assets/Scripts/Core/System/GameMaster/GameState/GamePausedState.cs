@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 public class GamePausedState : GameState
 {
@@ -17,5 +18,13 @@ public class GamePausedState : GameState
     {
         GameMaster.GetInstance().SetGameTimeScale(1.0f);
         InGameMenu.GetInstance().HideInGameMenu();
+    }
+
+    public override void UpdateState()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            this.master.UnPauseGame();
+        }
     }
 }

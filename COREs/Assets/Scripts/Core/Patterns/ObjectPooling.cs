@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
 
-public abstract class ObjectPooling<T> : MonoBehaviour
+public abstract class ObjectPooling<T>
 {
 
     [SerializeField]

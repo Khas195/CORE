@@ -35,15 +35,12 @@ public class LogHelper : SingletonMonobehavior<LogHelper>
     }
     private void ShowLogOnUI(string message)
     {
-        var ingameUI = InGameLogUI.GetInstance();
+        var ingameUI = InGameLogUI.GetInstance(false);
         if (ingameUI)
         {
-            InGameLogUI.GetInstance(forceCreate: false).ShowLog(message);
+            ingameUI.ShowLog(message);
         }
-        else
-        {
-            this.LogWarning("Trying to show log in the GameUI Console without having the InGameUI Prefab in the Scene");
-        }
+
     }
 
 }

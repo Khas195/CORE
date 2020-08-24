@@ -4,85 +4,92 @@ using System.Diagnostics;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
-
-[RequireComponent(typeof(GridLayoutGroup))]
-public class InGameLogUI : SingletonMonobehavior<InGameLogUI>
+public static class GameConsoleEvent
+{
+    public static string CONSOLE_SWITCH = "CONSOLE_SWITCH";
+}
+public class InGameLogUI : SingletonMonobehavior<InGameLogUI>, IObserver
 {
     [SerializeField]
     [Required]
-    GridLayoutGroup layout = null;
+    Text consoleText = null;
     [SerializeField]
     [Required]
-    LogItemPool logItemPool = null;
-
+    ScrollRect consoleScrollRect = null;
     [SerializeField]
-    float existTime = 1f;
-    [SerializeField]
-    float fadeTime = 1f;
-    List<LogTextItem> logList = new List<LogTextItem>();
-
-
+    [Required]
+    InputField controlInputField = null;
+    protected override void Awake()
+    {
+        base.Awake();
+        PostOffice.GetInstance().Subscribes(this, GameConsoleEvent.CONSOLE_SWITCH);
+    }
     /// <summary>
-    /// Awake is called when the script instance is being loaded.
+    /// Start is called on the frame when a script is enabled just before
+    /// any of the Update methods is called the first time.
     /// </summary>
     void Start()
     {
-        var rect = this.layout.GetComponent<RectTransform>();
-        this.layout.cellSize = new Vector2(rect.rect.width, rect.rect.height / 30f);
+        TurnOff();
     }
-
     public void ShowLog(string log)
     {
-        var newLog = logItemPool.RequestInstance();
-        var textComponent = newLog.item;
-        textComponent.text = log;
-        this.logList.Add(newLog);
+        var currentTime = System.DateTime.Now;
+        consoleText.text += "\n" + "[" + currentTime.Hour + ":" + currentTime.Minute + ":" + currentTime.Second + "] - " + log + ".";
+
+        consoleScrollRect.verticalNormalizedPosition = -1;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void InputCommand(string command)
     {
-        UpdateLogs();
-    }
-
-    private void UpdateLogs()
-    {
-        for (int i = 0; i < logList.Count; i++)
+        if (command == "")
         {
-            var log = logList[i];
-            log.item.transform.localScale = Vector3.one;
-            if (log.currentExistTime < existTime)
-            {
-                log.currentExistTime += Time.deltaTime;
-                logList[i] = log;
-            }
-            else
-            {
-                if (log.currentFadeTime <= fadeTime)
-                {
-                    log.currentFadeTime += Time.deltaTime;
-                    FadeLogItem(log);
-                    logList[i] = log;
-                }
-                if (log.item.color.a <= 0.2f)
-                {
-                    RemoveLog(log);
-                }
-            }
+            controlInputField.DeactivateInputField();
+            return;
+        }
+        ShowLog(command);
+        ProcessCommand(command);
+        controlInputField.text = "";
+        controlInputField.Select();
+        controlInputField.ActivateInputField();
+
+    }
+
+    private void ProcessCommand(string command)
+    {
+        var words = command.Split(' ');
+        var commandSignal = words[0].ToLower();
+        if (commandSignal.Equals("command") == false) return;
+        var commandType = words[1].ToLower();
+        if (commandType.Equals("clear"))
+        {
+            consoleText.text = "";
         }
     }
 
-    private void FadeLogItem(LogTextItem log)
+    public void ReceiveData(DataPack pack, string eventName)
     {
-        var newFadeColor = log.item.color;
-        var blend = Mathf.Clamp01(log.currentFadeTime / fadeTime);
-        newFadeColor.a = Mathf.Lerp(newFadeColor.a, 0, blend);
-        log.item.color = newFadeColor;
+        if (eventName.Equals(GameConsoleEvent.CONSOLE_SWITCH))
+        {
+            if (this.gameObject.activeSelf)
+            {
+                TurnOff();
+            }
+            else
+            {
+                TurnOn();
+            }
+
+        }
     }
 
-    private void RemoveLog(LogTextItem log)
+    private void TurnOn()
     {
-        logList.Remove(log);
-        logItemPool.ReturnInstance(log);
+        this.gameObject.SetActive(true);
+    }
+
+    private void TurnOff()
+    {
+        this.gameObject.SetActive(false);
     }
 }
