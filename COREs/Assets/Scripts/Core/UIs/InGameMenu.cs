@@ -18,14 +18,11 @@ public class InGameMenu : SingletonMonobehavior<InGameMenu>
     }
     public void ResumeGame()
     {
-        GameMaster.GetInstance().ResumeGame();
     }
     public void ExitGame()
     {
-        GameMaster.GetInstance().ExitGame();
     }
     public void GoToMainMenu()
     {
-        GameMaster.GetInstance().GoToMainMenu();
     }
 }

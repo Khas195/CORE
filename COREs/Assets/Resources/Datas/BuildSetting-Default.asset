@@ -13,13 +13,6 @@ MonoBehaviour:
   m_Name: BuildSetting-Default
   m_EditorClassIdentifier: 
   masterScene: MasterScene
-  skipMainMenu: 0
-  setupScenes:
-  - LogScene
-  menuScenes:
-  - MainMenu
-  prequisiteGameScenes:
-  - EntitiesScene
-  - InGameMenu
-  levels:
-  - Level1
+  loadScene: LoadScene
+  logScene: LogScene
+  startUpInstance: {fileID: 11400000, guid: f6a061fe48c2285409fd58bcb231e1d4, type: 2}

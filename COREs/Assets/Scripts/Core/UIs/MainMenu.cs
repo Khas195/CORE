@@ -6,14 +6,9 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
-    public void GoToMainMenu()
-    {
-    }
-    public void GoToChooseLevel()
-    {
-    }
     public void Exit()
     {
+        GameMaster.GetInstance().ExitGame();
     }
     public void LoadFistLevel()
     {

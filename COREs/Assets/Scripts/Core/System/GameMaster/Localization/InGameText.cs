@@ -34,10 +34,10 @@ public class InGameText : SingletonMonobehavior<InGameText>
     [Button("Load Text for all Localization Text")]
     public void LoadAllLocalizationText()
     {
-        LogHelper.GetInstance().Log("Reloading Text For all Localization");
+        LogHelper.Log("Reloading Text For all Localization");
         foreach (var obj in Resources.FindObjectsOfTypeAll(typeof(LocalizeText)) as LocalizeText[])
         {
-            LogHelper.GetInstance().Log("Reloading Text For " + obj);
+            LogHelper.Log("Reloading Text For " + obj);
             obj.LoadText();
         }
     }
@@ -67,7 +67,7 @@ public class InGameText : SingletonMonobehavior<InGameText>
         var result = data.texts.Find(x => x.name.Equals(name));
         if (result == null)
         {
-            LogHelper.GetInstance().LogWarning("Can't find Text Data with name: " + name);
+            LogHelper.LogWarning("Can't find Text Data with name: " + name);
             return null;
         }
         return result;
@@ -77,7 +77,7 @@ public class InGameText : SingletonMonobehavior<InGameText>
         var result = data.texts.Find(x => x.id.Equals(id));
         if (result == null)
         {
-            LogHelper.GetInstance().LogWarning("Can't find Text Data with id: " + id);
+            LogHelper.LogWarning("Can't find Text Data with id: " + id);
             return null;
         }
         return result;

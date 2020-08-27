@@ -8,14 +8,10 @@ public class BuildProfile : ScriptableObject
 {
     [Scene]
     public string masterScene = "";
-    [SerializeField]
-    public bool skipMainMenu = false;
     [Scene]
-    public List<string> setupScenes = new List<string>();
+    public string loadScene = "";
     [Scene]
-    public List<string> menuScenes = new List<string>();
-    [Scene]
-    public List<string> prequisiteGameScenes = new List<string>();
-    [Scene]
-    public List<string> levels = new List<string>();
+    public string logScene = "";
+
+    public GameInstance startUpInstance = null;
 }

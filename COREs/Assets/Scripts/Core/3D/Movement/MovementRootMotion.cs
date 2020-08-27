@@ -40,7 +40,7 @@ public class MovementRootMotion : IMovement
 
     public override void Move(float forward, float side)
     {
-        LogHelper.GetInstance().Log("Forward Value: " + forward);
+        LogHelper.Log("Forward Value: " + forward);
 
         targetForwardSpeed = forward == 0 ? 0 : this.GetSpeedBasedOnMode();
         if (forward < 0)
@@ -48,7 +48,7 @@ public class MovementRootMotion : IMovement
             targetForwardSpeed *= -1;
             targetForwardSpeed = Mathf.Clamp(targetForwardSpeed, -0.5f, 0);
         }
-        LogHelper.GetInstance().Log("Side Value: " + forward);
+        LogHelper.Log("Side Value: " + forward);
         targetSideSpeed = side == 0 ? 0 : this.GetSpeedBasedOnMode();
         if (side < 0)
         {

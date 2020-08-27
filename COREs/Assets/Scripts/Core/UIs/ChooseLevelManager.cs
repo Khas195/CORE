@@ -18,9 +18,9 @@ public class ChooseLevelManager : MonoBehaviour
     List<GameObject> activeButtons = new List<GameObject>();
     public void RefreshLevelView()
     {
-        LogHelper.GetInstance().Log("Refresh Level view");
+        LogHelper.Log("Refresh Level view");
         ClearButtons();
-        LogHelper.GetInstance().Log("Finding Existing Level");
+        LogHelper.Log("Finding Existing Level");
         bool foundAnyLevel = false;
         int numOfScene = EditorBuildSettings.scenes.Length;
         for (int i = 0; i < numOfScene; i++)
@@ -30,13 +30,13 @@ public class ChooseLevelManager : MonoBehaviour
             if (sceneName.Contains("Level"))
             {
                 foundAnyLevel = true;
-                LogHelper.GetInstance().Log("Found " + sceneName.Bolden());
+                LogHelper.Log("Found " + sceneName.Bolden());
                 sceneName = AddLevelButton(sceneName);
             }
         }
         if (foundAnyLevel == false)
         {
-            LogHelper.GetInstance().Log("Found no existing level".Bolden());
+            LogHelper.Log("Found no existing level".Bolden());
         }
     }
 
@@ -68,6 +68,5 @@ public class ChooseLevelManager : MonoBehaviour
 
     public void OnLoadLevelRequest(string levelName)
     {
-        GameMaster.GetInstance().LoadLevel(levelName);
     }
 }

@@ -7,7 +7,6 @@ public class IsInPausedMenu : CharacterBehaviorCondition
     bool reverse = false;
     public override bool IsSatisfied(Character character)
     {
-        var isInState = GameMaster.GetInstance().IsInState(GameState.GameStateEnum.GamePaused);
-        return reverse ? !isInState : isInState;
+        return false;
     }
 }

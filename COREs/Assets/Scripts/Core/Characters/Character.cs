@@ -159,7 +159,7 @@ public class Character : MonoBehaviour
     {
         this.health -= damage;
         OnCharacterDamaged.Invoke();
-        LogHelper.GetInstance().Log(this + " suffered " + damage + ", OUCH!! - Health Left: " + this.health + " out of " + characterData.health);
+        LogHelper.Log(this + " suffered " + damage + ", OUCH!! - Health Left: " + this.health + " out of " + characterData.health);
         if (this.health <= 0)
         {
             OnCharacterDeath.Invoke(this);
@@ -212,7 +212,7 @@ public class Character : MonoBehaviour
     {
         if (canRotate.IsSatisfied(this) == false || rotationLock == true)
         {
-            LogHelper.GetInstance().Log("Rotate conditions not satisfied for " + this);
+            LogHelper.Log("Rotate conditions not satisfied for " + this);
             return;
         }
 
@@ -229,7 +229,7 @@ public class Character : MonoBehaviour
         var result = true;
         if (moveConditions.IsSatisfied(this) == false || movementLock == true)
         {
-            LogHelper.GetInstance().Log("Movement conditions not satisfied for " + this);
+            LogHelper.Log("Movement conditions not satisfied for " + this);
             forward = side = 0;
             result = false;
         }
@@ -247,7 +247,7 @@ public class Character : MonoBehaviour
         if (attackConditions.IsSatisfied(this) == false)
         {
 
-            LogHelper.GetInstance().Log("Attack conditions not satisfied for " + this);
+            LogHelper.Log("Attack conditions not satisfied for " + this);
             return false;
         }
         onCharacterAttack.Invoke();
@@ -265,12 +265,12 @@ public class Character : MonoBehaviour
     {
         if (jumpConditions.IsSatisfied(this) && jumpLock == false)
         {
-            LogHelper.GetInstance().Log("Jump conditions satisfied for " + this);
+            LogHelper.Log("Jump conditions satisfied for " + this);
             movementBehavior.SignalJump();
             return true;
         }
 
-        LogHelper.GetInstance().Log("Jump conditions not satisfied for " + this);
+        LogHelper.Log("Jump conditions not satisfied for " + this);
         return false;
     }
     /// <summary>

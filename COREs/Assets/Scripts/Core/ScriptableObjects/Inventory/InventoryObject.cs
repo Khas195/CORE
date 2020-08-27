@@ -17,18 +17,18 @@ public class InventoryObject : ScriptableObject
         }
         if (container.Contains(newItem) == false)
         {
-            LogHelper.GetInstance().Log("Add new Item to Inventory: " + newItem);
+            LogHelper.Log("Add new Item to Inventory: " + newItem);
             container.Add(newItem);
         }
         newItem.IncreaseAmountInInventory();
-        LogHelper.GetInstance().Log(newItem + " increases count in Inventory by 1" + "- Current Amount : " + newItem.GetAmountInInventory());
+        LogHelper.Log(newItem + " increases count in Inventory by 1" + "- Current Amount : " + newItem.GetAmountInInventory());
         return true;
     }
     public bool RemoveItem(ItemObject targetItem)
     {
         if (container.Contains(targetItem) == false)
         {
-            LogHelper.GetInstance().LogWarning("Trying to remove an item that does not exist in the inventory");
+            LogHelper.LogWarning("Trying to remove an item that does not exist in the inventory");
             return false;
         }
         container.Remove(targetItem);

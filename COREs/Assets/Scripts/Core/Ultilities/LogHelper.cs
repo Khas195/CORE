@@ -2,10 +2,10 @@
 using System.Diagnostics;
 using UnityEngine;
 
-public class LogHelper : SingletonMonobehavior<LogHelper>
+public static class LogHelper
 {
     [Conditional("ENABLE_LOGS")]
-    public void LogError(string message, bool showLogOnInGame = false)
+    public static void LogError(string message, bool showLogOnInGame = false)
     {
         UnityEngine.Debug.LogError(message);
         if (showLogOnInGame)
@@ -15,7 +15,7 @@ public class LogHelper : SingletonMonobehavior<LogHelper>
     }
 
     [Conditional("ENABLE_LOGS")]
-    public void Log(string message, bool showLogOnInGame = false)
+    public static void Log(string message, bool showLogOnInGame = false)
     {
         UnityEngine.Debug.Log(message);
         if (showLogOnInGame)
@@ -25,7 +25,7 @@ public class LogHelper : SingletonMonobehavior<LogHelper>
     }
 
     [Conditional("ENABLE_LOGS")]
-    public void LogWarning(string message, bool showLogOnInGame = false)
+    public static void LogWarning(string message, bool showLogOnInGame = false)
     {
         UnityEngine.Debug.LogWarning(message);
         if (showLogOnInGame)
@@ -33,7 +33,7 @@ public class LogHelper : SingletonMonobehavior<LogHelper>
             ShowLogOnUI("WARNING:".TextMod("yellow", true, true) + message);
         }
     }
-    private void ShowLogOnUI(string message)
+    private static void ShowLogOnUI(string message)
     {
         var ingameUI = InGameLogUI.GetInstance(false);
         if (ingameUI)

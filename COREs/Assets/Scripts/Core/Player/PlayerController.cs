@@ -19,10 +19,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (GameMaster.GetInstance().IsInState(GameState.GameStateEnum.GamePaused) == false)
-        {
-            ProcessInput();
-        }
+        ProcessInput();
     }
     /**
      * All inputs by the player are and should be done in this function .

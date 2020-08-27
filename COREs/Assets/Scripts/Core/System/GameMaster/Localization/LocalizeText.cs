@@ -34,7 +34,7 @@ public class LocalizeText : MonoBehaviour
         }
         else
         {
-            LogHelper.GetInstance().LogWarning("Missing In Game Text instance for Text Localization");
+            LogHelper.LogWarning("Missing In Game Text instance for Text Localization");
         }
         return result;
     }
@@ -53,7 +53,7 @@ public class LocalizeText : MonoBehaviour
         }
         else
         {
-            LogHelper.GetInstance().LogWarning("Missing In Game Text instance for Text Localization");
+            LogHelper.LogWarning("Missing In Game Text instance for Text Localization");
         }
         return result;
     }
@@ -89,10 +89,10 @@ public class LocalizeText : MonoBehaviour
     public void FindTextElement()
     {
         var result = this.GetComponent<Text>();
-        LogHelper.GetInstance().Log("Find Text element for " + this);
+        LogHelper.Log("Find Text element for " + this);
         if (result == null)
         {
-            LogHelper.GetInstance().LogWarning("Found no Text Element in " + this);
+            LogHelper.LogWarning("Found no Text Element in " + this);
         }
         else
         {
@@ -102,7 +102,7 @@ public class LocalizeText : MonoBehaviour
     [Button("Load Text")]
     public void LoadText()
     {
-        LogHelper.GetInstance().Log("Loading new Text for " + this);
+        LogHelper.Log("Loading new Text for " + this);
         this.text.text = InGameText.GetInstance().GetTextData(id).content;
         EditorUtility.SetDirty(this.gameObject);
     }

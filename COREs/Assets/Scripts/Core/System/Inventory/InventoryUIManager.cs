@@ -68,7 +68,7 @@ public class InventoryUIManager : MonoBehaviour
 
         if (targetSlot == null)
         {
-            LogHelper.GetInstance().Log("Trying to remove an item from the Ui where it doesn't exist");
+            LogHelper.Log("Trying to remove an item from the Ui where it doesn't exist");
             return;
         }
 
@@ -106,7 +106,7 @@ public class InventoryUIManager : MonoBehaviour
         var targetSlot = slots.Find(slot => slot.GetItemObject() == targetItem);
         if (targetSlot == null)
         {
-            LogHelper.GetInstance().Log("Trying to focus an item that is not in the inventory ui list");
+            LogHelper.Log("Trying to focus an item that is not in the inventory ui list");
             return;
         }
         if (activeSlot)

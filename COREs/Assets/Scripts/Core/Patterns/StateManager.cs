@@ -23,19 +23,19 @@ public class StateManager : MonoBehaviour
     [Button("Find Available States")]
     private void FindAvailableStates()
     {
-        LogHelper.GetInstance().Log(this + " clearing available states");
+        LogHelper.Log(this + " clearing available states");
         availableStates.Clear();
 
-        LogHelper.GetInstance().Log(this + " finding available states in children");
+        LogHelper.Log(this + " finding available states in children");
         var states = this.GetComponentsInChildren<State>();
 
         if (states.Length <= 0)
         {
-            LogHelper.GetInstance().LogWarning(this + " has no available states to operate");
+            LogHelper.LogWarning(this + " has no available states to operate");
             return;
         }
 
-        LogHelper.GetInstance().Log(this + " adding available states in children");
+        LogHelper.Log(this + " adding available states in children");
         availableStates.AddRange(states);
 
     }
@@ -44,7 +44,7 @@ public class StateManager : MonoBehaviour
         var requestedState = LookUpAvailableState(requestedStateEnum);
         if (requestedState == null)
         {
-            LogHelper.GetInstance().LogWarning(this + " trying to request a NULL state");
+            LogHelper.LogWarning(this + " trying to request a NULL state");
             return false;
         }
 
@@ -61,14 +61,14 @@ public class StateManager : MonoBehaviour
         }
         else
         {
-            LogHelper.GetInstance().LogWarning(this + " trying to make an unsupported transition to " + requestedState);
+            LogHelper.LogWarning(this + " trying to make an unsupported transition to " + requestedState);
             return false;
         }
     }
 
     public State LookUpAvailableState(Enum requestedStateEnum)
     {
-        LogHelper.GetInstance().Log(this + " looking up available states for " + requestedStateEnum);
+        LogHelper.Log(this + " looking up available states for " + requestedStateEnum);
         State result = null;
         for (int i = 0; i < availableStates.Count; i++)
         {
@@ -81,12 +81,12 @@ public class StateManager : MonoBehaviour
         }
         if (result)
         {
-            LogHelper.GetInstance().Log(this + " found a match for " + requestedStateEnum);
+            LogHelper.Log(this + " found a match for " + requestedStateEnum);
         }
         else
         {
 
-            LogHelper.GetInstance().LogWarning(this + " CANNOT found a match for " + requestedStateEnum);
+            LogHelper.LogWarning(this + " CANNOT found a match for " + requestedStateEnum);
         }
         return result;
     }
@@ -95,16 +95,16 @@ public class StateManager : MonoBehaviour
     {
         if (currentState)
         {
-            LogHelper.GetInstance().Log(this + " call State exit for " + currentState);
+            LogHelper.Log(this + " call State exit for " + currentState);
             currentState.OnStateExit();
         }
         if (requestedState)
         {
-            LogHelper.GetInstance().Log(this + " call State enter for " + requestedState);
+            LogHelper.Log(this + " call State enter for " + requestedState);
             requestedState.OnStateEnter();
         }
         currentState = requestedState;
-        LogHelper.GetInstance().Log(this + " completed transition from " + currentState + " to " + requestedState);
+        LogHelper.Log(this + " completed transition from " + currentState + " to " + requestedState);
     }
     public State GetCurrentState()
     {

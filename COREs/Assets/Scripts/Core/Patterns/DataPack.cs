@@ -18,7 +18,7 @@ public class DataPack
     {
         if (datas.ContainsKey(valueName) == false)
         {
-            LogHelper.GetInstance().LogWarning("Data Value " + valueName + " does not exist in " + this);
+            LogHelper.LogWarning("Data Value " + valueName + " does not exist in " + this);
             return default(T);
         }
         try
@@ -28,7 +28,7 @@ public class DataPack
         }
         catch (InvalidCastException e)
         {
-            LogHelper.GetInstance().LogError("Invalid casting exception for getting " + valueName);
+            LogHelper.LogError("Invalid casting exception for getting " + valueName + ", " + e);
             return default(T);
         }
     }

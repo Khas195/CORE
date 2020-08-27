@@ -13,19 +13,19 @@ public abstract class IInteractable : MonoBehaviour
 
     public virtual void Focus()
     {
-        LogHelper.GetInstance().Log("Focusing".Bolden() + " " + this.name.Colorize("cyan").Bolden(), true);
+        LogHelper.Log("Focusing".Bolden() + " " + this.name.Colorize("cyan").Bolden(), true);
         isFocus = true;
     }
     public virtual void Defocus()
     {
-        LogHelper.GetInstance().Log("Defocusing".Bolden() + " " + this.name.Colorize("cyan").Bolden(), true);
+        LogHelper.Log("Defocusing".Bolden() + " " + this.name.Colorize("cyan").Bolden(), true);
         isFocus = false;
     }
 
     public virtual bool Interact()
     {
 
-        LogHelper.GetInstance().Log(this.GetKindOfInteraction().Bolden() + " " + this.name.Colorize("cyan").Bolden(), true);
+        LogHelper.Log(this.GetKindOfInteraction().Bolden() + " " + this.name.Colorize("cyan").Bolden(), true);
         return isFocus;
     }
 

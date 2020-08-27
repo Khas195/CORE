@@ -9,8 +9,9 @@ public abstract class GameState : State
     {
         MainMenu,
         InGame,
-        GamePaused,
+        GamePaused
     }
+
     [SerializeField]
     [ReadOnly]
     protected GameMaster master;

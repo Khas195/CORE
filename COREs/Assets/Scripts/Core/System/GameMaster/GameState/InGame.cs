@@ -22,7 +22,6 @@ public class InGame : GameState
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            this.master.PauseGame();
         }
     }
 }

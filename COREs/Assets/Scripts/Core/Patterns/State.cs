@@ -11,16 +11,16 @@ public abstract class State : MonoBehaviour
     public abstract void OnStateExit();
     public virtual bool CanTransitionTo(Enum stateEnum)
     {
-        LogHelper.GetInstance().Log(this + " checking transition to  " + stateEnum);
+        LogHelper.Log(this + " checking transition to  " + stateEnum);
         for (int i = 0; i < possibleTransitions.Count; i++)
         {
             if (possibleTransitions[i].GetEnum().Equals(stateEnum))
             {
-                LogHelper.GetInstance().Log(this + " found possible transition to " + stateEnum);
+                LogHelper.Log(this + " found possible transition to " + stateEnum);
                 return true;
             }
         }
-        LogHelper.GetInstance().LogWarning(this + " CANNOT found possible transition to " + stateEnum);
+        LogHelper.LogWarning(this + " CANNOT found possible transition to " + stateEnum);
         return false;
     }
 

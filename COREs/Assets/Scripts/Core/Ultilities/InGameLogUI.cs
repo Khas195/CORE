@@ -19,15 +19,24 @@ public class InGameLogUI : SingletonMonobehavior<InGameLogUI>, IObserver
     [SerializeField]
     [Required]
     InputField controlInputField = null;
+    [SerializeField]
+    List<ConsoleCommand> possibleCommands = new List<ConsoleCommand>();
+
+
+
     protected override void Awake()
     {
         base.Awake();
         PostOffice.GetInstance().Subscribes(this, GameConsoleEvent.CONSOLE_SWITCH);
     }
-    /// <summary>
-    /// Start is called on the frame when a script is enabled just before
-    /// any of the Update methods is called the first time.
-    /// </summary>
+    void OnDestroy()
+    {
+        var office = PostOffice.GetInstance(false);
+        if (office)
+        {
+            office.Unsubscribes(this, GameConsoleEvent.CONSOLE_SWITCH);
+        }
+    }
     void Start()
     {
         TurnOff();
@@ -47,24 +56,47 @@ public class InGameLogUI : SingletonMonobehavior<InGameLogUI>, IObserver
             controlInputField.DeactivateInputField();
             return;
         }
-        ShowLog(command);
-        ProcessCommand(command);
+
+        bool recognizedCommand = false;
+        for (int i = 0; i < this.possibleCommands.Count; i++)
+        {
+            if (this.possibleCommands[i].ParseCommand(command))
+            {
+                recognizedCommand = true;
+                this.possibleCommands[i].Execute(this, command);
+                break;
+            }
+        }
+
+        if (recognizedCommand == false)
+        {
+            ShowLog("Unrecognized command");
+        }
+
         controlInputField.text = "";
         controlInputField.Select();
         controlInputField.ActivateInputField();
 
     }
-
-    private void ProcessCommand(string command)
+    public void ClearConsole()
+    {
+        consoleText.text = "";
+    }
+    private bool ProcessCommand(string command)
     {
         var words = command.Split(' ');
         var commandSignal = words[0].ToLower();
-        if (commandSignal.Equals("command") == false) return;
+        if (commandSignal.Equals("command") == false) return false;
         var commandType = words[1].ToLower();
         if (commandType.Equals("clear"))
         {
             consoleText.text = "";
         }
+        else
+        {
+            return false;
+        }
+        return true;
     }
 
     public void ReceiveData(DataPack pack, string eventName)
@@ -91,5 +123,10 @@ public class InGameLogUI : SingletonMonobehavior<InGameLogUI>, IObserver
     private void TurnOff()
     {
         this.gameObject.SetActive(false);
+    }
+
+    public List<ConsoleCommand> GetCommandList()
+    {
+        return this.possibleCommands;
     }
 }

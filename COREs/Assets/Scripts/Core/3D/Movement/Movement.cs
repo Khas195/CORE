@@ -163,7 +163,7 @@ public class Movement : IMovement
     /// </summary>
     private void Jump()
     {
-        LogHelper.GetInstance().Log("Character jump with force of " + data.jumpForce);
+        LogHelper.Log("Character jump with force of " + data.jumpForce);
         charRigidbody.AddForce(Vector3.up * data.jumpForce, ForceMode.Impulse);
     }
     /// <summary>
