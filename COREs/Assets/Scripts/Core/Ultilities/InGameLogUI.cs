@@ -4,10 +4,7 @@ using System.Diagnostics;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
-public static class GameConsoleEvent
-{
-    public static string CONSOLE_SWITCH = "CONSOLE_SWITCH";
-}
+
 public class InGameLogUI : SingletonMonobehavior<InGameLogUI>, IObserver
 {
     [SerializeField]
@@ -27,15 +24,11 @@ public class InGameLogUI : SingletonMonobehavior<InGameLogUI>, IObserver
     protected override void Awake()
     {
         base.Awake();
-        PostOffice.GetInstance().Subscribes(this, GameConsoleEvent.CONSOLE_SWITCH);
+        PostOffice.Subscribes(this, GameMasterEvent.InGameLogConsoleEvent.CONSOLE_SWITCH_ON_OFF);
     }
     void OnDestroy()
     {
-        var office = PostOffice.GetInstance(false);
-        if (office)
-        {
-            office.Unsubscribes(this, GameConsoleEvent.CONSOLE_SWITCH);
-        }
+        PostOffice.Unsubscribes(this, GameMasterEvent.InGameLogConsoleEvent.CONSOLE_SWITCH_ON_OFF);
     }
     void Start()
     {
@@ -101,7 +94,7 @@ public class InGameLogUI : SingletonMonobehavior<InGameLogUI>, IObserver
 
     public void ReceiveData(DataPack pack, string eventName)
     {
-        if (eventName.Equals(GameConsoleEvent.CONSOLE_SWITCH))
+        if (eventName.Equals(GameMasterEvent.InGameLogConsoleEvent.CONSOLE_SWITCH_ON_OFF))
         {
             if (this.gameObject.activeSelf)
             {

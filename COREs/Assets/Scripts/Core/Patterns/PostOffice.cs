@@ -9,7 +9,7 @@ public interface IObserver
     void ReceiveData(DataPack pack, string eventName);
 }
 
-public class PostOffice : SingletonMonobehavior<PostOffice>
+public class PostOffice : MonoBehaviour
 {
     [Serializable]
     private class EventSubsciptions
@@ -19,8 +19,9 @@ public class PostOffice : SingletonMonobehavior<PostOffice>
         public List<IObserver> subscribers;
     }
     [SerializeField]
-    List<EventSubsciptions> availableEvents = new List<EventSubsciptions>();
-    public void SendData(DataPack pack, string eventName)
+    static List<EventSubsciptions> availableEvents = new List<EventSubsciptions>();
+
+    public static void SendData(DataPack pack, string eventName)
     {
         var targetEvent = availableEvents.Find(availEvent => availEvent.EventName.Equals(eventName));
         if (targetEvent == null)
@@ -33,10 +34,9 @@ public class PostOffice : SingletonMonobehavior<PostOffice>
         {
             targetEvent.subscribers[i].ReceiveData(pack, eventName);
         }
-
     }
 
-    public void Unsubscribes(IObserver observer, string eventToUnsubscribe)
+    public static void Unsubscribes(IObserver observer, string eventToUnsubscribe)
     {
         var targetEvent = availableEvents.Find(availEvent => availEvent.EventName.Equals(eventToUnsubscribe));
         if (targetEvent == null)
@@ -57,7 +57,7 @@ public class PostOffice : SingletonMonobehavior<PostOffice>
 
     }
 
-    public void Subscribes(IObserver newObserver, string eventToListen)
+    public static void Subscribes(IObserver newObserver, string eventToListen)
     {
         var targetEvent = availableEvents.Find(availEvent => availEvent.EventName.Equals(eventToListen));
         if (targetEvent == null)
@@ -76,7 +76,7 @@ public class PostOffice : SingletonMonobehavior<PostOffice>
         LogHelper.Log(newObserver.ToString().Bolden() + " is added to event " + eventToListen, true);
     }
 
-    private EventSubsciptions CreateNewEvent(string eventToListen)
+    private static EventSubsciptions CreateNewEvent(string eventToListen)
     {
         var newEvent = new EventSubsciptions();
         newEvent.EventName = eventToListen;

@@ -5,22 +5,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LoadingSceneControl : SingletonMonobehavior<LoadingSceneControl>, IObserver
+public class LoadingSceneControl : MonoBehaviour
 {
     [SerializeField]
     Text loadingProgress = null;
     [SerializeField]
     Text currentLoading = null;
-
-    public void ReceiveData(DataPack pack, string eventName)
-    {
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -29,6 +19,7 @@ public class LoadingSceneControl : SingletonMonobehavior<LoadingSceneControl>, I
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                LogHelper.Log("Scene finished loading!!");
                 SceneLoadingManager.GetInstance().FinishedLoading();
             }
         }
