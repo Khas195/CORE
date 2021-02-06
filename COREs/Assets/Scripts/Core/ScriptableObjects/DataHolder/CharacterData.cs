@@ -3,14 +3,13 @@ using System.Xml.Serialization;
 using NaughtyAttributes;
 using UnityEngine;
 
+
 [CreateAssetMenu(fileName = "CharacterData", menuName = "Data/Character", order = 1)]
 [Serializable]
 public class CharacterData : ScriptableObject
 {
-    public string characterName;
-    public int health;
-
-    public int stamina;
+    [SerializeField]
+    public MovementData moveData = null;
 
     [Button("Save")]
     public void SaveData()

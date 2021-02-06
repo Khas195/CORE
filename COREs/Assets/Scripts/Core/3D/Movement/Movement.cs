@@ -21,6 +21,11 @@ public class Movement : IMovement
 
     [SerializeField]
     [BoxGroup("Requirements")]
+    [Required]
+    Rigidbody charRigidbody = null;
+
+    [SerializeField]
+    [BoxGroup("Requirements")]
     bool hasAirbornedCollider;
     /// <summary>
     /// The collider this character will use while it is airborned. 
@@ -57,7 +62,6 @@ public class Movement : IMovement
     float distanceToGround = 0.1f;
     bool jumpSignal = false;
     Transform targetTransform = null;
-    Rigidbody charRigidbody = null;
 
 
     void Start()
@@ -76,14 +80,6 @@ public class Movement : IMovement
     {
         targetTransform = charRigidbody.transform;
         distanceToGround = charCollider.bounds.extents.y;
-    }
-    /// <summary>
-    /// Set the rigid body of the character's model.
-    /// </summary>
-    /// <param name="hostRigidBody"> The rigid body of the character's model.</param>
-    public override void SetRigidBody(Rigidbody hostRigidBody)
-    {
-        this.charRigidbody = hostRigidBody;
     }
 
     /// <summary>

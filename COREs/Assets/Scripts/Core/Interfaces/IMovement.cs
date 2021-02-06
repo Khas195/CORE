@@ -16,14 +16,13 @@ public class IMovement : MonoBehaviour
         Walk,
         Run
     }
+    [BoxGroup("Movement Data")]
     [SerializeField]
     protected bool noCharacter;
-    /** The container for all movement related data */
-    [InfoBox("Movement Data Object - The values below are applied for script that use this Data Object", EInfoBoxType.Warning)]
-    [Required]
+
     [SerializeField]
-    [DisplayScriptableObjectProperties]
     [BoxGroup("Movement Data")]
+    [ShowIf("noCharacter")]
     protected MovementData data = null;
 
 

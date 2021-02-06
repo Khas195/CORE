@@ -33,14 +33,8 @@ public class PlayerController : MonoBehaviour
 
         var side = Input.GetAxisRaw("Horizontal");
         var forward = Input.GetAxisRaw("Vertical");
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            character.RequestMovementType(IMovement.MovementType.Run);
-        }
-        else if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            character.RequestMovementType(IMovement.MovementType.Walk);
-        }
+        character.RequestMovementType(IMovement.MovementType.Run);
+
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -52,7 +46,7 @@ public class PlayerController : MonoBehaviour
             interact.Invoke();
         }
 
-        if ((forward != 0 || side != 0) && character.IsRotationLock() == false)
+        if (forward != 0 || side != 0)
         {
             var movedir = Util.CalculateMoveDirection(horizontalInput: side, forwardInput: forward
                                             , playerCameraView.transform.forward, playerCameraView.transform.right);

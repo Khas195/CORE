@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f7044c6709323443a74a241c047c306, type: 3}
-  m_Name: RotateCondition
+  m_Script: {fileID: 11500000, guid: a13cd6da5e12e824bbdbc0faf11779e4, type: 3}
+  m_Name: ThiefData
   m_EditorClassIdentifier: 
-  conditions: []
-  needAllToSastisfied: 1
+  moveData: {fileID: 11400000, guid: e5a8a8c29d6822c4c914782e6ff95a65, type: 2}
