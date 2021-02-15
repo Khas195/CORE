@@ -8,10 +8,19 @@ public class GameMaster : SingletonMonobehavior<GameMaster>, IObserver
 {
     [SerializeField]
     [Required]
-    BuildProfile profile = null;
+    BuildProfile requiredScenes = null;
     [SerializeField]
     [Required]
     SceneLoadingManager loadingManager = null;
+    [SerializeField]
+    [Required]
+    GameInstance startInstance = null;
+
+
+    public void StartGame()
+    {
+        this.RequestInstance(startInstance);
+    }
 
     /// <summary>
     /// Awake is called when the script instance is being loaded.
@@ -24,9 +33,9 @@ public class GameMaster : SingletonMonobehavior<GameMaster>, IObserver
 
     void Start()
     {
-        loadingManager.UnloadAllScenes(exception: profile.masterScene);
-        loadingManager.LoadSceneAdditively(profile.logScene);
-        RequestInstance(profile.startUpInstance);
+        loadingManager.UnloadAllScenes(exception: requiredScenes.masterScene);
+        loadingManager.LoadSceneAdditively(requiredScenes.logScene);
+        RequestInstance(requiredScenes.startUpInstance);
     }
     void OnDestroy()
     {
@@ -45,6 +54,7 @@ public class GameMaster : SingletonMonobehavior<GameMaster>, IObserver
         var data = DataPool.GetInstance().RequestInstance();
         data.SetValue(GameMasterEvent.GameStateChangeEvent.New_Game_State, newGameState);
         PostOffice.SendData(data, GameMasterEvent.ON_GAMESTATE_CHANGED);
+        DataPool.GetInstance().ReturnInstance(data);
     }
 
 

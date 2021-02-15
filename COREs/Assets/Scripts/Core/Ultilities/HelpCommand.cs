@@ -7,7 +7,7 @@ public class HelpCommand : ConsoleCommand
     public override void Execute(InGameLogUI inGameLog, string commandLine = "")
     {
         var commandList = inGameLog.GetCommandList();
-        var helpText = "Command Format: command *command key* \n";
+        var helpText = "Command Format: \\*command* \n";
         helpText += " List of Possible Commands: \n";
         for (int i = 0; i < commandList.Count; i++)
         {

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba6aefaad7c39504d8c5615b37bc924e, type: 3}
   m_Name: HelpCommand
   m_EditorClassIdentifier: 
-  commandKey: help
+  commandKey: /help
   description: List all the possible commands.

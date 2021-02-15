@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e013534ec209d7a41a85d6fde3db1506, type: 3}
   m_Name: ClearCommand
   m_EditorClassIdentifier: 
-  commandKey: clear
+  commandKey: /clear
   description: Clear the Console.

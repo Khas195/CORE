@@ -11,11 +11,9 @@ public abstract class ConsoleCommand : ScriptableObject
     public virtual bool ParseCommand(string commandLine)
     {
         var words = commandLine.Split(' ');
-        var commandSignal = words[0].ToLower();
 
-        if (commandSignal.Equals("command") == false) return false;
 
-        var commandType = words[1].ToLower();
+        var commandType = words[0].ToLower();
 
         if (commandType.Equals(this.commandKey))
         {

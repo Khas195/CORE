@@ -8,9 +8,13 @@ public class MainMenu : MonoBehaviour
 {
     public void Exit()
     {
+        LogHelper.Log("Exit Game.", true);
         GameMaster.GetInstance().ExitGame();
     }
-    public void LoadFistLevel()
+    public void StartGame()
     {
+        LogHelper.Log("Start Game.", true);
+        GameMaster.GetInstance().StartGame();
     }
+
 }
