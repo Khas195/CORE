@@ -1,16 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
 public abstract class State : MonoBehaviour
 {
     [SerializeField]
+    bool allTransitionsPossible = false;
+    [SerializeField]
+    [HideIf("allTransitionsPossible")]
     List<State> possibleTransitions = new List<State>();
     public abstract void OnStateEnter();
     public abstract void OnStateExit();
     public virtual bool CanTransitionTo(Enum stateEnum)
     {
+        if (stateEnum == this.GetEnum())
+        {
+            return false;
+        }
+        if (allTransitionsPossible)
+        {
+            LogHelper.Log("All transitions are possible for " + this + ". Transition to" + stateEnum);
+            return true;
+        }
         LogHelper.Log(this + " checking transition to  " + stateEnum);
         for (int i = 0; i < possibleTransitions.Count; i++)
         {

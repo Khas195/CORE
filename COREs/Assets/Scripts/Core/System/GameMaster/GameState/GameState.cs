@@ -9,7 +9,10 @@ public abstract class GameState : State
     {
         MainMenu,
         InGame,
-        GamePaused
+        GamePaused,
+        Init,
+        Console,
+        LoadState
     }
 
     [SerializeField]

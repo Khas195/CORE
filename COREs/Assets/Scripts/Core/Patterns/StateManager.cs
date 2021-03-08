@@ -103,12 +103,16 @@ public class StateManager : MonoBehaviour
             LogHelper.Log(this + " call State enter for " + requestedState);
             requestedState.OnStateEnter();
         }
-        currentState = requestedState;
         LogHelper.Log(this + " completed transition from " + currentState + " to " + requestedState);
+        currentState = requestedState;
     }
     public State GetCurrentState()
     {
         return currentState;
+    }
+    public T GetCurrentState<T>() where T : State
+    {
+        return (T)currentState;
     }
     public bool IsCurrentState(Enum stateEnum)
     {

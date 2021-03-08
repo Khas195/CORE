@@ -15,7 +15,7 @@ public abstract class ConsoleCommand : ScriptableObject
 
         var commandType = words[0].ToLower();
 
-        if (commandType.Equals(this.commandKey))
+        if (commandType.Equals(this.commandKey.ToLower()))
         {
             return true;
         }

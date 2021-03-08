@@ -30,7 +30,14 @@ public class PlayerController : MonoBehaviour
      */
     private void ProcessInput()
     {
+        if (GameMaster.GetInstance().GetCurrentState().GetEnum().Equals(GameState.GameStateEnum.InGame))
+        {
+            ProcessInputs();
+        }
+    }
 
+    private void ProcessInputs()
+    {
         var side = Input.GetAxisRaw("Horizontal");
         var forward = Input.GetAxisRaw("Vertical");
         character.RequestMovementType(IMovement.MovementType.Run);
@@ -55,10 +62,5 @@ public class PlayerController : MonoBehaviour
         }
         forward = Mathf.Abs(forward) > Mathf.Abs(side) ? Mathf.Abs(forward) : Mathf.Abs(side);
         character.RequestMove(forward, 0);
-
     }
-
-
-
-
 }

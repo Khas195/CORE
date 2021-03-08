@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using NaughtyAttributes;
@@ -109,6 +109,7 @@ public class InGameLogUI : SingletonMonobehavior<InGameLogUI>, IObserver
         if (eventName.Equals(GameMasterEvent.ON_GAMESTATE_CHANGED))
         {
             var newState = pack.GetValue<GameState.GameStateEnum>(valueName: GameMasterEvent.GameStateChangeEvent.New_Game_State);
+            // do something with newState
         }
     }
 

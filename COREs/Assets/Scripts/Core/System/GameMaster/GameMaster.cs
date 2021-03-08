@@ -17,6 +17,12 @@ public class GameMaster : SingletonMonobehavior<GameMaster>, IObserver
     GameInstance startInstance = null;
 
 
+
+    [SerializeField]
+    [Required]
+    StateManager gameStates = null;
+
+
     public void StartGame()
     {
         this.RequestInstance(startInstance);
@@ -29,6 +35,11 @@ public class GameMaster : SingletonMonobehavior<GameMaster>, IObserver
     {
         base.Awake();
         PostOffice.Subscribes(this, GameMasterEvent.ON_GAMESTATE_CHANGED);
+    }
+
+    public bool RequestGameState(GameState.GameStateEnum requestState)
+    {
+        return this.gameStates.RequestState(requestState);
     }
 
     void Start()
@@ -45,7 +56,14 @@ public class GameMaster : SingletonMonobehavior<GameMaster>, IObserver
 
     public void RequestInstance(GameInstance newInstance)
     {
-        loadingManager.InitiateLoadingSequenceFor(newInstance);
+        if (this.gameStates.RequestState(newInstance.desiredGameState))
+        {
+            loadingManager.InitiateLoadingSequenceFor(newInstance);
+        }
+        else
+        {
+            LogHelper.LogError("Cannot Transition to the desired game state:" + newInstance.desiredGameState + "of this game instance: " + newInstance);
+        }
     }
 
 
@@ -61,9 +79,21 @@ public class GameMaster : SingletonMonobehavior<GameMaster>, IObserver
 
     void Update()
     {
+        var currentState = gameStates.GetCurrentState<GameState>();
+        if (currentState != null)
+        {
+            currentState.UpdateState();
+            if ((GameState.GameStateEnum)currentState.GetEnum() != GameState.GameStateEnum.Console)
+            {
+                ProcessConsoleTrigger();
+            }
+        }
+    }
+    public void ProcessConsoleTrigger()
+    {
         if (Input.GetKeyDown(KeyCode.F1))
         {
-            PostOffice.SendData(null, GameMasterEvent.InGameLogConsoleEvent.CONSOLE_SWITCH_ON_OFF);
+            this.gameStates.RequestState(GameState.GameStateEnum.Console);
         }
     }
 
@@ -102,4 +132,9 @@ public class GameMaster : SingletonMonobehavior<GameMaster>, IObserver
     {
         Time.timeScale = 1.0f;
     }
+    public GameState GetCurrentState()
+    {
+        return gameStates.GetCurrentState<GameState>();
+    }
 }
+

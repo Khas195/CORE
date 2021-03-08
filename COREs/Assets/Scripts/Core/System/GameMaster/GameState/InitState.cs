@@ -1,11 +1,13 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class InGame : GameState
+public class InitState : State
 {
     public override Enum GetEnum()
     {
-        return GameStateEnum.InGame;
+        return GameState.GameStateEnum.Init;
     }
 
     public override void OnStateEnter()
@@ -16,10 +18,4 @@ public class InGame : GameState
     {
     }
 
-    public override void UpdateState()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-        }
-    }
 }

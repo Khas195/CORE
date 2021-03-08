@@ -15,3 +15,4 @@ public class BuildProfile : ScriptableObject
 
     public GameInstance startUpInstance = null;
 }
+

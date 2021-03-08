@@ -9,4 +9,5 @@ public class GameInstance : ScriptableObject
     public string instanceName = "";
     [Scene]
     public List<string> sceneList = new List<string>();
+    public GameState.GameStateEnum desiredGameState;
 }

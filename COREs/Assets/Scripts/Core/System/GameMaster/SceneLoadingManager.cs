@@ -32,6 +32,11 @@ public class SceneLoadingManager : SingletonMonobehavior<SceneLoadingManager>, I
 
     public void FinishedLoading()
     {
+        GameMaster.GetInstance().RequestGameState(this.instanceToLoad.desiredGameState);
+
+    }
+    public void FinishedLoadingProtocol()
+    {
         SceneManager.UnloadSceneAsync(profile.loadScene);
         var data = DataPool.GetInstance().RequestInstance();
         data.SetValue("Instance", currentInstance);
@@ -42,6 +47,11 @@ public class SceneLoadingManager : SingletonMonobehavior<SceneLoadingManager>, I
     public void InitiateLoadingSequenceFor(GameInstance newInstance)
     {
         instanceToLoad = newInstance;
+        GameMaster.GetInstance().RequestGameState(GameState.GameStateEnum.LoadState);
+    }
+
+    public void LoadLoadingScene()
+    {
         this.LoadSceneAdditively(profile.loadScene);
     }
 

@@ -10,12 +10,12 @@ public class GamePausedState : GameState
 
     public override void OnStateEnter()
     {
-        GameMaster.GetInstance().SetGameTimeScale(0.0f);
+        master.FreezeGame();
     }
 
     public override void OnStateExit()
     {
-        GameMaster.GetInstance().SetGameTimeScale(1.0f);
+        master.UnFreezeGame();
     }
 
     public override void UpdateState()
